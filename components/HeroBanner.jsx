@@ -16,7 +16,7 @@ export default function HeroBanner() {
       </div>
       <div className="container">
         <div className="banner_content w-[50%] md:w-full ">
-          <h1 className=" text-[#f7f2ca] mb-5 ">
+          <h1 className=" text-lightYelow mb-5 ">
             We help Ukrainians heal from conflict-related trauma so they can
             live fulfilling and productive lives.
           </h1>
