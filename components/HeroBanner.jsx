@@ -1,9 +1,19 @@
 import React from "react";
+import Image from "next/image";
 import Button from "./button/Button";
 
 export default function HeroBanner() {
   return (
-    <section className=" hero_banner padding-large relative w-full before:content-[''] before:absolute before:top-0 before:right-0 before:w-full before:h-full before:bg-[url('/index_page/hero_banner_bgimg.jpeg')] before:bg-cover before:bg-no-repeat before:bg-right  ">
+    <section className=" hero_banner padding-large relative w-full ">
+      <div className="banner_bg_img absolute top-0 right-0 w-full h-full ">
+        <Image
+          width={2500}
+          height={1200}
+          src="/heroBanner/hero_banner_bgimg.jpeg"
+          alt="bg-img"
+          className=" w-full h-full object-cover "
+        />
+      </div>
       <div className="container">
         <div className="banner_content w-[50%] md:w-full ">
           <h1 className=" text-[#f7f2ca] mb-5 ">
