@@ -4,14 +4,14 @@ import Button from "./button/Button";
 
 export default function HeroBanner() {
   return (
-    <section className=" hero_banner padding-large relative w-full ">
+    <section className=" hero_banner padding-large relative w-full bg-[#0244c0] ">
       <div className="banner_bg_img absolute top-0 right-0 w-full h-full ">
         <Image
           width={2500}
           height={1200}
           src="/heroBanner/hero_banner_bgimg.jpeg"
           alt="bg-img"
-          className=" w-full h-full object-cover "
+          className=" w-full h-full object-cover object-right "
         />
       </div>
       <div className="container">
