@@ -1,0 +1,10 @@
+header .header .container{
+    width: 100%;
+    max-width: 1520px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+header .header .subMenu {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
