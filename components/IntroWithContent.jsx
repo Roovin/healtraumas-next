@@ -6,7 +6,7 @@ export default function IntroWithContent() {
     <section className=" introWith_Content bg-[#cbe8fa]  padding-large relative w-full ">
       <div className="container">
         <div className="content relative w-full max-w-[1050px] mx-auto ">
-          <h2 className=" text-center text-[#0045bf] mb-8 ">What We Do</h2>
+          <h2 className=" text-center text-blue mb-8 ">What We Do</h2>
           <p className=" text-[#134fc3] mb-4 ">
             We work with international trauma experts and Ukrainian partners to
             scale existing evidence-based programs and pilot innovative
@@ -24,7 +24,7 @@ export default function IntroWithContent() {
           </p>
           <div className="button_wrap flex justify-center items-center mt-8 ">
             <Button
-              buttonText="Our Work"
+              buttonText="How We Help"
               buttonClass="default"
               url={"/our-work"}
             />
