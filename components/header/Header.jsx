@@ -9,25 +9,29 @@ export default function Header() {
     <header>
       <div className="header">
         <div className="container">
-          <div className="mainHeader flex">
-            <div className="logoWrap">
+          <div className="mainHeader flex items-center">
+            <div className="logoWrap max-w-[334px] relative">
+              <Link href={'/'} className='emptyLink'>.</Link>
               <Image src={'/logo/logo.png'} alt='Logo' width={334} height={140} />
             </div>
-            <div className="main-nav">
-              <div className="nav">
-                <ul>
+            <div className="main-nav flex items-center">
+              <div className="nav mr-[20px]">
+                <ul className='flex'>
                   {
                     headerData.map((item, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link href={item.url}>{item.nav}</Link>
-                          {/* <div className="subMenu">
+                          <div className="subMenu">
                             <ul>
+                              {
+
+                              }
                               <li>
-                                <Link></Link>
+                                <Link href={'/'}></Link>
                               </li>
                             </ul>
-                          </div> */}
+                          </div>
                         </li>
                       )
                     })
