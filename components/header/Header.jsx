@@ -54,7 +54,7 @@ export default function Header() {
                               {
                                 item?.subMenu?.map((val, i) => {
                                   return (
-                                    <li className='mb-[10px]'>
+                                    <li key={i} className='mb-[10px]'>
                                       <Link href={val.url} className='text-blue'>{val.subNav}</Link>
                                     </li>
                                   )
