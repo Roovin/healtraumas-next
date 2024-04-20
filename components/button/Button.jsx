@@ -4,7 +4,7 @@ const Button = ({ buttonText, url, target, buttonClass }) => {
 
   return (
     <>
-      <Link href={url} target={target ? "_blank":""} className={`button ${buttonClass}`}>{buttonText}</Link>
+      <Link href={'/'} target={target ? "_blank":""} className={`button ${buttonClass}`}>{buttonText}</Link>
     </>
    
   )
