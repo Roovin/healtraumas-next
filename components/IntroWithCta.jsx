@@ -42,7 +42,8 @@ export default function IntroWithCta({
               textcenterContent === true ? "text-center" : "text-left"
             }`}
           >
-            {paragraph && <p className=" text-black mb-4 ">{paragraph}</p>}
+            {paragraph && <p className=" text-black mb-4 "  dangerouslySetInnerHTML={{ __html: paragraph }} />}
+            {/* <div dangerouslySetInnerHTML={paragraph} /> */}
             <ul className=" list-none ">
               {listItem && (
                 <li className=" text-black mb-4 ">
