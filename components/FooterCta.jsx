@@ -7,7 +7,7 @@ export default function FooterCta() {
       <div className="container">
         <div className="intro text-center w-full  max-w-[1050px] mx-auto z-[2] ">
           <h2 className=" text-yellow mb-4">
-            Download our &apos Mental Health in Ukraine &apos report
+            Download our &ldquo;Mental Health in Ukraine&ldquo; report
           </h2>
           <p className="text-white">
             Sign up with your email address to download our report on mental
@@ -20,7 +20,7 @@ export default function FooterCta() {
             className=" relative w-[calc(100%+16px)] ml-[-8px] flex items-center justify-center lg:flex-wrap "
           >
             <div className=" relative w-full flex  items-center justify-center lg:flex-wrap ">
-              <div className="wrap relative w-full max-w-[315px] mx-2 mb-4 ">
+              <div className="wrap relative w-full max-w-[315px] mx-2 mb-4  before:content-[''] before:absolute before:top-[-4px] before:left-[-4px] before:w-[calc(100%+8px)] before:h-[calc(100%+8px)] before:bg-none before:border-solid before:border-[2px] before:border-white  ">
                 <label htmlFor="firstName" className=" text-[0] hidden ">
                   .
                 </label>
@@ -28,10 +28,10 @@ export default function FooterCta() {
                   type="text"
                   id="firstName"
                   placeholder="First Name"
-                  className=" relative w-full py-[22px] px-8 rounded-none bg-white "
+                  className=" relative w-full py-[22px] px-8 rounded-none bg-white border-none outline-none "
                 />
               </div>
-              <div className="wrap relative w-full max-w-[315px] mx-2 mb-4 ">
+              <div className="wrap relative w-full max-w-[315px] mx-2 mb-4 before:content-[''] before:absolute before:top-[-4px] before:left-[-4px] before:w-[calc(100%+8px)] before:h-[calc(100%+8px)] before:bg-none before:border-solid before:border-[2px] before:border-white  ">
                 <label htmlFor="lastName" className=" text-[0] hidden ">
                   .
                 </label>
@@ -39,10 +39,10 @@ export default function FooterCta() {
                   type="text"
                   id="lastName"
                   placeholder="Last Name"
-                  className=" relative w-full py-[22px] px-8 rounded-none border-solid border-[2px] border-white bg-white "
+                  className=" relative w-full py-[22px] px-8 rounded-none bg-white border-none outline-none "
                 />
               </div>
-              <div className="wrap relative w-full max-w-[315px] mx-2 mb-4 ">
+              <div className="wrap relative w-full max-w-[315px] mx-2 mb-4 before:content-[''] before:absolute before:top-[-4px] before:left-[-4px] before:w-[calc(100%+8px)] before:h-[calc(100%+8px)] before:bg-none before:border-solid before:border-[2px] before:border-white  ">
                 <label htmlFor="emailAddress" className=" text-[0] hidden ">
                   .
                 </label>
@@ -50,7 +50,7 @@ export default function FooterCta() {
                   type="email"
                   id="emailAddress"
                   placeholder="Email Address"
-                  className=" relative w-full py-[22px] px-8 rounded-none border-solid border-[2px] border-white bg-white "
+                  className=" relative w-full py-[22px] px-8 rounded-none bg-white border-none outline-none "
                 />
               </div>
             </div>
