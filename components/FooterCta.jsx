@@ -7,7 +7,7 @@ export default function FooterCta() {
       <div className="container">
         <div className="intro text-center w-full  max-w-[1050px] mx-auto z-[2] ">
           <h2 className=" text-yellow mb-4">
-            Download our "Mental Health in Ukraine" report
+            Download our &apos Mental Health in Ukraine &apos report
           </h2>
           <p className="text-white">
             Sign up with your email address to download our report on mental
@@ -63,7 +63,6 @@ export default function FooterCta() {
                 value="Sign Up"
                 buttonText="Sign Up"
                 buttonClass="default"
-                url={""}
               />
             </div>
           </form>
