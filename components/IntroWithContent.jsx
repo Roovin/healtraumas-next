@@ -7,17 +7,17 @@ export default function IntroWithContent() {
       <div className="container">
         <div className="content relative w-full max-w-[1050px] mx-auto ">
           <h2 className=" text-center text-blue mb-8 ">What We Do</h2>
-          <p className=" text-blue mb-4 ">
+          <p className=" text-black mb-4 ">
             We work with international trauma experts and Ukrainian partners to
             scale existing evidence-based programs and pilot innovative
             solutions for:{" "}
           </p>
-          <p className=" text-blue mb-4 ">
+          <p className=" text-black mb-4 ">
             1) <b className=" font-bold ">Veterans</b> - Supporting the
             introduction of novel therapies to improve outcomes for those with
             severe mental health conditions.{" "}
           </p>
-          <p className=" text-blue ">
+          <p className=" text-black ">
             2) <b className=" font-bold ">Children</b> – Implementing effective
             programs to address traumatic stress and reduce the risk of
             long-term mental health conditions.{" "}

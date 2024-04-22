@@ -4,9 +4,9 @@ export default function Introduction() {
   return (
     <section className=" introduction  padding-large relative w-full ">
       <div className="container">
-        <div className="intro relative w-full max-w-[817px] mx-auto text-center ">
+        <div className="intro relative w-full  max-w-[1050px] mx-auto text-center ">
           <h2 className=" text-blue  mb-8 ">The Need</h2>
-          <p className=" text-blue ">
+          <p className=" text-black ">
             The ongoing war has subjected Ukraine’s population of{" "}
             <b className=" font-bold ">44 million</b> to widespread traumatic
             stress. The WHO estimates that{" "}
