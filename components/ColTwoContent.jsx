@@ -6,10 +6,10 @@ export default function ColTwoContent({ data }) {
     return (
         <section className={`colTwoContent ${data[0]?.sectionBg}`}>
             <div className="container">
-                <div className="row flex">
+                <div className="row flex sm:flex-wrap">
                     {data.map((item, i) => {
                         return (
-                            <div key={i} className="item w-1/2">
+                            <div key={i} className="item w-1/2 sm:w-full">
                                 {item?.mainTitle ?
                                     <div className="title">
                                         <h2 className='h1 text-blue'>

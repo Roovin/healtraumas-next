@@ -31,6 +31,7 @@ h1 {
   line-height: 1.41;
   font-weight: 500;
 }
+
 .h2,
 h2 {
   font-size: 38px;
@@ -70,6 +71,98 @@ p {
   font-size: 16px;
   line-height: 1.7;
   font-weight: 300;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .h1,
+    h1 {
+      font-size: 40px;
+      
+    }
+    .h2,
+    h2  {
+      font-size: 30px;
+    }
+    .h3,
+    h3 {
+      font-size: 28px;
+    }
+    .h4,
+    h4 {
+      font-size: 22px;
+    }
+    .h5,
+    h5 {
+      font-size: 18px;
+    }
+    p,
+    .h6,
+    h6 {
+      font-size: 16px;
+    }
+    section {
+      padding: 60px 0;
+    }
+}
+@media (min-width: 595px) and (max-width: 767px) {
+  .h1,
+    h1 {
+      font-size: 36px;
+    }
+    .h2,
+    h2  {
+      font-size: 28px;
+    }
+    .h3,
+    h3 {
+      font-size: 24px;
+    }
+    .h4,
+    h4 {
+      font-size: 22px;
+    }
+    .h5,
+    h5 {
+      font-size: 18px;
+    }
+    p,
+    .h6,
+    h6 {
+      font-size: 16px;
+    }
+    section {
+      padding: 40px 0;
+    }
+}
+@media (max-width: 595px) {
+  .h1,
+    h1 {
+      font-size: 32px;
+    }
+    .h2,
+    h2  {
+      font-size: 24px;
+    }
+    .h3,
+    h3 {
+      font-size: 22px;
+    }
+    .h4,
+    h4 {
+      font-size: 20px;
+    }
+    .h5,
+    h5 {
+      font-size: 18px;
+    }
+    p,
+    .h6,
+    h6 {
+      font-size: 16px;
+    }
+    section {
+      padding: 40px 0;
+    }
 }
 
 .emptyLink {

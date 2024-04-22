@@ -57,10 +57,10 @@ export default function Header() {
 
   return (
     <header>
-      <div className={`${Style.header} header bg-blue ipad:py-[20px]`}>
+      <div className={`${Style.header} header bg-blue ipad:py-[20px] sm:py-[10px]`}>
         <div className={`container`}>
           <div className={`mainHeader ${Style.mainHeader} flex items-center justify-between`}>
-            <div className="logoWrap max-w-[200px] ipad:max-w-[150px] relative">
+            <div className="logoWrap max-w-[200px] ipad:max-w-[150px] sm:max-w-[100px] relative">
               <Link href={'/'} className='emptyLink'>.</Link>
               <Image src={'/logo/logo.png'} alt='Logo' width={334} height={140} />
             </div>
