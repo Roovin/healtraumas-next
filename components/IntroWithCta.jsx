@@ -1,15 +1,16 @@
 import React from "react";
 import Button from "./button/Button";
+import Image from "next/image";
 
 export default function IntroWithCta({
-  textskyblue,
+  bgskyblue,
+  bgImage,
   textcenterTitle,
   title,
-  textblue,
+  titleblue,
+  titlewhite,
   textcenterContent,
   paragraph,
-  paragraph2,
-  paragraph3,
   listItem,
   listTitle,
   listItem2,
@@ -19,9 +20,23 @@ export default function IntroWithCta({
 }) {
   return (
     <section
-      className={`introWith_cta padding-large relative w-full ${textskyblue === 'bg-skyBlue' ? 'bg-skyBlue' : ''}`}>
+      className={`introWith_cta padding-large relative w-full ${
+        bgImage ? "bgBlueOverlay" : ""
+      } ${bgskyblue === "bg-skyBlue" ? "bg-skyBlue" : ""}`}
+    >
+      {bgImage && (
+        <div className="bg_img absolute top-0 left-0 w-full h-full ">
+          <Image
+            src={bgImage}
+            width={2600}
+            height={2600}
+            className=" w-full h-full object-cover object-center "
+            alt="bg-img"
+          />
+        </div>
+      )}
       <div className="container">
-        <div className="content relative w-full  max-w-[1050px] mx-auto ">
+        <div className="content relative w-full  max-w-[1050px] mx-auto z-[2] ">
           <div
             className={`${
               textcenterTitle === true ? "text-center" : "text-left"
@@ -29,9 +44,9 @@ export default function IntroWithCta({
           >
             {title && (
               <h2
-                className={` ${
-                  textblue === true ? "text-blue" : "text-black"
-                }   mb-8 `}
+                className={` ${titleblue === true ? "text-blue" : ""} ${
+                  titlewhite === true ? " text-white" : ""
+                } text-black mb-8 `}
               >
                 {title}
               </h2>
@@ -42,7 +57,12 @@ export default function IntroWithCta({
               textcenterContent === true ? "text-center" : "text-left"
             }`}
           >
-            {paragraph && <p className=" text-black mb-4 "  dangerouslySetInnerHTML={{ __html: paragraph }} />}
+            {paragraph && (
+              <p
+                className=" text-black mb-4 "
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+              />
+            )}
             {/* <div dangerouslySetInnerHTML={paragraph} /> */}
             <ul className=" list-none ">
               {listItem && (
@@ -62,8 +82,6 @@ export default function IntroWithCta({
                 </li>
               )}
             </ul>
-            {paragraph2 && <p className=" text-black mb-4 ">{paragraph2}</p>}
-            {paragraph3 && <p className=" text-black mb-4 ">{paragraph3}</p>}
           </div>
           <div className="button_wrap flex justify-center items-center mt-8 ">
             <Button
@@ -72,9 +90,6 @@ export default function IntroWithCta({
               url={{ btnUrl }}
             />
           </div>
-          {/* <div className="button_wrap flex justify-center items-center mt-8 ">
-            <Button buttonText="Donate" buttonClass="default" url={"/donate"} />
-          </div> */}
         </div>
       </div>
     </section>

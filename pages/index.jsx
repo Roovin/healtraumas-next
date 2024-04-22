@@ -1,16 +1,17 @@
 import HeroBanner from "../components/HeroBanner";
 import Introduction from "../components/Introduction";
 import IntroWithCta from "../components/IntroWithCta";
-import { intro } from "../public/data/homePageData";
+import Testimonial from "../components/Testimonial";
+import { intro, intro3 } from "../public/data/homePageData";
 
 export default function Home() {
   return (
     <>
       <HeroBanner />
       <IntroWithCta
-        textskyblue={intro.textskyblue}
+        bgskyblue={intro.bgskyblue}
         title={intro.title}
-        textblue={intro.textblue}
+        titleblue={intro.titleblue}
         paragraph={intro.paragraph}
         textcenterTitle={intro.textcenterTitle}
         listTitle={intro.listTitle}
@@ -21,7 +22,15 @@ export default function Home() {
         btnUrl={intro.btnUrl}
       />
       <Introduction />
-      <IntroWithCta />
+      <IntroWithCta
+        bgImage={intro3.bgImage}
+        title={intro3.title}
+        titlewhite={intro3.titlewhite}
+        textcenterTitle={intro3.textcenterTitle}
+        btnText={intro3.btnText}
+        btnUrl={intro3.btnUrl}
+      />
+      <Testimonial />
     </>
   );
 }

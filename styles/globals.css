@@ -83,6 +83,10 @@ p {
   z-index: 9;
 }
 
+p span {
+  font-weight: 700;
+}
+
 .padding-large{
   padding: 120px 0;
 }
@@ -126,4 +130,18 @@ p {
   max-width: 1380px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.bgBlueOverlay{
+  position: relative;
+}
+.bgBlueOverlay::after{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0045bf;
+  opacity: 0.4;
 }
