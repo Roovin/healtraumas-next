@@ -33,7 +33,6 @@ export default function Header() {
       setSubMenu("h")
   }
   const toggleMenu = () => { 
-    console.log('test');
     setIsMenuOpen(!isMenuOpen);
   }
 
@@ -53,7 +52,7 @@ export default function Header() {
                     headerData.map((item, i) => {
                       return (
                         <li key={i} className='mr-[30px] pb-[42px]' onMouseEnter={(e) => showSubManu(e, i)} onMouseLeave={(e) => hideMenu(e, i)}>
-                          <Link href={item.url} className={`text-white`} >{item.nav}</Link>
+                          <Link href={item.url} className={`text-white ${ item?.subMenu ? Style.arrow : ''} ${openSubMenu === i ? Style.show : ''} `} >{item.nav}</Link>
                           <div className={`subMenu ${Style.subMenu} ${openSubMenu == i ? 'block' : 'hidden'} ${item?.subMenu ? 'block' : 'hidden'} absolute bottom-0 bg-white h-full p-[20px] z-[99]`} style={subMenuProrperty}>
                             <ul>
                               {

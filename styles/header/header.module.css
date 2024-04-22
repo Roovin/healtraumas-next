@@ -12,3 +12,21 @@ header .header .subMenu {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+header .header a.arrow {
+    position: relative;
+}
+header .header a.arrow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 12px;
+    height: 7px;
+    background: url('../../public/icons/dropDownArrow.svg') no-repeat;
+    background-size: cover;
+    transform: translateY(-50%) rotate(0);
+    transition: all 0.3s ease-in-out;
+}
+header .header a.arrow.show::before {
+    transform: translateY(-50%) rotate(180deg);
+}
