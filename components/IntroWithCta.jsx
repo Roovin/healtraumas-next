@@ -19,10 +19,7 @@ export default function IntroWithCta({
 }) {
   return (
     <section
-      className={`introWith_cta padding-large relative w-full ${
-        textskyblue === true ? "bg-skyBlue" : " "
-      } `}
-    >
+      className={`introWith_cta padding-large relative w-full ${textskyblue}`}>
       <div className="container">
         <div className="content relative w-full  max-w-[1050px] mx-auto ">
           <div

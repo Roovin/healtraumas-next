@@ -1,5 +1,5 @@
 const intro = {
-  textskyblue: true,
+  textskyblue: "bg-skyBlue",
   textcenterTitle: true,
   title: "What We Do",
   textblue: true,
