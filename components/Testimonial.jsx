@@ -15,7 +15,7 @@ const testimonialSliderData = [
 
 export default function Testimonial() {
   return (
-    <section className="testimonial relative w-full padding-large bg-skyBlue ">
+    <section className="testimonial relative w-full bg-skyBlue ">
       <div className="container">
         <div className="testimonial_content_wrap relative w-full  max-w-[1050px] mx-auto flex overflow-hidden ">
           {testimonialSliderData.map((testimonialSlider) => (

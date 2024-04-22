@@ -3,7 +3,7 @@ import Button from "./button/Button";
 
 export default function FooterCta() {
   return (
-    <section className="FooterCta relative w-full bg-blue padding-large ">
+    <section className="FooterCta relative w-full bg-blue">
       <div className="container">
         <div className="intro text-center w-full  max-w-[1050px] mx-auto z-[2] ">
           <h2 className=" text-yellow mb-4">
@@ -63,6 +63,7 @@ export default function FooterCta() {
                 value="Sign Up"
                 buttonText="Sign Up"
                 buttonClass="default"
+                url={"/"}
               />
             </div>
           </form>

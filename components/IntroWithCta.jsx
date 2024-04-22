@@ -20,7 +20,7 @@ export default function IntroWithCta({
 }) {
   return (
     <section
-      className={`introWithCta padding-large relative w-full ${
+      className={`introWithCta relative w-full ${
         bgImage ? "bgBlueOverlay" : ""
       } ${bgskyblue === "bg-skyBlue" ? "bg-skyBlue" : ""}`}
     >
