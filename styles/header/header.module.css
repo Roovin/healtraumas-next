@@ -1,3 +1,7 @@
+header .header {
+    max-width:1960px;
+    margin: 0 auto;
+}
 header .header .container{
     width: 100%;
     max-width: 1520px;

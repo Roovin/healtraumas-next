@@ -1,0 +1,16 @@
+footer .footer {
+    max-width:1960px;
+    margin: 0 auto;
+}
+@media (max-width: 1024px) {
+    footer .footer .logoWrap{ 
+        max-width: 200px;
+        width: 100%;
+    }
+}
+@media (max-width: 595px) {
+    footer .footer .logoWrap{ 
+        max-width: 150px;
+        width: 100%;
+    }
+}
