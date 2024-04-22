@@ -83,13 +83,15 @@ export default function IntroWithCta({
               )}
             </ul>
           </div>
-          <div className="button_wrap flex justify-center items-center mt-8 ">
-            <Button
-              buttonText={btnText}
-              buttonClass="default"
-              url={{ btnUrl }}
-            />
-          </div>
+          {btnText && (
+            <div className="button_wrap flex justify-center items-center mt-8 ">
+              <Button
+                buttonText={btnText}
+                buttonClass="default"
+                url={{ btnUrl }}
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>

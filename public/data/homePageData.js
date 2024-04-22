@@ -14,6 +14,22 @@ const intro = {
   btnText: "How We Help",
   btnUrl: "/our-work",
 };
+const intro2 = {
+  bgskyblue: "",
+  bgImage: "",
+  textcenterTitle: true,
+  title: "The Need",
+  titleblue: true,
+  titlewhite: false,
+  textcenterContent: true,
+  paragraph: "The ongoing war has subjected Ukraine’s population of <span>44 million</span> to widespread traumatic stress. The WHO estimates that <span>1 in 4 Ukrainians</span> are at risk of developing a severe mental health condition such as PTSD, depression, or anxiety as a result of the war. By healing trauma now, we can improve long-term mental health outcomes for millions of Ukrainians. ",
+  listTitle: "",
+  listItem: "",
+  listTitle2: "",
+  listItem2: "",
+  btnText: "",
+  btnUrl: "",
+};
 const intro3 = {
   bgskyblue: "",
   bgImage: "/introWithCta/footer_cta_bgimg.jpeg",
@@ -30,4 +46,4 @@ const intro3 = {
   btnText: "Donate",
   btnUrl: "/donate",
 };
-export { intro, intro3, };
+export { intro, intro2, intro3, };

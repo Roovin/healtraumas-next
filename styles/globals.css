@@ -145,3 +145,10 @@ p span {
   background-color: #0045bf;
   opacity: 0.4;
 }
+
+.slick-slider {
+  width: 100%;
+}
+.slick-track {
+  display: flex;
+}
