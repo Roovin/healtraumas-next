@@ -1,20 +1,24 @@
 header .header {
-    max-width:1960px;
+    max-width: 1960px;
     margin: 0 auto;
 }
-header .header .container{
+
+header .header .container {
     width: 100%;
     max-width: 1520px;
     padding: 0 20px;
     margin: 0 auto;
 }
+
 header .header .subMenu {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 header .header a.arrow {
     position: relative;
 }
+
 header .header a.arrow::before {
     content: '';
     position: absolute;
@@ -27,6 +31,19 @@ header .header a.arrow::before {
     transform: translateY(-50%) rotate(0);
     transition: all 0.3s ease-in-out;
 }
+
 header .header a.arrow.show::before {
     transform: translateY(-50%) rotate(180deg);
+}
+
+header .header .subMenu .backBtn {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 12px;
+    height: 20px;
+    background: url('../../public/icons/right-arrow-black.svg') no-repeat;
+    background-size: cover;
+    transform: translateY(-65%) rotate(180deg);
 }
