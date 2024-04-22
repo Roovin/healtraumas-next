@@ -20,7 +20,7 @@ export default function IntroWithCta({
 }) {
   return (
     <section
-      className={`introWith_cta padding-large relative w-full ${
+      className={`introWithCta padding-large relative w-full ${
         bgImage ? "bgBlueOverlay" : ""
       } ${bgskyblue === "bg-skyBlue" ? "bg-skyBlue" : ""}`}
     >
@@ -28,8 +28,8 @@ export default function IntroWithCta({
         <div className="bg_img absolute top-0 left-0 w-full h-full ">
           <Image
             src={bgImage}
-            width={2600}
-            height={2600}
+            width={2000}
+            height={2000}
             className=" w-full h-full object-cover object-center "
             alt="bg-img"
           />
