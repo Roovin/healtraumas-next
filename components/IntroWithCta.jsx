@@ -5,7 +5,9 @@ import Image from "next/image";
 export default function IntroWithCta({ data, className }) {
   return (
     <section
-      className={`introWithCta relative w-full ${data.bgImage ? "bgBlueOverlay" : ""} ${className} ${data.bgskyblue}`}
+      className={`introWithCta relative w-full ${
+        data.bgImage ? "bgBlueOverlay" : ""
+      } ${className} ${data.bgskyblue}`}
     >
       {data.bgImage && (
         <div className="bg_img absolute top-0 left-0 w-full h-full ">
@@ -20,47 +22,60 @@ export default function IntroWithCta({ data, className }) {
       )}
       <div className="container">
         <div className="content relative w-full  max-w-[1050px] mx-auto z-[2] ">
-          <div
-            className={`text-center`}
-          >
+          <div className={`text-center`}>
             {data.title && (
               <h2
-                className={` ${data.bgImage  ? "text-white" : ""} text-blue mb-8 `}
+                className={` ${
+                  data.bgImage ? "text-white" : ""
+                } text-blue mb-8 `}
               >
                 {data.title}
               </h2>
             )}
+            {data.titleSpan && (
+              <h2
+                className={` ${
+                  data.bgImage ? "text-white" : ""
+                } text-blue mb-8 `}
+              >
+                <span className="text-[51px]">{data.titleSpan}</span>
+              </h2>
+            )}
           </div>
           <div
-            className={`${data.textcenterContent === true ? "text-center" : "text-left"
-              }`}
+            className={`${
+              data.textcenterContent === true ? "text-center" : "text-left"
+            }`}
           >
-            {data.paragraph && ( 
+            {data.paragraph && (
               <p
                 className=" text-black mb-4 "
                 dangerouslySetInnerHTML={{ __html: data.paragraph }}
               />
             )}
-            {
-              data.listItem && (
-                <ul className=" list-none ">
-                  {data.listItem && (
-                    <li className=" text-black mb-4 ">
-                      <p >
-                        {data.listTitle && <b className=" font-bold ">{data.listTitle}</b>}
-                        {data.listItem}
-                      </p>
-                    </li>
-                  )}
-                  {data.listItem2 && (
-                    <li className=" text-black mb-4 ">
-                      <p>
-                        {data.listTitle2 && <b className=" font-bold ">{data.listTitle2}</b>}
-                        {data.listItem2}
-                      </p>
-                    </li>
-                  )}
-                </ul> 
+            {data.listItem && (
+              <ul className=" list-none ">
+                {data.listItem && (
+                  <li className=" text-black mb-4 ">
+                    <p>
+                      {data.listTitle && (
+                        <b className=" font-bold ">{data.listTitle}</b>
+                      )}
+                      {data.listItem}
+                    </p>
+                  </li>
+                )}
+                {data.listItem2 && (
+                  <li className=" text-black mb-4 ">
+                    <p>
+                      {data.listTitle2 && (
+                        <b className=" font-bold ">{data.listTitle2}</b>
+                      )}
+                      {data.listItem2}
+                    </p>
+                  </li>
+                )}
+              </ul>
             )}
           </div>
           {data.btnText && (
