@@ -3,6 +3,7 @@ import IntroWithCta from "../components/IntroWithCta";
 import ColTwoContent from "../components/ColTwoContent";
 import ParallaxBlade from "../components/ParallaxBlade";
 import ContentWithVideo from "../components/ContentWithVideo";
+import ContentWithImage from "../components/ContentWithImage";
 import FooterCta from "../components/FooterCta";
 import {
   intro,
@@ -10,6 +11,10 @@ import {
   intro2,
   parallaxBlade,
   parallaxBlade2,
+  intro3,
+  contentwithimage,
+  contentwithimage2,
+  contentwithimage3,
 } from "../public/data/ourWorkPageData";
 
 export default function ourWork() {
@@ -21,6 +26,10 @@ export default function ourWork() {
       <IntroWithCta data={intro2} />
       <ContentWithVideo />
       {/* <ParallaxBlade data={parallaxBlade2} /> */}
+      <IntroWithCta data={intro3} />
+      <ContentWithImage data={contentwithimage} />
+      <ContentWithImage data={contentwithimage2} />
+      <ContentWithImage data={contentwithimage3} />
       <FooterCta />
     </>
   );
