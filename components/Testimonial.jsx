@@ -6,7 +6,7 @@ const testimonialSliderData = [
   {
     id: 1,
     quote:
-      "Ukrainian children are proving to be exceptionally resilient in what is the bloodiest war in Europe since the Second World War. Their stories of survival and overcoming trauma are both heartbreaking and uplifting. Some children, however, need support. We know how to support them. <span>Helping now prevents a lot of suffering in the future.</span> ",
+      "&ldquo;Ukrainian children are proving to be exceptionally resilient in what is the bloodiest war in Europe since the Second World War. Their stories of survival and overcoming trauma are both heartbreaking and uplifting. Some children, however, need support. We know how to support them. <span>Helping now prevents a lot of suffering in the future.</span>&ldquo; ",
     authorName: "Dennis Ougrin",
     author:
       ", MBBS, PhD, Professor of Child and Adolescent Psychiatry, Heal Ukraine Trauma Advisory Board Member",
@@ -23,13 +23,14 @@ export default function Testimonial() {
               className="testimonial_content relative w-full text-center "
               key={testimonialSlider}
             >
-              <p className=" mb-4">
-                <q
+              <blockquote>
+                <p
+                  className=" mb-4"
                   dangerouslySetInnerHTML={{
                     __html: testimonialSlider.quote,
                   }}
                 />
-              </p>
+              </blockquote>
               <p>
                 -{" "}
                 <Link href="/our-team" className=" underline ">

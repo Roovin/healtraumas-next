@@ -30,5 +30,21 @@ const colTwoContentData = [
     // btnUrl: "Get Involved",
   }
 ]
+const intro2 = {
+  bgskyblue: "bg-white",
+  bgImage: "",
+  textcenterTitle: true,
+  title: "",
+  titleblue: true,
+  titlewhite: false,
+  textcenterContent: true,
+  paragraph: "There are currently over 500,000 people in the Ukrainian military. Data in Ukraine from 2012-2021 shows that military hospital admissions for mental health increased <span>6.97</span> times during periods of active hostility. Another study found that <span>57%</span> of Ukrainian veterans needed psychological support. The end of the war could lead to a wave of severe mental health disorders among veterans.",
+  listTitle: "",
+  listItem: "",
+  listTitle2: "",
+  listItem2: "",
+  btnText: "",
+  btnUrl: "",
+};
 
-export { intro, colTwoContentData };
+export { intro, colTwoContentData, intro2, };
