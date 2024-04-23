@@ -34,7 +34,7 @@ export default function ColTwoContent({ data }) {
                                         }  
                                        {item.btn && (
                                         <Button
-                                            buttonText="Our Work"
+                                            buttonText={text}
                                             buttonClass="default"
                                             url={btnUrl}
                                         />
