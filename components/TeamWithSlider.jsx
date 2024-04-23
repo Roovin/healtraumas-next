@@ -84,9 +84,17 @@ export default function TeamWithSlider({ data }) {
 	}, [slider]);
     return (
         <>
-            <IntroWithCta data={operatingTeamDataIntro} className={'pb-0'} />
-            <section className="teamWithSlider pt-0">
+            {/* <IntroWithCta data={operatingTeamDataIntro} className={data.sectionClass} /> */}
+            <section className={`teamWithSlider ${data.sectionClass}`}>
                 <div className="container">
+                    <div className="intro text-center mb-[40px]">
+                        <h2 className='text-blue'>{data.title}</h2>
+                        {
+                            data.title && (
+                                <p>{data.description}</p>
+                            )
+                        }
+                    </div>
                     <div className="cardWrapper flex flex-wrap w-full">
                         {data?.team?.map((item, index) => {
                             return (
