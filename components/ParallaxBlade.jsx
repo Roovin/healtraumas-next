@@ -17,28 +17,26 @@ export default function ParallaxBlade() {
   }, []);
 
   return (
-    <>
-      <section
-        className={`parallaxBlade relative w-full bgBlueOverlay padding-large `}
+    <section
+      className={`parallaxBlade relative w-full bgBlueOverlay padding-large `}
+    >
+      <div
+        className="bgImg fixed top-[300px] left-0 w-full h-full z-[-1] "
+        style={{ transform: `translateY(-${scrollY * 0.63}px)` }}
       >
-        <div
-          className="bgImg fixed top-[300px] left-0 w-full h-full z-[-1] "
-          style={{ transform: `translateY(-${scrollY * 0.6}px)` }}
-        >
-          <Image
-            src="/parallaxImg/parallax_img1.jpeg"
-            width={1920}
-            height={500}
-            className=" w-full h-full object-cover object-center "
-            alt="bg-img"
-          />
+        <Image
+          src="/parallaxImg/parallax_img1.jpeg"
+          width={1920}
+          height={500}
+          className=" w-full h-full object-cover object-center "
+          alt="bg-img"
+        />
+      </div>
+      <div className="container">
+        <div className="parallaxContent relative w-full text-center z-[2] ">
+          <h2 className=" text-skyBlue ">Veterans Programs</h2>
         </div>
-        <div className="container">
-          <div className="parallaxContent relative w-full text-center z-[2] ">
-            <h2 className=" text-skyBlue ">Veterans Programs</h2>
-          </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -53,6 +53,7 @@ export default function IntroWithCta({ data, className }) {
                 dangerouslySetInnerHTML={{ __html: data.paragraph }}
               />
             )}
+            {data.paragraph2 && <p className="mb-4">{data.paragraph2}</p>}
             {data.listItem && (
               <ul className=" list-none ">
                 {data.listItem && (

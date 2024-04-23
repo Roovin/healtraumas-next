@@ -2,6 +2,7 @@ import React from "react";
 import IntroWithCta from "../components/IntroWithCta";
 import ColTwoContent from "../components/ColTwoContent";
 import ParallaxBlade from "../components/ParallaxBlade";
+import ContentWithVideo from "../components/ContentWithVideo";
 import {
   intro,
   colTwoContentData,
@@ -15,6 +16,7 @@ export default function ourWork() {
       <ColTwoContent data={colTwoContentData} />
       <ParallaxBlade />
       <IntroWithCta data={intro2} />
+      <ContentWithVideo />
     </>
   );
 }
