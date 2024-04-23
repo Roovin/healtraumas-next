@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './button/Button'
 
 export default function ColTwoContent({ data }) {
     // console.log(data);
@@ -24,9 +25,20 @@ export default function ColTwoContent({ data }) {
                                                     <p>{val?.description}</p>
                                                 </div>
                                             )
-                                            }) : 
-                                            <p>{item.description}</p>
-                                        }
+                                            }) :  <>
+                                                <p>{item.description}</p>
+                                                {item.descriptionTwo && (
+                                                    <p>{item.descriptionTwo}</p>
+                                                )}
+                                                </>
+                                        }  
+                                       {item.btn && (
+                                        <Button
+                                            buttonText="Our Work"
+                                            buttonClass="default"
+                                            url={"/our-work"}
+                                        />
+                                       )}
                                     </div>
                                 }
                             </div>

@@ -2,34 +2,17 @@ import React from "react";
 import Button from "./button/Button";
 import Image from "next/image";
 
-export default function IntroWithCta({
-  bgskyblue,
-  bgImage,
-  textcenterTitle,
-  title,
-  titleblue,
-  titlewhite,
-  textcenterContent,
-  paragraph,
-  listItem,
-  listTitle,
-  listItem2,
-  listTitle2,
-  btnText,
-  btnUrl,
-}) {
+export default function IntroWithCta({ data }) {
   return (
     <section
-      className={`introWithCta relative w-full ${
-        bgImage ? "bgBlueOverlay" : ""
-      } ${bgskyblue === "bg-skyBlue" ? "bg-skyBlue" : ""}`}
+      className={`introWithCta relative w-full ${data.bgImage ? "bgBlueOverlay" : ""} ${data.bgskyblue}`}
     >
-      {bgImage && (
+      {data.bgImage && (
         <div className="bg_img absolute top-0 left-0 w-full h-full ">
           <Image
-            src={bgImage}
-            width={2000}
-            height={2000}
+            src={data.bgImage}
+            width={1920}
+            height={500}
             className=" w-full h-full object-cover object-center "
             alt="bg-img"
           />
@@ -38,57 +21,55 @@ export default function IntroWithCta({
       <div className="container">
         <div className="content relative w-full  max-w-[1050px] mx-auto z-[2] ">
           <div
-            className={`${
-              textcenterTitle === true ? "text-center" : "text-left"
-            }`}
+            className={`${data.textcenterTitle === true ? "text-center" : "text-left"
+              }`}
           >
-            {title && (
+            {data.title && (
               <h2
-                className={` ${titleblue === true ? "text-blue" : ""} ${
-                  titlewhite === true ? " text-white" : ""
-                } text-black mb-8 `}
+                className={` ${data.bgImage  ? "text-white" : ""} text-black mb-8 `}
               >
-                {title}
+                {data.title}
               </h2>
             )}
           </div>
           <div
-            className={`${
-              textcenterContent === true ? "text-center" : "text-left"
-            }`}
+            className={`${data.textcenterContent === true ? "text-center" : "text-left"
+              }`}
           >
-            {paragraph && (
+            {data.paragraph && (
               <p
                 className=" text-black mb-4 "
-                dangerouslySetInnerHTML={{ __html: paragraph }}
+                dangerouslySetInnerHTML={{ __html: data.paragraph }}
               />
             )}
-            {/* <div dangerouslySetInnerHTML={paragraph} /> */}
-            <ul className=" list-none ">
-              {listItem && (
-                <li className=" text-black mb-4 ">
-                  <p>
-                    {listTitle && <b className=" font-bold ">{listTitle}</b>}
-                    {listItem}
-                  </p>
-                </li>
-              )}
-              {listItem2 && (
-                <li className=" text-black mb-4 ">
-                  <p>
-                    {listTitle2 && <b className=" font-bold ">{listTitle2}</b>}
-                    {listItem2}
-                  </p>
-                </li>
-              )}
-            </ul>
+            {
+              data.listItem && (
+                <ul className=" list-none ">
+                  {data.listItem && (
+                    <li className=" text-black mb-4 ">
+                      <p >
+                        {data.listTitle && <b className=" font-bold ">{data.listTitle}</b>}
+                        {data.listItem}
+                      </p>
+                    </li>
+                  )}
+                  {data.listItem2 && (
+                    <li className=" text-black mb-4 ">
+                      <p>
+                        {data.listTitle2 && <b className=" font-bold ">{data.listTitle2}</b>}
+                        {data.listItem2}
+                      </p>
+                    </li>
+                  )}
+                </ul> 
+            )}
           </div>
-          {btnText && (
+          {data.btnText && (
             <div className="button_wrap flex justify-center items-center mt-8 ">
               <Button
-                buttonText={btnText}
+                buttonText={data.btnText}
                 buttonClass="default"
-                url={{ btnUrl }}
+                url={data.btnUrl}
               />
             </div>
           )}
