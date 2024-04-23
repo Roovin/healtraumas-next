@@ -15,4 +15,18 @@ const intro = {
   btnUrl: "",
 };
 
-export { intro, };
+const colTwoContentData = [
+  {
+    id: "1",
+    mainTitle: "Our Approach",
+    sectionBg: "bg-skyBlue",
+  },
+  {
+    id: "2",
+    sectionBg: "",
+    mainTitle: "",
+    description: "Heal Ukraine Trauma brings unique value – we focus on areas of great need, build collaborative partnerships, and lead project teams. Our global network of experts helps us achieve maximum impact."
+  }
+]
+
+export { intro, colTwoContentData };
