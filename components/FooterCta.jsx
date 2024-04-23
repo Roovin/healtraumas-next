@@ -28,7 +28,7 @@ export default function FooterCta() {
                   type="text"
                   id="firstName"
                   placeholder="First Name"
-                  className=" relative w-full py-[22px] px-8 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px] "
+                  className=" relative w-full py-[22px] px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px] "
                 />
               </div>
               <div className="wrap relative w-full max-w-[315px] mx-2 mb-4 ">
@@ -39,7 +39,7 @@ export default function FooterCta() {
                   type="text"
                   id="lastName"
                   placeholder="Last Name"
-                  className=" relative w-full py-[22px] px-8 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px] "
+                  className=" relative w-full py-[22px] px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px] "
                 />
               </div>
               <div className="wrap relative w-full max-w-[315px] mx-2 mb-4 ">
@@ -50,11 +50,11 @@ export default function FooterCta() {
                   type="email"
                   id="emailAddress"
                   placeholder="Email Address"
-                  className=" relative w-full py-[22px] px-8 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px] "
+                  className=" relative w-full py-[22px] px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px] "
                 />
               </div>
             </div>
-            <div className="btnWrap relative w-full max-w-[133px] mx-2 mb-4  lg:max-w-full lg:flex lg:justify-center lg:mt-8 lg:mb-0  ">
+            <div className="btnWrap relative w-full max-w-[133px] mx-2 mb-4  lg:max-w-full lg:flex lg:justify-center lg:mt-7 lg:mb-0  ">
               <label htmlFor="submit" className=" text-[0] hidden ">
                 .
               </label>
