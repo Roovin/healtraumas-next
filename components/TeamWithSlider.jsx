@@ -88,7 +88,7 @@ export default function TeamWithSlider({ data }) {
             <section className={`teamWithSlider ${data.sectionClass}`}>
                 <div className="container">
                     <div className="intro text-center mb-[40px] max-w-[1050px] mx-auto">
-                        <h2 className='text-blue mb-[20px]'>{data.title}</h2>
+                        <h2 className={` ${data.sectionClass === 'bg-blue' ? 'text-white' : 'text-blue'} mb-[20px]`}>{data.title}</h2>
                         {
                             data.title && (
                                 <p>{data.description}</p>

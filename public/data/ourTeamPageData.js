@@ -48,7 +48,7 @@ export const operatingTeamData =
 export const DirectorsTeamData = 
     {
         title: "Our Board of Directors",
-        sectionClass: "pt-0",
+        sectionClass: "bg-skyBlue",
         team: [
             {
                 id: "1",
@@ -104,7 +104,7 @@ export const DirectorsTeamData =
 export const advisoryTeamData = 
     {
         title: "Our Advisory Board",
-        sectionClass: "pt-0",
+        sectionClass: "",
         description: "Advisory Board members have expertise in psychiatry, psychology, clinical research, humanitarian response, international development, and healthcare communications. Their guidance ensures our work has maximum impact. ",
         team: [
             {
