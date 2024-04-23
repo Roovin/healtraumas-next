@@ -26,7 +26,7 @@ export default function IntroWithCta({ data }) {
           >
             {data.title && (
               <h2
-                className={` ${data.bgImage  ? "text-white" : ""} text-black mb-8 `}
+                className={` ${data.bgImage  ? "text-white" : ""} text-blue mb-8 `}
               >
                 {data.title}
               </h2>
@@ -36,7 +36,7 @@ export default function IntroWithCta({ data }) {
             className={`${data.textcenterContent === true ? "text-center" : "text-left"
               }`}
           >
-            {data.paragraph && (
+            {data.paragraph && ( 
               <p
                 className=" text-black mb-4 "
                 dangerouslySetInnerHTML={{ __html: data.paragraph }}
