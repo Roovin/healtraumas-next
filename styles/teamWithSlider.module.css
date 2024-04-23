@@ -1,0 +1,24 @@
+.overlay{
+    background: rgba(0, 0, 0, 0.6);
+    /* display: block; */
+    height: 100%;
+    right: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    /* width: 100%; */
+    z-index: 300;
+}
+.overlaycardsWrap{
+    transform: translateY(-50%);
+}
+@media screen and (min-width: 767px) and (max-width: 991px) and (orientation: landscape) {
+    .overlaycardsWrap{
+        transform: unset;
+    }
+}
+@media (max-width: 767px) {
+    .overlaycardsWrap{
+        transform: unset;
+    }
+}
