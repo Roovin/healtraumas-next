@@ -50,4 +50,11 @@ const intro2 = {
   btnUrl: "",
 };
 
-export { intro, colTwoContentData, intro2, };
+const parallaxBlade = {
+  imgUrl: "/parallaxImg/parallax_img1.jpeg",
+};
+const parallaxBlade2 = {
+  imgUrl: "/introWithCta/footer_cta_bgimg.jpeg",
+}
+
+export { intro, colTwoContentData, intro2, parallaxBlade, parallaxBlade2, };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function ContentWithVideo() {
   const [videoDimensions, setVideoDimensions] = useState({
@@ -26,7 +27,7 @@ export default function ContentWithVideo() {
   return (
     <section className="contentWithVideo bg-skyBlue ">
       <div className="container">
-        <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap ">
+        <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap mb-[100px] ">
           <div className="content w-[calc(50%-40px)] mx-[20px] ">
             <h4 className="text-blue mb-8 ">
               Conference on novel therapies for severe PTSD
@@ -80,6 +81,72 @@ export default function ContentWithVideo() {
                 className=" w-full h-full "
               ></iframe>
             </div>
+          </div>
+        </div>
+        <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap mb-[100px] ">
+          <div className="content w-[calc(50%-40px)] mx-[20px] ">
+            <h4 className="text-blue mb-8 ">Therapist Training</h4>
+            <p className=" mb-4">
+              Heal Ukraine Trauma partnered with Fluence, a leader in
+              psychedelic therapy training, and the Ukrainian Psychedelic
+              Research Association to make Fluence’s introductory course on
+              psychedelic-assisted therapy available for free in Ukrainian
+              language for psychologists and medical doctors addressing
+              conflict-related trauma. Read more about the initiative
+              <a
+                href="https://www.forbes.com/sites/davidcarpenter/2024/03/06/war-torn-ukraine-sees-increased-psychedelic-training-to-combat-effects-of-ptsd/"
+                className=" underline ml-1 "
+              >
+                here
+              </a>
+              .
+            </p>
+          </div>
+          <div className="videoWrapper w-[calc(50%-40px)]  mx-[20px] ">
+            <div className="logoWrapper relative w-full flex justify-end ">
+              <div className="logo relative w-full max-w-[225px] h-full max-h-[96px] ">
+                <Image
+                  src="/contentWithVideo/logo_img1.png"
+                  width={400}
+                  height={400}
+                  alt="logo"
+                  className=" w-full h-full object-cover "
+                />
+              </div>
+              <div className="logo relative w-full max-w-[225px] h-full max-h-[222px] ml-10 ">
+                <Image
+                  src="/contentWithVideo/logo_img2.png"
+                  width={400}
+                  height={400}
+                  alt="logo"
+                  className=" w-full h-full object-cover "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap ">
+          <div className="content w-[calc(50%-40px)] mx-[20px] ">
+            <h4 className="text-blue mb-8 ">
+              Program Under development - Ketamine Assisted Group Therapy
+              Training
+            </h4>
+            <p className=" mb-4">
+              Our pilot program aims to develop a comprehensive group
+              ketamine-assisted psychotherapy (KAP) curriculum and initially
+              train 8 psychotherapists in Kyiv to facilitate group sessions. Due
+              to the scale of the mental health crisis in Ukraine, 11 million
+              people are projected to need psychosocial support, making
+              solutions that maximize resources and go beyond a 1-to-1 model
+              between patient and provider essential. With immediate
+              applicability due to ketamine’s effectiveness and legal status,
+              this training will have a real impact now. In the long term, the
+              KAP group model can serve as a framework for psychedelic-assisted
+              group therapy if psychedelic medicines become legally available in
+              Ukraine. Following the initial pilot, the program will be scaled
+              to more therapists, building their capacity to ultimately reach
+              thousands with KAP.
+            </p>
           </div>
         </div>
       </div>

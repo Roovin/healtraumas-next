@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function ParallaxBlade() {
+export default function ParallaxBlade({ data }) {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function ParallaxBlade() {
         style={{ transform: `translateY(-${scrollY * 0.63}px)` }}
       >
         <Image
-          src="/parallaxImg/parallax_img1.jpeg"
+          src={data.imgUrl}
           width={1920}
           height={500}
           className=" w-full h-full object-cover object-center "
