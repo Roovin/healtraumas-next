@@ -21,8 +21,7 @@ export default function IntroWithCta({ data, className }) {
       <div className="container">
         <div className="content relative w-full  max-w-[1050px] mx-auto z-[2] ">
           <div
-            className={`${data.textcenterTitle === true ? "text-center" : "text-left"
-              }`}
+            className={`text-center`}
           >
             {data.title && (
               <h2

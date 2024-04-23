@@ -2,7 +2,7 @@ export const operatingTeamDataIntro = {
     title: "Our Operating Team",
     description: ""
 }
-export const operatingTeamData = [
+export const operatingTeamData = 
     {
         title: "Our Operating Team",
         team: [
@@ -48,4 +48,3 @@ export const operatingTeamData = [
             },
         ]
     }
-]
