@@ -87,8 +87,8 @@ export default function TeamWithSlider({ data }) {
             {/* <IntroWithCta data={operatingTeamDataIntro} className={data.sectionClass} /> */}
             <section className={`teamWithSlider ${data.sectionClass}`}>
                 <div className="container">
-                    <div className="intro text-center mb-[40px]">
-                        <h2 className='text-blue'>{data.title}</h2>
+                    <div className="intro text-center mb-[40px] max-w-[1050px] mx-auto">
+                        <h2 className='text-blue mb-[20px]'>{data.title}</h2>
                         {
                             data.title && (
                                 <p>{data.description}</p>
@@ -100,8 +100,8 @@ export default function TeamWithSlider({ data }) {
                             return (
                                 <div key={index} className={`card relative group w-[calc(25%-30px)] mx-[15px] sm:w-full sm:mx-0 phablet:w-[calc(50%-20px)] phablet:mx-[10px] tablet:w-[calc(33%-20px)] tablet:mx-[10px] bg-white mb-[30px] border-black border-[2px] rounded-[10px] hover:shadow-xl`} onClick={() => clickOverlay(index)}>
                                     <span className='emptyLink'>.</span>
-                                    <div className="imgWrap max-w-full overflow-hidden">
-                                        <Image src={item.imageUrl} alt={item.alt} width={300} height={400} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] sm:object-cover' />
+                                    <div className="imgWrap max-w-full overflow-hidden max-h-[300px] h-full">
+                                        <Image src={item.imageUrl} alt={item.alt} width={300} height={300} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] object-cover h-full' />
                                     </div>
                                     <div className="contentWrap px-[15px] py-[20px] relative h-[200px] sm:h-[150px]">
                                         <span className='font-bold '>{item.authorDesignation}</span>
