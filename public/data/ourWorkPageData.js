@@ -1,5 +1,5 @@
 const intro = {
-  bgskyblue: "",
+  bgskyblue: "bg-white",
   bgImage: "",
   textcenterTitle: true,
   title: "Our Work",
@@ -25,7 +25,9 @@ const colTwoContentData = [
     id: "2",
     sectionBg: "",
     mainTitle: "",
-    description: "Heal Ukraine Trauma brings unique value – we focus on areas of great need, build collaborative partnerships, and lead project teams. Our global network of experts helps us achieve maximum impact."
+    description: "Heal Ukraine Trauma brings unique value – we focus on areas of great need, build collaborative partnerships, and lead project teams. Our global network of experts helps us achieve maximum impact.",
+    descriptionTwo: "Please reach out if you would like to collaborate with us!",
+    // btnUrl: "Get Involved",
   }
 ]
 

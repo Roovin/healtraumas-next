@@ -32,7 +32,7 @@ export default function Testimonial() {
               </p>
               <p>
                 -{" "}
-                <Link href="/" className=" underline ">
+                <Link href="/our-team" className=" underline ">
                   {testimonialSlider.authorName}
                 </Link>
                 {testimonialSlider.author}
