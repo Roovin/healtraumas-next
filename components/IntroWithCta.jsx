@@ -2,10 +2,10 @@ import React from "react";
 import Button from "./button/Button";
 import Image from "next/image";
 
-export default function IntroWithCta({ data }) {
+export default function IntroWithCta({ data, className }) {
   return (
     <section
-      className={`introWithCta relative w-full ${data.bgImage ? "bgBlueOverlay" : ""} ${data.bgskyblue}`}
+      className={`introWithCta relative w-full ${data.bgImage ? "bgBlueOverlay" : ""} ${className} ${data.bgskyblue}`}
     >
       {data.bgImage && (
         <div className="bg_img absolute top-0 left-0 w-full h-full ">

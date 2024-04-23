@@ -36,7 +36,7 @@ export default function ColTwoContent({ data }) {
                                         <Button
                                             buttonText="Our Work"
                                             buttonClass="default"
-                                            url={"/our-work"}
+                                            url={btnUrl}
                                         />
                                        )}
                                     </div>

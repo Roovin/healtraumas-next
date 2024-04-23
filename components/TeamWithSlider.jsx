@@ -6,10 +6,17 @@ import { operatingTeamDataIntro } from '../public/data/ourTeamPageData'
 
 export default function TeamWithSlider({data}) {
   return (
-    <section className="teamWithSlider">
+    <>
+    <IntroWithCta data={operatingTeamDataIntro} className={'pb-0'} />
+    <section className="teamWithSlider pt-0">
         <div className="container">
-            <IntroWithCta data={operatingTeamDataIntro} />
+            <div className="cardWrapper">
+                <div className="card">
+                    
+                </div>
+            </div>
         </div>
     </section>
+    </>
   )
 }
