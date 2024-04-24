@@ -114,6 +114,7 @@ const contentwithVideo5 = {
   paragraph: "Heal Ukraine Trauma is providing support for an ongoing randomized controlled trial in Ukraine to assess the effectiveness of adding a parenting module to the Teaching Recovery Techniques program. The program partners for this study are Queen Mary University, Ternopil University, UNICEF, “All Ukrainian NGO Volunteers”, Children and War Foundation, and the Department of Education in Ternopil. The study will enroll 226 children. The program has so far screened 4500 children ages 8-13 and found that 40% have above-threshold PTSD symptoms.",
   paragraph2: "",
   imgurl: "/colTwo/colTwo_img2.jpeg",
+  flexRowReverse: "flex-row-reverse",
 }
 const contentwithVideo6 = {
   title: "Program Under development - Adaptation of Teaching Recovery Techniques (TRT) for children with disabilities",

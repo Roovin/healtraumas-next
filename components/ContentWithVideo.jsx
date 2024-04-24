@@ -27,7 +27,11 @@ export default function ContentWithVideo({ data }) {
   return (
     <section className="contentWithVideo bg-skyBlue ">
       <div className="container">
-        <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap md:w-full md:ml-0 ">
+        <div
+          className={`contentWrap ${
+            data.imgurl ? (data.flexRowReverse ? "flex-row-reverse" : "") : ""
+          } relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap md:w-full md:ml-0`}
+        >
           <div className="content w-[calc(50%-40px)] mx-[20px] md:w-full md:mx-auto  ">
             {data.title && <h4 className="text-blue mb-8 ">{data.title}</h4>}
             {data.paragraph && (
