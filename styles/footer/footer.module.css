@@ -26,3 +26,19 @@ footer .footer .bgImg img{
         width: 100%;
     }
 }
+footer .footer .linksWrap ul li a{
+    position: relative;
+}
+footer .footer .linksWrap ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border: solid 1px transparent;
+    transition: all 0.3s ease-in-out;
+}
+footer .footer .linksWrap ul li a:hover::before {
+    width: 100%;
+    border: solid 1px #f2dd30;
+}

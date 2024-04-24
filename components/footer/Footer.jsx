@@ -32,22 +32,22 @@ export default function Footer() {
                 <p className='text-white'>Heal Ukraine Trauma is an initiative of Heal Traumas International, Inc, a U.S. based 501(c)(3) nonprofit. All donations are tax deductible to the fullest extent allowed by law. Tax ID Number: 88-2231121.</p>
               </div>
             </div>
-            <div className="linksWrap md:w-full md:mt-[40px] ">
+            <div className={`${Style.linksWrap} linksWrap md:w-full md:mt-[40px] `}>
               <ul>
                 <li className='mb-[20px]'>
-                  <Link href="/our-work" className='text-yellow border-b-[1px] border-yellow'>Our Work</Link>
+                  <Link href="/our-work" className='text-yellow pb-[5px]'>Our Work</Link>
                 </li>
                 <li className='mb-[20px]'>
-                  <Link href="/our-mission" className='text-yellow border-b-[1px] border-yellow'>Our Mission</Link>
+                  <Link href="/our-mission" className='text-yellow pb-[5px]'>Our Mission</Link>
                 </li>
                 <li className='mb-[20px]'>
-                  <Link href="/our-team" className='text-yellow border-b-[1px] border-yellow'>Our Team</Link>
+                  <Link href="/our-team" className='text-yellow pb-[5px]'>Our Team</Link>
                 </li>
                 <li className='mb-[20px]'>
-                  <Link href="/contact-us" className='text-yellow border-b-[1px] border-yellow'>Contact Us</Link>
+                  <Link href="/contact-us" className='text-yellow pb-[5px]'>Contact Us</Link>
                 </li>
                 <li className='mb-[20px]'>
-                  <Link href="/privacy-policy" className='text-yellow border-b-[1px] border-yellow'>Privacy Policy</Link>
+                  <Link href="/privacy-policy" className='text-yellow pb-[5px]'>Privacy Policy</Link>
                 </li>
               </ul>
             </div>
