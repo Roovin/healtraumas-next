@@ -376,3 +376,35 @@ p a {
 .slick-track {
   display: flex;
 }
+
+/* Default Button */
+.default {
+	cursor: pointer;
+	color: #0045bf;
+	background-color: #f2dd30;
+	display: inline-block;
+	border-radius: 300px;
+	padding: 22px 32px 22px;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.1;
+	text-align: center;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	position: relative;
+    opacity: 1;
+}
+.btn-blue {
+    color: #fff;
+    background-color: #0045bf;
+}
+.btn-blueSky {
+    color: #0045bf;
+    background-color: #cbe8fa;
+}
+
+.btn-blueSky,
+.btn-blue,
+.default:hover {
+	opacity: 0.8;
+}
