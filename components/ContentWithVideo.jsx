@@ -50,21 +50,15 @@ export default function ContentWithVideo({ data }) {
                 dangerouslySetInnerHTML={{ __html: data.paragraph2 }}
               />
             )}
-            {data.listItem1 && (
+            {data.list && (
               <ul className=" relative w-full list-disc pl-10 ">
-                <li className=" mb-2 ">
-                  <p>{data.listItem1}</p>
-                </li>
-                {data.listItem2 && (
-                  <li className=" mb-2 ">
-                    <p>{data.listItem2}</p>
-                  </li>
-                )}
-                {data.listItem3 && (
-                  <li className=" mb-2 ">
-                    <p>{data.listItem3}</p>
-                  </li>
-                )}
+                {data?.list.map((item, i) => {
+                  return (
+                    <li key={i} className=" mb-2 ">
+                      <p>{item.description}</p>
+                    </li>
+                  )
+                }) }
               </ul>
             )}
           </div>

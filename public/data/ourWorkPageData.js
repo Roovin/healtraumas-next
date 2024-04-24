@@ -47,9 +47,20 @@ const contentwithVideo = {
   paragraph: "In 2023, Heal Ukraine Trauma sponsored the first medical conference on psychedelic-assisted therapy (PAT) in Ukraine for the treatment of PTSD. This event was organized by the Ukrainian Psychedelic Research Association (UPRA) and hosted by the Forest Glade military rehabilitation hospital. International experts presented scientific and clinical data on the use of PAT, and veterans shared their personal experiences and insights. The conference was <span>viewed online by over 12,000 people.<span/>",
   paragraph2: "The conference opened the door to discussions about potential legalization of PAT in Ukraine.",
   imgurl: "",
-  listItem1: "It built awareness of PAT as a breakthrough therapy to heal those impacted by trauma-related mental health conditions.",
-  listItem2: "It led to a government roundtable to discuss the pathway for approval of PAT in Ukraine.",
-  listItem3: "Working groups involving key stakeholders have been established to work through the requirements.",
+  list: [
+    {
+      id: "1",
+      description: "It built awareness of PAT as a breakthrough therapy to heal those impacted by trauma-related mental health conditions."
+    },
+    {
+      id: "2",
+      description: "It led to a government roundtable to discuss the pathway for approval of PAT in Ukraine."
+    },
+    {
+      id: "1",
+      description: "Working groups involving key stakeholders have been established to work through the requirements."
+    }
+  ],
   videoUrl: "https://www.youtube.com/embed/NUahT77rDik?si=rM_9cnbCgI2ExzvK",
 }
 const contentwithVideo2 = {
