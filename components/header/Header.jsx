@@ -66,11 +66,11 @@ export default function Header() {
             </div>
             <div className={`main-nav flex items-center ipad:flex-wrap ipad:justify-start justify-end ipad:absolute ipad:top-[62px] sm:top-[43px] ipad:w-full ipad:bg-blue ipad:z-[99] ipad:p-[20px] ipad:pt-0 transition-all duration-700 ease-in-out ${isMenuOpen ? 'ipad:left-0 ipad:opacity-1 ipad:visible' : 'ipad:left-[-100%] ipad:opacity-0 ipad:invisible'}`}>
               <div className="nav mr-[20px]">
-                <ul className='flex pt-[42px] ipad:flex-wrap ipad:pt-[20px]'>
+                <ul className='flex pt-[42px] ipad:flex-wrap ipad:pt-[20px] ml-[20px]'>
                   {
                     headerData.map((item, i) => {
                       return (
-                        <li key={i} className='mr-[30px] pb-[42px] ipad:w-full ipad:pb-[20px]' onMouseEnter={(e) => showSubManu(e, i)} onMouseLeave={(e) => hideMenu(e, i)}>
+                        <li key={i} className='mr-[30px] pb-[42px] ipad:w-full ipad:pb-[20px] laptop-portrait:mr-[10px] last:mr-0' onMouseEnter={(e) => showSubManu(e, i)} onMouseLeave={(e) => hideMenu(e, i)}>
                           { item?.subMenu ? 
                               <span className={`text-white ${item?.subMenu ? Style.arrow : ''} cursor-pointer pr-[20px] ${ item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={(e) => showMenuRes(e, i)}>{item.nav}</span>
                             : 
