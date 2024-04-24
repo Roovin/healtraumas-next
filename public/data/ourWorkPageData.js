@@ -92,8 +92,7 @@ const intro3 = {
 
 const contentwithVideo4 = {
   title: "Teaching Recovery Techniques",
-  paragraph: "Teaching Recovery Techniques (TRT) is an evidence-based program that helps children in conflict and disaster areas process traumatic stress. The program was developed by the nonprofit Children & War and has been actively used in Ukraine since 2014.",
-  paragraph2: "TRT addresses the early stages of trauma, preventing mental health issues from intensifying. In 2023, Heal Ukraine Trauma partnered with the “All Ukrainian NGO <Volunteers>” to deliver the program to 648 children. The 6-week, two-hour sessions teach mind-body techniques to help with stress management and trauma processing. <span>Children who participated reported that the program was useful (91%) and showed improvement on standard mental health assessments</span> at the end of the program.",
+  paragraph: "Teaching Recovery Techniques (TRT) is an evidence-based program that helps children in conflict and disaster areas process traumatic stress. The program was developed by the nonprofit Children & War and has been actively used in Ukraine since 2014. </br></br> TRT addresses the early stages of trauma, preventing mental health issues from intensifying. In 2023, Heal Ukraine Trauma partnered with the “All Ukrainian NGO <Volunteers>” to deliver the program to 648 children. The 6-week, two-hour sessions teach mind-body techniques to help with stress management and trauma processing. <span>Children who participated reported that the program was useful (91%) and showed improvement on standard mental health assessments</span> at the end of the program.",
   imgurl: "/colTwo/colTwo_img1.jpeg",
 }
 const contentwithVideo5 = {

@@ -44,12 +44,6 @@ export default function ContentWithVideo({ data }) {
                 dangerouslySetInnerHTML={{ __html: data.paragraph }}
               />
             )}
-            {data.paragraph2 && (
-              <p
-                className=" mb-4"
-                dangerouslySetInnerHTML={{ __html: data.paragraph2 }}
-              />
-            )}
             {data.list && (
               <ul className=" relative w-full list-disc pl-10 ">
                 {data?.list.map((item, i) => {
