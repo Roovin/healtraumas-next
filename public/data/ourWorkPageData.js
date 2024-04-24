@@ -63,12 +63,15 @@ const contentwithVideo = {
   listItem1: "It built awareness of PAT as a breakthrough therapy to heal those impacted by trauma-related mental health conditions.",
   listItem2: "It led to a government roundtable to discuss the pathway for approval of PAT in Ukraine.",
   listItem3: "Working groups involving key stakeholders have been established to work through the requirements.",
+  videoUrl: "https://www.youtube.com/embed/NUahT77rDik?si=rM_9cnbCgI2ExzvK",
 }
 const contentwithVideo2 = {
   title: "Therapist Training",
   paragraph: "Heal Ukraine Trauma partnered with Fluence, a leader in psychedelic therapy training, and the Ukrainian Psychedelic Research Association to make Fluence’s introductory course on psychedelic-assisted therapy available for free in Ukrainian language for psychologists and medical doctors addressing conflict-related trauma. Read more about the initiative <a href={https://www.forbes.com/sites/davidcarpenter/2024/03/06/war-torn-ukraine-sees-increased-psychedelic-training-to-combat-effects-of-ptsd/}>here</a>.",
   paragraph2: "",
   imgurl: "",
+  logoImage: "/contentWithVideo/logo_img1.png",
+  logoImage2: "/contentWithVideo/logo_img2.png",
 }
 const contentwithVideo3 = {
   title: "Program Under development - Ketamine Assisted Group Therapy Training",
