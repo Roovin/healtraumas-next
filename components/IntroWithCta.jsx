@@ -44,8 +44,8 @@ export default function IntroWithCta({ data, className }) {
           </div>
           <div
             className={`${
-              data.textcenterContent === true ? "text-center" : "text-left"
-            }`}
+              data.textcenterContent ? "text-center" : ""
+            } text-left`}
           >
             {data.paragraph && (
               <p
