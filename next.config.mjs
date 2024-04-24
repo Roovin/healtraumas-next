@@ -1,12 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-		domains: [
-			imageDomain,
-			'healtraumas.vercel.app/',
-		],
-	},
-};
-
+const nextConfig = {};
 
 export default nextConfig;
