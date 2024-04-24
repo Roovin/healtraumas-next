@@ -3,7 +3,6 @@ import IntroWithCta from "../components/IntroWithCta";
 import ColTwoContent from "../components/ColTwoContent";
 import ParallaxBlade from "../components/ParallaxBlade";
 import ContentWithVideo from "../components/ContentWithVideo";
-import ContentWithImage from "../components/ContentWithImage";
 import FooterCta from "../components/FooterCta";
 
 import {
