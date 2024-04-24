@@ -18,7 +18,7 @@ export default function Home() {
 					description: 'Heal Ukraine Trauma provides mental health services for Ukrainians healing from conflict-associated trauma and PTSD.',
 					images: [
 						{
-							url: '../og-image.jpeg',
+							url: '/healtraumas_OG_image.jpeg',
 							width: 800,
 							height: 600,
 							alt: 'Healtraumas',
