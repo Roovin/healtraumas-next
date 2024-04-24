@@ -12,7 +12,7 @@ import {
   parallaxBlade,
   parallaxBlade2,
   intro3,
-  contentwithimage,
+  contentwithVideo,
   contentwithimage2,
   contentwithimage3,
 } from "../public/data/ourWorkPageData";
@@ -27,7 +27,7 @@ export default function ourWork() {
       <ContentWithVideo />
       <ParallaxBlade data={parallaxBlade2} />
       <IntroWithCta data={intro3} />
-      <ContentWithImage data={contentwithimage} />
+      <ContentWithVideo data={contentwithVideo} />
       <ContentWithImage data={contentwithimage2} />
       <ContentWithImage data={contentwithimage3} />
       <FooterCta />

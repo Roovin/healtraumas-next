@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function ContentWithVideo() {
+export default function ContentWithVideo({ data }) {
   const [videoDimensions, setVideoDimensions] = useState({
     width: 0,
     height: 0,
@@ -27,8 +27,8 @@ export default function ContentWithVideo() {
   return (
     <section className="contentWithVideo bg-skyBlue ">
       <div className="container">
-        <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap mb-[100px] ">
-          <div className="content w-[calc(50%-40px)] mx-[20px] ">
+        <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap md:w-full md:ml-0 ">
+          <div className="content w-[calc(50%-40px)] mx-[20px] md:w-full md:mx-auto  ">
             <h4 className="text-blue mb-8 ">
               Conference on novel therapies for severe PTSD
             </h4>
@@ -47,43 +47,49 @@ export default function ContentWithVideo() {
               legalization of PAT in Ukraine.
             </p>
             <ul className=" relative w-full list-disc pl-10 ">
-              <li className=" text-[18px] leading-[1.7] font-light mb-2 ">
+              <li className=" text-[18px] leading-[1.7] font-light mb-2 tabletlarge:text-[16px] lg:text-[16px] ">
                 It built awareness of PAT as a breakthrough therapy to heal
                 those impacted by trauma-related mental health conditions.
               </li>
-              <li className=" text-[18px] leading-[1.7] font-light mb-2 ">
+              <li className=" text-[18px] leading-[1.7] font-light mb-2 tabletlarge:text-[16px] lg:text-[16px] ">
                 It led to a government roundtable to discuss the pathway for
                 approval of PAT in Ukraine.
               </li>
-              <li className=" text-[18px] leading-[1.7] font-light mb-2 ">
+              <li className=" text-[18px] leading-[1.7] font-light mb-2 tabletlarge:text-[16px] lg:text-[16px] ">
                 Working groups involving key stakeholders have been established
                 to work through the requirements.
               </li>
             </ul>
           </div>
-          <div className="videoWrapper w-[calc(50%-40px)]  mx-[20px] ">
-            <div
-              className="video relative w-full"
-              style={{
-                width: videoDimensions.width,
-                height: videoDimensions.height,
-              }}
-            >
-              <iframe
-                // width="560"
-                // height="315"
-                src="https://www.youtube.com/embed/NUahT77rDik?si=rM_9cnbCgI2ExzvK"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen=""
-                className=" w-full h-full "
-              ></iframe>
-            </div>
+          <div className="videoWrapper w-[calc(50%-40px)] mx-[20px] md:w-full md:mx-auto md:mt-5 ">
+            {data && data.imgurl ? (
+              <div className="imageWrap w-full h-auto">
+                <Image src={data.imgurl} width={600} height={600} alt="img" />
+              </div>
+            ) : (
+              <div
+                className="video relative w-full"
+                style={{
+                  width: videoDimensions.width,
+                  height: videoDimensions.height,
+                }}
+              >
+                <iframe
+                  // width="560"
+                  // height="315"
+                  src="https://www.youtube.com/embed/NUahT77rDik?si=rM_9cnbCgI2ExzvK"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen=""
+                  className=" w-full h-full "
+                ></iframe>
+              </div>
+            )}
           </div>
         </div>
-        <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap mb-[100px] ">
+        {/* <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap mb-[100px] ">
           <div className="content w-[calc(50%-40px)] mx-[20px] ">
             <h4 className="text-blue mb-8 ">Therapist Training</h4>
             <p className=" mb-4">
@@ -148,7 +154,7 @@ export default function ContentWithVideo() {
               thousands with KAP.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
