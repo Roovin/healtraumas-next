@@ -61,7 +61,7 @@ export default function ContentWithVideo({ data }) {
             )}
           </div>
           <div className="videoWrapper w-[calc(50%-40px)] mx-[20px] md:w-full md:mx-auto md:mt-5 ">
-            {data && data.imgurl ? (
+            {data && data.imgurl ? 
               <div className="imageWrap w-full h-auto">
                 <Image
                   src={data.imgurl}
@@ -71,7 +71,7 @@ export default function ContentWithVideo({ data }) {
                   className=" w-full h-auto object-cover "
                 />
               </div>
-            ) : (
+             : data && data.videoUrl ?
               <div
                 className="video relative w-full"
                 style={{
@@ -84,14 +84,33 @@ export default function ContentWithVideo({ data }) {
                   // height="315"
                   src="https://www.youtube.com/embed/NUahT77rDik?si=rM_9cnbCgI2ExzvK"
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen=""
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen=""
                   className=" w-full h-full "
                 ></iframe>
+              </div> : <div className="logoWrapper relative w-full flex justify-end ">
+              <div className="logo relative w-full max-w-[225px] h-full max-h-[96px] ">
+                <Image
+                  src="/contentWithVideo/logo_img1.png"
+                  width={400}
+                  height={400}
+                  alt="logo"
+                  className=" w-full h-full object-cover "
+                />
               </div>
-            )}
+              <div className="logo relative w-full max-w-[225px] h-full max-h-[222px] ml-10 ">
+                <Image
+                  src="/contentWithVideo/logo_img2.png"
+                  width={400}
+                  height={400}
+                  alt="logo"
+                  className=" w-full h-full object-cover "
+                />
+              </div>
+            </div>
+             }
           </div>
         </div>
         {/* <div className="contentWrap relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap mb-[100px] ">
