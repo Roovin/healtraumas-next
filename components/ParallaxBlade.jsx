@@ -17,6 +17,11 @@ export default function ParallaxBlade({ data }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // const transformValue = {
+  //   backgroundImage: `url(`${imgUrl}`)`,
+  //   transform: `translateY(-${scrollY * 0.63}px)`
+  // }
   const transformValue = {
     backgroundImage: `url('${imgUrl}')`,
     transform: `translateY(-${scrollY * 0.6}px)`,
