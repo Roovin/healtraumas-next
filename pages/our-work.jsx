@@ -17,7 +17,7 @@ import {
   contentwithimage3,
 } from "../public/data/ourWorkPageData";
 
-export default function ourWork() {
+export default function OurWork() {
   return (
     <>
       <IntroWithCta data={intro} />

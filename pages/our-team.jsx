@@ -2,7 +2,7 @@ import React from 'react'
 import TeamWithSlider from '@/components/TeamWithSlider'
 import {operatingTeamData, DirectorsTeamData, advisoryTeamData} from '../public/data/ourTeamPageData'
 
-export default function ourTeam() {
+export default function OurTeam() {
   return (
     <>
         <TeamWithSlider data={operatingTeamData} />

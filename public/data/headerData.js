@@ -27,7 +27,7 @@ export const headerData = [
     {
         id:"4",
         nav: "Our News",
-        url: "/news"
+        url: "/our-news"
     },
     {
         id:"5",
