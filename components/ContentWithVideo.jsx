@@ -29,10 +29,14 @@ export default function ContentWithVideo({ data }) {
       <div className="container">
         <div
           className={`contentWrap ${
-            data.imgurl ? (data.flexRowReverse ? "flex-row-reverse" : "") : ""
-          } relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap md:w-full md:ml-0`}
+            data.imgurl
+              ? data.flexRowReverse
+                ? "flex-row-reverse lg:flex-row"
+                : ""
+              : ""
+          } relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap lg:w-full lg:ml-0`}
         >
-          <div className="content w-[calc(50%-40px)] mx-[20px] md:w-full md:mx-auto  ">
+          <div className="content w-[calc(50%-40px)] mx-[20px] lg:w-full lg:mx-auto  ">
             {data.title && <h4 className="text-blue mb-8 ">{data.title}</h4>}
             {data.paragraph && (
               <p
@@ -64,15 +68,15 @@ export default function ContentWithVideo({ data }) {
               </ul>
             )}
           </div>
-          <div className="videoWrapper w-[calc(50%-40px)] mx-[20px] md:w-full md:mx-auto md:mt-5 ">
+          <div className="videoWrapper w-[calc(50%-40px)] mx-[20px] lg:w-full lg:max-w-[600px] lg:mx-0 lg:mt-5 ">
             {data && data.imgurl ? (
-              <div className="imageWrap w-full h-auto">
+              <div className="imageWrap w-full h-[500px] laptop:h-[400px] sm:h-[300px] ">
                 <Image
                   src={data.imgurl}
                   width={600}
                   height={600}
                   alt="img"
-                  className=" w-full h-auto object-cover "
+                  className=" w-full h-full object-cover object-center "
                 />
               </div>
             ) : data && data.videoUrl ? (
