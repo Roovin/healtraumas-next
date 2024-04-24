@@ -165,9 +165,7 @@ export default function TeamWithSlider({ data }) {
 														<span className=" text-[16px] mb-[8px] font-[700] uppercase tracking-[1.65px]">
 															{card.authorDesignation}
 														</span>
-														<p className=" mt-[30px] xxl:text-[14px] md:mt-[10px]">
-															{card.description}
-														</p>
+														<p className=" mt-[30px] xxl:text-[14px] md:mt-[10px]"  dangerouslySetInnerHTML={{ __html: card.description }} />
 													</div>
 												</div>
 											</div>
