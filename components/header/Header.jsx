@@ -64,9 +64,9 @@ export default function Header() {
               <Link href={'/'} className='emptyLink'>.</Link>
               <Image src={'/logo/logo.png'} alt='Logo' width={334} height={140} />
             </div>
-            <div className={`main-nav flex items-center ipad:flex-wrap ipad:justify-start justify-end ipad:absolute ipad:top-[90px] ipad:w-full ipad:bg-blue ipad:z-[99] ipad:p-[20px] ipad:pt-0 transition-all duration-700 ease-in-out ${isMenuOpen ? 'ipad:left-0 ipad:opacity-1 ipad:visible' : 'ipad:left-[-100%] ipad:opacity-0 ipad:invisible'}`}>
+            <div className={`main-nav flex items-center ipad:flex-wrap ipad:justify-start justify-end ipad:absolute ipad:top-[62px] sm:top-[43px] ipad:w-full ipad:bg-blue ipad:z-[99] ipad:p-[20px] ipad:pt-0 transition-all duration-700 ease-in-out ${isMenuOpen ? 'ipad:left-0 ipad:opacity-1 ipad:visible' : 'ipad:left-[-100%] ipad:opacity-0 ipad:invisible'}`}>
               <div className="nav mr-[20px]">
-                <ul className='flex pt-[42px] ipad:flex-wrap ipad:pt-0'>
+                <ul className='flex pt-[42px] ipad:flex-wrap ipad:pt-[20px]'>
                   {
                     headerData.map((item, i) => {
                       return (
