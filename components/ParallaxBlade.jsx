@@ -18,13 +18,9 @@ export default function ParallaxBlade({ data }) {
     };
   }, []);
 
-  // const transformValue = {
-  //   backgroundImage: `url(`${imgUrl}`)`,
-  //   transform: `translateY(-${scrollY * 0.63}px)`
-  // }
   const transformValue = {
     backgroundImage: `url('${imgUrl}')`,
-    transform: `translateY(-${scrollY * 0.6}px)`,
+    transform: `translateY(-${scrollY * 0.2}px)`,
   };
 
   return (

@@ -25,7 +25,7 @@ export default function ourWork() {
       <ParallaxBlade data={parallaxBlade} />
       <IntroWithCta data={intro2} />
       <ContentWithVideo />
-      {/* <ParallaxBlade data={parallaxBlade2} /> */}
+      <ParallaxBlade data={parallaxBlade2} />
       <IntroWithCta data={intro3} />
       <ContentWithImage data={contentwithimage} />
       <ContentWithImage data={contentwithimage2} />
