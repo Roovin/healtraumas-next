@@ -1,21 +1,44 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Style from '../../styles/footer/footer.module.css'
 
 export default function Footer() {
-  // useEffect (() => {
-  //   const scrollHandler = () => {
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scale, setScale] = useState(1);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const height =
+  //     document.documentElement.scrollHeight -
+  //     document.documentElement.clientHeight;
 
-  //   }
+  //     const windowScroll = document.documentElement.scrollTop;
 
-  //   document.addEventListener('scroll', scrollHandler);
-  // })
+  //   const scrolled = (windowScroll / height) * 100;
+  //   console.log(scrolled);
+  //   setScrollPosition(scrolled);
+  //   };
+
+  //   if(scrollPosition == 100 ) {
+  //     setScale(1)
+  // } else if(scrollPosition < 100) { 
+  //       setScale(scrollPosition * 1)
+  // }
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+
+  
+
   return (
     <footer>
       <div className={`footer relative ${Style.footer} padding-medium`}>
         <div className={`bgImg ${Style.bgImg} absolute top-0 left-0 w-full h-full`}>
-          <Image src={'/footer/footer-bg.jpg'} alt="footer Image" width={1920} height={400} className='object-cover'/>
+          <Image src={'/footer/footer-bg.jpg'} alt="footer Image" width={1920} height={400} className='object-cover' />
         </div>
         <div className="container">
           <div className="row flex justify-between border-b-[1px] border-white pb-[20px] md:flex-wrap">
