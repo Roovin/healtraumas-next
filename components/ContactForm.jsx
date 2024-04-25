@@ -3,13 +3,29 @@ import { useForm, ValidationError } from '@formspree/react';
 
 export default function ContactForm() {
     const [state, handleSubmit] = useForm("xeqyvnlk");
+    const [formsuccess, setformsuccess] = useState(false);
+  
+    useEffect(() => {
+      const clearForm = () => {
+        const inputs = document.querySelectorAll(".ContactUsForm form input");
+        inputs.forEach(input => {
+          input.value = "";
+        });
+      };
+      return clearForm;
+    }, []);
+    
+    if (state.succeeded && !formsuccess) {
+        alert('Thank You')
+        setformsuccess(true);
+    }
     return (
-        <section className="ContactForm">
+        <section className="ContactUsForm">
             <div className="container">
                 <div className="intro text-center">
                     <h2 className='text-blue'>Interested in working with us? Get in touch! </h2>
                 </div>
-                <form action="" className='mt-[40px] max-w-[1050px] mx-auto'>
+                <form onSubmit={handleSubmit} className='mt-[40px] max-w-[1050px] mx-auto'>
                     <div className="formWrap flex w-[calc(100%+30px)] ml-[-15px] mb-[10px] md:mb-[5px] sm:flex-wrap sm:w-full sm:mx-0">
                         <div className="firstFieldName w-[calc(50%-30px)] mx-[15px] sm:w-full sm:mx-0">
                             <label htmlFor="firstName" className=" text-blue mb-[4px] inline-block">
