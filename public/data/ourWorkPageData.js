@@ -31,6 +31,7 @@ const colTwoContentData = [
 ]
 
 const parallaxBlade = {
+  title: "Veterans Programs",
   imgUrl: "/parallaxImg/parallax_img1.jpeg",
 };
 
@@ -80,6 +81,7 @@ const contentwithVideo3 = {
 
 
 const parallaxBlade2 = {
+  title: "Children’s Programs",
   imgUrl: "/introWithCta/footer_cta_bgimg.jpeg",
 };
 
