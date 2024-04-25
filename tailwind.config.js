@@ -13,7 +13,9 @@ module.exports = {
       blue: '#0045bf',
       skyBlue: '#cbe8fa',
       yellow: '#f2dd30',
-      lightYelow: '#f7f2ca'
+      lightYelow: '#f7f2ca',
+      alabaster: '#FAFAFA',
+      silverCharlice: '#a9a9a9'
     },
     screens: {
       largedesktop: { min: '1920px', max: '2560px' },

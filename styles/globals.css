@@ -403,8 +403,8 @@ p a {
     background-color: #cbe8fa;
 }
 
-.btn-blueSky,
-.btn-blue,
+.btn-blueSky:hover,
+.btn-blue:hover,
 .default:hover {
 	opacity: 0.8;
 }
