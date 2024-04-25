@@ -29,7 +29,7 @@ export default function ParallaxBlade({ data }) {
     >
       <div className="parallax-wrap max-h-[350px] min-h-[350px] relative overflow-hidden">
         <div
-          className={`${Style.weParallaxImage} weParallaxImage `}
+          className={`${data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage} weParallaxImage `}
           style={transformValue}
         ></div>
       </div>
