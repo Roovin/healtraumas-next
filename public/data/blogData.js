@@ -9,7 +9,7 @@ export const blogData = {
             title: "What Children in Ukraine Need Right Now",
             description: "",
             btn: "Read More",
-            btnUrl: "#"
+            btnUrl: "/blog/"
         },
         {
             id: "2",
