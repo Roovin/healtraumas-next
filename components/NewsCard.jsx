@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function NewsCard({data}) {
-    console.log(data);
   return (
     <section className="ourNews">
     <div className="container">
