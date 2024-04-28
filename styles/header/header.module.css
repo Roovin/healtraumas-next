@@ -15,10 +15,11 @@ header .header .subMenu {
     border-bottom-right-radius: 5px;
 }
 
+header .header span.arrow,
 header .header a.arrow {
     position: relative;
 }
-
+header .header span.arrow::before,
 header .header a.arrow::before {
     content: '';
     position: absolute;

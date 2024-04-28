@@ -13,6 +13,7 @@ export default function Header() {
   const [winWidth, isWinWidth] = useState(0);
   const [ActiveMobileSubMenu, setActiveMobileSubMenu] = useState();
   const [back, setBack] = useState();
+  const [isFixed, setFixed] = useState(0);
 
   useEffect(() => {
     const headerElement = document.querySelector('header .mainHeader');
@@ -25,6 +26,7 @@ export default function Header() {
       isWinWidth(window.innerWidth);
       setIsMenuOpen(false)
       setSubMenu("a")
+      setFixed(0)
     })
   })
 
@@ -50,6 +52,7 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setActiveMobileSubMenu();
+    (isFixed === 0) ? setFixed(1) : setFixed(0);
   }
   const backBtn = (val) => {
     setBack(val)
@@ -57,16 +60,16 @@ export default function Header() {
 
   return (
     <header>
-      <div className={`${Style.header} header bg-blue ipad:py-[20px] sm:py-[10px]`}>
+      <div className={`${Style.header} header bg-blue ipad:py-[20px] sm:py-[10px] `}> {/* ${isFixed === 1 ? 'fixed z-[99] w-full ' : ''} */} 
         <div className={`container`}>
           <div className={`mainHeader ${Style.mainHeader} flex items-center justify-between`}>
             <div className="logoWrap max-w-[200px] ipad:max-w-[150px] sm:max-w-[100px] relative">
               <Link href={'/'} className='emptyLink'>.</Link>
               <Image src={'/logo/logo.png'} alt='Logo' width={334} height={140} />
             </div>
-            <div className={`main-nav flex items-center ipad:flex-wrap ipad:justify-start justify-end ipad:absolute ipad:top-[62px] sm:top-[43px] ipad:w-full ipad:bg-blue ipad:z-[99] ipad:p-[20px] ipad:pt-0 transition-all duration-700 ease-in-out ${isMenuOpen ? 'ipad:left-0 ipad:opacity-1 ipad:visible' : 'ipad:left-[-100%] ipad:opacity-0 ipad:invisible'}`}>
+            <div className={`main-nav flex items-center ipad:flex-wrap ipad:justify-start justify-end ipad:absolute ipad:top-[62px] sm:top-[42px] ipad:w-full ipad:bg-blue ipad:z-[99] ipad:p-[20px] ipad:pt-0 transition-all duration-700 ease-in-out ${isMenuOpen ? 'ipad:left-0 ipad:opacity-1 ipad:visible' : 'ipad:left-[-100%] ipad:opacity-0 ipad:invisible'}`}>
               <div className="nav mr-[20px]">
-                <ul className='flex pt-[42px] ipad:flex-wrap ipad:pt-[20px] ml-[20px]'>
+                <ul className='flex pt-[42px] ipad:flex-wrap ipad:pt-[20px] ml-[20px] ipad:ml-0'>
                   {
                     headerData.map((item, i) => {
                       return (
@@ -99,9 +102,6 @@ export default function Header() {
               <div className="socialLinkWithBtn">
                 <div className="socialIcon relative">
                   <Link href={'/'} className='emptyLink'>.</Link>
-                  {/* <svg viewBox="23 23 64 64">
-                    <use xlink:href="#linkedin-unauth-icon" width="110" height="110"></use>
-                  </svg> */}
                 </div>
                 <div className="btnWrap ipad:mt-[50px]">
                   <Button buttonText="Donate" buttonClass="default" url={'/donate'} />
