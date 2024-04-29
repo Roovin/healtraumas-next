@@ -31,6 +31,10 @@ h1 {
   line-height: 1.41;
   font-weight: 500;
 }
+.h1 span,
+h1 span {
+  font-size: 67px;
+}
 
 .h2,
 h2 {
@@ -129,6 +133,10 @@ p a {
     h1 {
       font-size: 42px;
     }
+    .h1 span,
+    h1 span {
+      font-size: 54px;
+    }
     .h2,
     h2  {
       font-size: 32px;
@@ -177,6 +185,10 @@ p a {
     h1 {
       font-size: 40px;
     }
+    .h1 span,
+      h1 span {
+        font-size: 48px;
+      }
     .h2,
     h2  {
       font-size: 30px;
@@ -234,6 +246,10 @@ p a {
     h1 {
       font-size: 36px;
     }
+    .h1 span,
+    h1 span {
+      font-size: 42px;
+    }
     .h2,
     h2  {
       font-size: 28px;
@@ -290,6 +306,10 @@ p a {
   .h1,
     h1 {
       font-size: 32px;
+    }
+    .h1 span,
+    h1 span {
+      font-size: 38px;
     }
     .h2,
     h2  {
@@ -407,4 +427,7 @@ p a {
 .btn-blue:hover,
 .default:hover {
 	opacity: 0.8;
+}
+b {
+  font-weight: 700;
 }
