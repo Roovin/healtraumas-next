@@ -17,7 +17,7 @@ export default function BannerSecond({ data }) {
   }, []);
   return (
     <section
-      className={`introWithCta relative w-full min-h-[527px] flex flex-wrap items-center overflow-hidden after:opacity-[0.75] ${
+      className={`introWithCta relative w-full min-h-[50vh] flex flex-wrap items-center overflow-hidden after:opacity-[0.75] ${
         data.bgImage ? "bgBlueOverlay" : ""
       }`}
     >
