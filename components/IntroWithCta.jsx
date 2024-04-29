@@ -42,11 +42,7 @@ export default function IntroWithCta({ data, className }) {
               </h2>
             )}
           </div>
-          <div
-            className={`${
-              data.textcenterContent ? "text-center" : ""
-            } text-left`}
-          >
+          <div className={`${data.points ? "text-left" : "text-center"} `}>
             {data.paragraph && (
               <p
                 className=" text-black mb-4 "
@@ -54,28 +50,18 @@ export default function IntroWithCta({ data, className }) {
               />
             )}
             {data.paragraph2 && <p className="mb-4">{data.paragraph2}</p>}
-            {data.listItem && (
+            {data.points && (
               <ul className=" list-none ">
-                {data.listItem && (
-                  <li className=" text-black mb-4 ">
+                {data.points.map((point) => (
+                  <li className=" text-black mb-4 " key={point.id}>
                     <p>
-                      {data.listTitle && (
-                        <b className=" font-bold ">{data.listTitle}</b>
+                      {point.listTitle && (
+                        <b className=" font-bold ">{point.listTitle}</b>
                       )}
-                      {data.listItem}
+                      {point.listItem}
                     </p>
                   </li>
-                )}
-                {data.listItem2 && (
-                  <li className=" text-black mb-4 ">
-                    <p>
-                      {data.listTitle2 && (
-                        <b className=" font-bold ">{data.listTitle2}</b>
-                      )}
-                      {data.listItem2}
-                    </p>
-                  </li>
-                )}
+                ))}
               </ul>
             )}
           </div>

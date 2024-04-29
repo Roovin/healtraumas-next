@@ -3,7 +3,6 @@ const intro = {
   bgImage: "",
   title: "",
   titleSpan: "Our Work",
-  textcenterContent: "",
   paragraph: "Heal Ukraine Trauma is the first initiative of Heal Traumas International, Inc., a mental health 501(c)(3) non-profit founded in 2022.",
   paragraph2: "Our goal is to help Ukrainian adults and children heal from conflict-related trauma so that they can live fulfilling and productive lives. We work with international trauma experts and Ukrainian partners to scale existing evidence-based programs and pilot innovative solutions for:",
   listTitle: "Veterans",
@@ -38,7 +37,6 @@ const parallaxBlade = {
 const intro2 = {
   bgskyblue: "bg-white",
   bgImage: "",
-  textcenterContent: "text-center",
   paragraph: "There are currently over 500,000 people in the Ukrainian military. Data in Ukraine from 2012-2021 shows that military hospital admissions for mental health increased <span>6.97</span> times during periods of active hostility. Another study found that <span>57%</span> of Ukrainian veterans needed psychological support. The end of the war could lead to a wave of severe mental health disorders among veterans.",
 
 };
@@ -88,7 +86,6 @@ const parallaxBlade2 = {
 const intro3 = {
   bgskyblue: "bg-white",
   bgImage: "",
-  textcenterContent: "text-center",
   paragraph: "Since 2022, Ukrainian children have had their lives upended because of the war. Many have experienced traumatic events – loss of loved ones, separation from family and friends, destruction of homes, and ongoing Russian missile strikes.",
 };
 
