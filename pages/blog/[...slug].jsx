@@ -5,17 +5,11 @@ import { blogData } from '../../public/data/blogData'
 export default function BlogDetail() {
     
     const router = useRouter();
- 
-
     const query = router.query
     const queryVal = query?.slug?.[0];
-    var getValue = queryVal?.replace(/[^a-zA-Z ]/g, " ")
-    // console.log(getValue);
+    var getValue = queryVal?.replace(/-/g, " ")
     const [isValue, setGetValue] = useState(getValue);
   
-  //  useEffect(() => {
-  //   console.log(isValue);
-  // })
   return (
     <section className="blogDetail">
       {blogData?.cards.map((item, i) => {
@@ -40,6 +34,7 @@ export default function BlogDetail() {
                         })
                       }
                     </div>
+                    {item?.sources && (
                     <div className="sourcesWrap">
                       <div className="title">
                         <p>Sources: </p>
@@ -55,10 +50,10 @@ export default function BlogDetail() {
                               )
                             })
                           }
-                          
                         </ul>
                       </div>
                     </div>
+                    )}
                   </div>
                   : ''}
                 </div> 
