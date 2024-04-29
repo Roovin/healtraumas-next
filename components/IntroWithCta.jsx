@@ -13,7 +13,7 @@ export default function IntroWithCta({ data, className }) {
         <div className="bg_img absolute top-0 left-0 w-full h-full ">
           <Image
             src={data.bgImage}
-            width={1920}
+            width={1960}
             height={500}
             className=" w-full h-full object-cover object-center "
             alt="bg-img"
