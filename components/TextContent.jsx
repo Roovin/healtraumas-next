@@ -1,43 +1,78 @@
 import React from "react";
 
-export default function TextContent() {
+export default function TextContent({ data }) {
   return (
     <section className=" textContent relative w-full bg-white ">
       <div className="container">
-        <div className="content">
-          <h6 className=" font-bold mb-4 ">
-            Heal Traumas International, Inc Privacy Statement
-          </h6>
-          <h6 className=" font-bold mb-4 ">Effective Date: March 15, 2023</h6>
-          <h6 className=" font-bold uppercase mb-4 ">
-            YOUR PRIVACY IS IMPORTANT TO US
-          </h6>
-          <p className=" mb-4 ">
-            Heal Traumas International, Inc (DBA Heal Ukraine Trauma) values the
-            partnership it has with its visitors and donors and pledges to
-            always act responsibly and compliantly with the data and information
-            entrusted to it. This promise includes a full commitment to openness
-            and transparency with respect to how we collect, use, and share
-            data. HTI will never sell the data it collects. We will only share
-            de-identified, aggregated, and anonymized data with providers or
-            others that serve our mission and goals and only after users,
-            donors, and visitors understand that use and sharing.
-          </p>
-          <p className=" mb-4 ">
-            This Privacy Statement explains how Heal Traumas International
-            (“HTI” or “we”) collects, processes, and shares personal data about
-            you when you visit our website (www.healtraumas.org), donate to our
-            cause, or otherwise use services that we provide. If you have
-            questions about these practices, please contact us using the contact
-            details provided below. Under some data protection laws, the person
-            or entity that controls the purposes and means of processing
-            personal data is known as a “data controller” and a person or entity
-            that processes data on behalf of the data controller is known as a
-            “data processor” or a “service provider.” The person to which the
-            data relates is known as the “data subject.” Each of these terms
-            will be used throughout this Privacy Statement as defined herein.{" "}
-          </p>
-        </div>
+        {data.datacontent.map((text, index) => (
+          <div
+            className="content relative w-full max-w-[1050px] mx-auto mb-14 "
+            key={index}
+          >
+            {text.title && (
+              <h6 className=" font-bold text-blue mb-4 ">{text.title}</h6>
+            )}
+            {text.title2 && (
+              <h6 className=" font-bold text-blue mb-4 ">{text.title2}</h6>
+            )}
+            {text.titleUppercase && (
+              <h6 className=" font-bold text-blue uppercase mb-4 ">
+                {text.titleUppercase}
+              </h6>
+            )}
+            {text.paragraph && (
+              <p
+                className=" mb-4 "
+                dangerouslySetInnerHTML={{ __html: text.paragraph }}
+              />
+            )}
+            {text.paragraph2 && (
+              <p
+                className=" mb-4 "
+                dangerouslySetInnerHTML={{ __html: text.paragraph2 }}
+              />
+            )}
+            {text.listItems && Array.isArray(text.listItems) && (
+              <ul className=" list-disc pl-[40px] ">
+                {text.listItems.map((listItem) => (
+                  <li key={listItem.id} className=" mb-4 ">
+                    <p dangerouslySetInnerHTML={{ __html: listItem.item }} />
+                  </li>
+                ))}
+              </ul>
+            )}
+            {text.paragraph3 && (
+              <p
+                className=" mb-4 "
+                dangerouslySetInnerHTML={{ __html: text.paragraph3 }}
+              />
+            )}
+            {text.listItems2 && Array.isArray(text.listItems2) && (
+              <ul className=" list-disc pl-[40px] ">
+                {text.listItems2.map((listItem) => (
+                  <li key={listItem.id} className=" mb-4 ">
+                    <p dangerouslySetInnerHTML={{ __html: listItem.item }} />
+                  </li>
+                ))}
+              </ul>
+            )}
+            {text.paragraph4 && (
+              <p
+                className=" mb-4 "
+                dangerouslySetInnerHTML={{ __html: text.paragraph4 }}
+              />
+            )}
+            {text.listItems3 && Array.isArray(text.listItems3) && (
+              <ul className=" list-disc pl-[40px] ">
+                {text.listItems3.map((listItem) => (
+                  <li key={listItem.id} className=" mb-4 ">
+                    <p dangerouslySetInnerHTML={{ __html: listItem.item }} />
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
