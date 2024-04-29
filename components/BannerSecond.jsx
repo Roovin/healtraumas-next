@@ -40,7 +40,9 @@ export default function BannerSecond({ data }) {
         <div className="bannerContent relative text-center z-10 ">
           {data.mainTitle && (
             <h1 className=" text-white ">
-              <span className=" text-[68px]">{data.mainTitle}</span>
+              <span className=" text-[72px] desktop:text-[66px] laptop:text-[60px] tablet:text-[54px] phablet:text-[46px] sm:text-[40px] ">
+                {data.mainTitle}
+              </span>
             </h1>
           )}
         </div>
