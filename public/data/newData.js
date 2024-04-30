@@ -24,7 +24,7 @@ export const newsData = {
                 title: "Heal Ukraine Trauma Welcomes International Security and Global Health Economics Expert John Tedstrom to Board of Directors",
                 content: [
                     {
-                        description: "CAMBRIDGE, MASS., December 8, 2023 – Heal Ukraine Trauma (HUT) is pleased to announce the appointment of John Tedstrom, a distinguished international security and global health economics expert, to its Board of Directors. <quote> “With a wealth of experience in government, the private sector, and civil society, John Tedstrom brings a unique and invaluable perspective to our organization,” <quote> said HUT’s Board President, Elaine Klein.<quote>“We are thrilled to welcome John to our Board and look forward to benefiting from his expertise to advance our mission of addressing conflict-related trauma in Ukraine.”</quote>"
+                        description: "CAMBRIDGE, MASS., December 8, 2023 – Heal Ukraine Trauma (HUT) is pleased to announce the appointment of John Tedstrom, a distinguished international security and global health economics expert, to its Board of Directors. <q> With a wealth of experience in government, the private sector, and civil society, John Tedstrom brings a unique and invaluable perspective to our organization,</q> said HUT’s Board President, Elaine Klein.<q>We are thrilled to welcome John to our Board and look forward to benefiting from his expertise to advance our mission of addressing conflict-related trauma in Ukraine.</q>"
                     },
                     {
                         description: "Mr. Tedstrom served as the Director for Russia, Ukraine, and the New Independent States at the National Security Council under President Bill Clinton, where he played a crucial role in shaping policies that impacted the region. In 2003, he founded Transatlantic Partners Against AIDS (TPAA), a groundbreaking joint venture between the U.S., Russia, and Ukraine aimed at combatting the HIV/AIDS epidemic in the former Soviet Union. His exceptional leadership and close partnership with Ambassador Richard Holbrooke, who led the Global Business Coalition on HIV/AIDS (GBC), led to the merger of TPAA and GBC. The merger significantly expanded the organization’s impact and outreach."
@@ -33,7 +33,7 @@ export const newsData = {
                         description: "Mr. Tedstrom founded and operates Tedstrom Associates, a consulting firm dedicated to advancing diversity, equity, and inclusion in the workplace, particularly for LGBTQ+ employees. Tedstrom also founded NextGen Leaders, a leadership development and networking program for young LGBTQ+ professionals.  An accomplished academic, Mr. Tedstrom holds a D.Phil. degree in Economics and Russian Area Studies from the University of Birmingham. He conducted research on the economies of the Soviet Union, Russia, and Ukraine at The Hudson Institute, Radio Liberty (Munich), RAND, and Columbia University. He has authored over 100 publications on economics and public health. Mr. Tedstrom has served on several international boards and commissions focused on international security, global health, and enduring peace and justice. "
                     },
                     {
-                        description: "<quote>“HUT is working at the cutting edge of breakthrough mental health interventions, and I'm both honored and excited to join its Board,” Mr. Tedstrom said. “Its leaders have done a great job of establishing the organization, building awareness around game changing treatments for PTSD, and forging strong partnerships on the ground that will deliver treatment. Ukraine has already lost too many of its best and brightest to an unjust and tragic war, and it will need all of its citizens healthy and focused in order to rebuild. I look forward to working with HUT to bring vital mental health support to Ukrainians and help build a brighter future for Ukraine.”</quote>"
+                        description: "<q>HUT is working at the cutting edge of breakthrough mental health interventions, and I'm both honored and excited to join its Board,</q> Mr. Tedstrom said. <q>Its leaders have done a great job of establishing the organization, building awareness around game changing treatments for PTSD, and forging strong partnerships on the ground that will deliver treatment. Ukraine has already lost too many of its best and brightest to an unjust and tragic war, and it will need all of its citizens healthy and focused in order to rebuild. I look forward to working with HUT to bring vital mental health support to Ukrainians and help build a brighter future for Ukraine.</q>"
                     },
                     {
                         description: "For media inquiries, please contact:"
@@ -42,16 +42,16 @@ export const newsData = {
                         description: "Elise Wilson, Executive Director, Heal Ukraine "
                     },
                     {
-                        description: "Trauma <a href='mailto:`elisewilson@healtraumas.org`'>elisewilson@healtraumas.org</a> "
+                        description: "Trauma <a href='mailto:elisewilson@healtraumas.org'>elisewilson@healtraumas.org</a>"
                     },
                     {
-                        description: "About Heal Ukraine Trauma  "
+                        description: "About Heal Ukraine Trauma"
                     },
                     {
                         description: "Heal Ukraine Trauma was founded in 2022 with the goal of helping Ukrainian adults and children heal from conflict-associated trauma and live fulfilling, productive lives. HUT works with trauma experts and strategic partners in Ukraine and abroad to scale existing evidence-based programs, pilot new programs, and support the introduction of novel therapies to improve mental health outcomes. Heal Ukraine Trauma is the first project of Heal Traumas International, Inc., a U.S.-based 501(c)(3) nonprofit which aims to implement evidence-based programs for conflict-related trauma. Learn more at <a href='https://healtraumas.org/'>https://healtraumas.org/</a>.  "
                     },
                 ],
-                url: "news/",
+                url: "/news/",
                 btn: "Read More"
             },
             {
@@ -113,7 +113,7 @@ export const newsData = {
                         description: "Learn more at <a href='https://healtraumas.org/'>https://healtraumas.org/</a>"
                     },
                 ],
-                url: "news/",
+                url: "/news/",
                 btn: "Read More"
             },
         ]
