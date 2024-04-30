@@ -90,8 +90,8 @@ export default function ParallaxBlade({ data }) {
         ref={transformValue1Ref}
         style={{
           backgroundImage: `url('${imgUrl}')`,
-          transform: `translateY(-${scrollY * 0.6}px)`,
-          top: `0`,
+          transform: `translateY(-${scrollY * 0.4}px)`,
+          top: `80px`,
         }}
       ></div>
       <div
@@ -103,6 +103,7 @@ export default function ParallaxBlade({ data }) {
         style={{
           backgroundImage: `url('${imgUrl}')`,
           transform: `translateY(-${scrollY * 0.2}px)`,
+          top: `100px`,
         }}
       ></div>
       {/* </div> */}
