@@ -23,9 +23,7 @@ export default function TeamWithSlider({ data }) {
 		setSlider(index);
         setActiveTab(index);
 	};
-    // const handleTabClick = (index) => {
-	// 	setActiveTab(index);
-	// };
+
     const removeOverlay = () => {
 		setOverlay((prevOverlay) => !prevOverlay);
 	};
@@ -84,7 +82,6 @@ export default function TeamWithSlider({ data }) {
 	}, [slider]);
     return (
         <>
-            {/* <IntroWithCta data={operatingTeamDataIntro} className={data.sectionClass} /> */}
             <section className={`teamWithSlider ${data.sectionClass}`}>
                 <div className="container">
                     <div className="intro text-center mb-[40px] max-w-[1050px] mx-auto">

@@ -2,8 +2,6 @@ import React from "react";
 import Button from "./button/Button";
 
 export default function ColTwoContent({ data }) {
-  // console.log(data);
-  // console.log(data?.content);
   return (
     <section className={`colTwoContent ${data[0]?.sectionBg}`}>
       <div className="container">

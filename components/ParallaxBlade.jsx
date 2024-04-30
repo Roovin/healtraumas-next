@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from "react";
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Style from "../styles/parallaxBlade.module.css";
@@ -19,21 +18,6 @@ export default function ParallaxBlade({ data }) {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll);
-
-    handleScroll(); // Initial check
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
       if (transformValue1Ref.current && transformValue2Ref.current) {
         const rect1 = transformValue1Ref.current.getBoundingClientRect();
         const rect2 = transformValue2Ref.current.getBoundingClientRect();
