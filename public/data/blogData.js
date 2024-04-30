@@ -34,13 +34,13 @@ export const blogData = {
             ],
             sources: [
                 {
-                    source: "1 No Author, 2022. Study explored the impact of the Russian invasion on Mental Health in Ukraine 2014. EurekAlert! Available at: <a href='https://www.eurekalert.org/newsreleases/971055' blank='_target'>https://www.eurekalert.org/newsreleases/971055</a> (Accessed: January 10, 2023). "
+                    source: "1 No Author, 2022. Study explored the impact of the Russian invasion on Mental Health in Ukraine 2014. EurekAlert! Available at: <a href='https://www.eurekalert.org/newsreleases/971055' blank='_target'> https://www.eurekalert.org/newsreleases/971055 </a> (Accessed: January 10, 2023). "
                 },
                 {
-                    source: "2 Bellamy, C., 2005. Childhood under threat. UNICEF. Available at: <a href='https://www.unicef.org/media/84801/file/SOWC-2005.pdf . '> https://www.unicef.org/media/84801/file/SOWC-2005.pdf</a>+ (Accessed: January 10, 2023)"
+                    source: "2 Bellamy, C., 2005. Childhood under threat. UNICEF. Available at:  <a href='https://www.unicef.org/media/84801/file/SOWC-2005.pdf . '> https://www.unicef.org/media/84801/file/SOWC-2005.pdf </a>+ (Accessed: January 10, 2023)"
                 },
                 {
-                    source: "3 Bellamy, C., 2005. Childhood under threat. UNICEF. Available at:  <a href='https://www.unicef.org/media/84801/file/SOWC-2005.pdf. '> https://www.unicef.org/media/84801/file/SOWC-2005.pdf</a>+ (Accessed: January 10, 2023)"
+                    source: "3 Bellamy, C., 2005. Childhood under threat. UNICEF. Available at:  <a href='https://www.unicef.org/media/84801/file/SOWC-2005.pdf. '> https://www.unicef.org/media/84801/file/SOWC-2005.pdf </a>+ (Accessed: January 10, 2023)"
                 },
                 {
                     source: "4 Rocha, T.B.M., Graeff-Martins, A.S., Kieling, C. and Rohde, L.A., 2015. Provision of mental healthcare for children and adolescents: a worldwide view. Current opinion in psychiatry, 28(4), pp.330-335. "
@@ -49,16 +49,16 @@ export const blogData = {
                     source: "5 Mihajlovic, A., Segalite, L. and Lawler, A., 2022. Mental health disparities of Ukrainian children exposed to war: A narrative review. World Social Psychiatry, 4(2), p.63. "
                 },
                 {
-                    source: "6 No Author, 2022. Help for more than half a million people while the situation in Ukraine worsens [en/CS] – Ukraine. ReliefWeb. Available at:<a href='https://reliefweb.int/report/ukraine/help-more-half-million-people-whilesituation-ukraine-worsens-encs'>https://reliefweb.int/report/ukraine/help-more-half-million-people-whilesituation-ukraine-worsens-encs</a> (Accessed: January 10, 2023). "
+                    source: "6 No Author, 2022. Help for more than half a million people while the situation in Ukraine worsens [en/CS] – Ukraine. ReliefWeb. Available at:<a href='https://reliefweb.int/report/ukraine/help-more-half-million-people-whilesituation-ukraine-worsens-encs'> https://reliefweb.int/report/ukraine/help-more-half-million-people-whilesituation-ukraine-worsens-encs </a> (Accessed: January 10, 2023). "
                 },
                 {
-                    source: "7 Askew, J., 2022. 'Left Behind': How war is hitting the disabled in Ukraine. euronews. Available at:<a href='https://www.euronews.com/my-europe/2022/08/02/a-crisis-withina-crisis-how-war-is-hitting-the-disabled-in-ukraine'>https://www.euronews.com/my-europe/2022/08/02/a-crisis-withina-crisis-how-war-is-hitting-the-disabled-in-ukraine</a> (Accessed: January 10, 2023). "
+                    source: "7 Askew, J., 2022. 'Left Behind': How war is hitting the disabled in Ukraine. euronews. Available at:<a href='https://www.euronews.com/my-europe/2022/08/02/a-crisis-withina-crisis-how-war-is-hitting-the-disabled-in-ukraine'> https://www.euronews.com/my-europe/2022/08/02/a-crisis-withina-crisis-how-war-is-hitting-the-disabled-in-ukraine</a> (Accessed: January 10, 2023). "
                 },
                 {
-                    source: "8 No Author, No Date. Through this conflict in Ukraine, what happens to persons with disabilities? International Disability Alliance. Available at:<a href='https://www.internationaldisabilityalliance.org/content/through-conflict-ukrainewhat-happens-persons-disabilities'>https://www.internationaldisabilityalliance.org/content/through-conflict-ukrainewhat-happens-persons-disabilities</a> (Accessed: January 10, 2023). "
+                    source: "8 No Author, No Date. Through this conflict in Ukraine, what happens to persons with disabilities? International Disability Alliance. Available at:<a href='https://www.internationaldisabilityalliance.org/content/through-conflict-ukrainewhat-happens-persons-disabilities'> https://www.internationaldisabilityalliance.org/content/through-conflict-ukrainewhat-happens-persons-disabilities</a> (Accessed: January 10, 2023). "
                 },
                 {
-                    source: "9 Askew, J., 2022. 'Left Behind': How war is hitting the disabled in Ukraine. euronews. Available at: <a href='https://www.euronews.com/my-europe/2022/08/02/a-crisis-withina-crisis-how-war-is-hitting-the-disabled-in-ukraine'>https://www.euronews.com/my-europe/2022/08/02/a-crisis-withina-crisis-how-war-is-hitting-the-disabled-in-ukraine</a> (Accessed: January 10, 2023). "
+                    source: "9 Askew, J., 2022. 'Left Behind': How war is hitting the disabled in Ukraine. euronews. Available at: <a href='https://www.euronews.com/my-europe/2022/08/02/a-crisis-withina-crisis-how-war-is-hitting-the-disabled-in-ukraine'> https://www.euronews.com/my-europe/2022/08/02/a-crisis-withina-crisis-how-war-is-hitting-the-disabled-in-ukraine</a> (Accessed: January 10, 2023). "
                 },
             ],
             filterList: [
@@ -95,13 +95,13 @@ export const blogData = {
                     detail: "I’m sitting here reflecting on my three weeks in Kyiv, slightly dazed by a 72-hour journey back to the States.  It was a challenging, good trip.  "
                 },
                 {
-                    detail: "Kyiv doesn’t seem like a city at war, but it is.  Scratch the surface and you see it everywhere. Everyone’s changed.  One old friend said, poignantly, when I asked him what made him saddest, <q>“I’ve lost my past.  We’ve lost our past.”</q>  His words reminded me of accounts of the summers of 1914 and 1939 being described as a golden time cast in amber, gone forever.  This war has changed everything."
+                    detail: "Kyiv doesn’t seem like a city at war, but it is.  Scratch the surface and you see it everywhere. Everyone’s changed.  One old friend said, poignantly, when I asked him what made him saddest, <q>I’ve lost my past.  We’ve lost our past.</q>  His words reminded me of accounts of the summers of 1914 and 1939 being described as a golden time cast in amber, gone forever.  This war has changed everything."
                 },
                 {
                     detail: "It was also a hugely productive trip that confirmed for me that Heal Ukraine Trauma (HUT)’s mission, vision, and our operating model are exactly correct.  I went to Kyiv to work with our Ukrainian partner organizations who we are working with to implement programs that serve both children and families as well as veterans and first responders."
                 },
                 {
-                    detail: "This included supporting our partner Ukrainian Psychedelic Research Association (UPRA) in preparing for Ukraine’s first conference on the potential of psychedelic-assisted therapy (PAT) for the treatment of severe PTSD in veterans and first responders and working with our partner NGO, <q>“Volunteers”</q>, implementing a program to teach children mind-body therapies."
+                    detail: "This included supporting our partner Ukrainian Psychedelic Research Association (UPRA) in preparing for Ukraine’s first conference on the potential of psychedelic-assisted therapy (PAT) for the treatment of severe PTSD in veterans and first responders and working with our partner NGO, <q>Volunteers</q>, implementing a program to teach children mind-body therapies."
                 },
                 {
                     imgUrl: "/blog/UPRA_Conference.jpeg",
@@ -139,7 +139,7 @@ export const blogData = {
                 {
                     imgUrl: "/blog/Elizabeth_photo.jpeg",
                     alt: "Russian_vehicle",
-                    detail: "There are two things I heard multiple times that moved me equally on this trip.  When strangers met me the first time, they would shake my hand, look me in the eye, and with deep, furry expression in their voices say, <q>“God bless the United States of America.”</q>  Just imagine. "
+                    detail: "There are two things I heard multiple times that moved me equally on this trip.  When strangers met me the first time, they would shake my hand, look me in the eye, and with deep, furry expression in their voices say, <q>God bless the United States of America.</q>  Just imagine. "
                 },
                 {
                     detail: "The other came seeing friends-like-family I’ve known for 30-plus years, who stuck like glue during those long-ago hard times in ’92-’93 when world-record hyperinflation and shortages were so severe it really did not matter that I had hard currency.  It was always the same goodbye: “Thank you for coming.  Thank you for not forgetting us.”  Imagine that too.  I choked up every time."

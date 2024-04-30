@@ -56,7 +56,7 @@ export default function BlogDetail() {
                             item?.sources.map((list, index) => {
                               return (
                                 <li key={index} className='mb-[40px]'>
-                                  <p>{ list.source }</p>
+                                  <p dangerouslySetInnerHTML={{ __html: list.source }} />
                               </li>
                               )
                             })

@@ -6,7 +6,6 @@ import BlogCards from '@/components/BlogCards'
 import {blogData} from '../public/data/blogData'
 
 export default function index() {
-  console.log(blogData);
   return (
     <>
         <BlogCards data={blogData} />
