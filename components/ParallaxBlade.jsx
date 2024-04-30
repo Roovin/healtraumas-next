@@ -84,30 +84,46 @@ export default function ParallaxBlade({ data }) {
       className={`${Style.ParallaxBlade} parallaxBlade parallax-image  min-h-[352px] flex items-center bgBlueOverlay laptop:min-h-[310px] lg:min-h-[280px] `}
     >
       {/* <div className="parallax-wrap max-h-[350px] min-h-[350px] relative overflow-hidden"> */}
-      <div
+      {/* { 
+        <div
+          className={`${
+            data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
+          } weParallaxImage relative `}
+          // style={transformValue1}
+          ref={transformValue1Ref}
+          style={{
+            backgroundImage: `url('${imgUrl}')`,
+            transform: `translateY(-${scrollY * 0.4}px)`,
+            top: `0`,
+          }}
+        ></div>
+      } */}
+      {
+        data.parallax === 'parllaxOne' ? 
+        <div
+          className={`${
+            data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
+          } weParallaxImage relative !z-[-3] `}
+          // style={transformValue2}
+          ref={transformValue2Ref}
+          style={{
+            backgroundImage: `url('${imgUrl}')`,
+            transform: `translateY(-${scrollY * 0.2}px)`,
+            top: `100px`,
+          }}
+        ></div> :  <div
         className={`${
           data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
-        }  ${isVisible1 ? "" : "hidden"} weParallaxImage relative `}
-        // style={transformValue1}
-        ref={transformValue1Ref}
-        style={{
-          backgroundImage: `url('${imgUrl}')`,
-          transform: `translateY(-${scrollY * 0.4}px)`,
-          top: `0`,
-        }}
-      ></div>
-      <div
-        className={`${
-          data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
-        } ${isVisible2 ? "" : "hidden"}  weParallaxImage relative !z-[-3] `}
+        } weParallaxImage relative !z-[-3] `}
         // style={transformValue2}
         ref={transformValue2Ref}
         style={{
           backgroundImage: `url('${imgUrl}')`,
           transform: `translateY(-${scrollY * 0.2}px)`,
-          top: `100px`,
+          top: `350px`,
         }}
       ></div>
+      }
       {/* </div> */}
       {/* <div className="parallaxContent absolute top-[50%] left-0 w-full text-center z-[2] translate-y-[-50%]"> */}
       <div className="container">

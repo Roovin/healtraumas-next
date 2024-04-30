@@ -40,6 +40,7 @@ const colTwoContentData = [
 const parallaxBlade = {
   title: "Veterans Programs",
   imgUrl: "/parallaxImg/parallax_img1.jpeg",
+  parallax: "parllaxOne"
 };
 
 const intro2 = {
@@ -89,6 +90,7 @@ const contentwithVideo3 = {
 const parallaxBlade2 = {
   title: "Children’s Programs",
   imgUrl: "/introWithCta/footer_cta_bgimg.jpeg",
+  parallax: "parllaxTwo"
 };
 
 const intro3 = {
