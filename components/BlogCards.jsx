@@ -23,8 +23,8 @@ export default function BlogCards({data}) {
                             </div>
                             <div className="contentWrap relative p-[20px] h-[300px]">
                                 <span className='text-blue'>{item.date}</span>
-                                <h3 className='my-[10px]'>{item.title}</h3>
-                                <p>{item.description}</p>
+                                <h3 className='my-[10px] text-ellipsis line-clamp-2'>{item.title}</h3>
+                                <p className='text-ellipsis line-clamp-3'>{item.description}</p>
                                 <div className="btnWrap absolute bottom-[20px]">
                                   <span className=''>{item.btn}</span>
                                 </div>
