@@ -47,3 +47,54 @@
     background-attachment: fixed;
     z-index: -1;
 }
+
+
+/* .parallax_wrapper {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 50vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.background {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 50vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+}
+
+.season_desc {
+  z-index: 1;
+  position: relative;
+  background: #282E34;
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  line-height: 2em;
+  padding: 3rem;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  .desc-wrapper {
+    margin: auto;
+    box-sizing: border-box;
+  }
+  .season_title {
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  .season_about {
+    margin-top: 50px;
+    padding: 0;
+  }
+} */
