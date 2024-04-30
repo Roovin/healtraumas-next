@@ -29,13 +29,13 @@ export const headerData = [
         nav: "Our News",
         url: "/our-news"
     },
+    // {
+    //     id:"5",
+    //     nav: "Events",
+    //     url: "/events"
+    // },
     {
         id:"5",
-        nav: "Events",
-        url: "/events"
-    },
-    {
-        id:"6",
         nav: "Contact Us",
         url: "/contact-us"
     },

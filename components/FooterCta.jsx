@@ -100,7 +100,7 @@ export default function FooterCta() {
           </form> */}
 
           <form onSubmit={handleSubmit} className="w-[calc(100%+16px)] ml-[-8px] flex lg:flex-wrap">
-            <label htmlFor="firstName" className=" text-[0] hidden ">
+            <label htmlFor="firstName" className=" text-[0] ">
               First Name
             </label>
             <input
@@ -115,7 +115,7 @@ export default function FooterCta() {
               field="firstName"
               errors={state.errors}
             />
-            <label htmlFor="LastName" className=" text-[0] hidden ">
+            <label htmlFor="LastName" className=" text-[0] ">
               Last Name
             </label>
             <input
@@ -130,7 +130,7 @@ export default function FooterCta() {
               field="LastName"
               errors={state.errors}
             />
-            <label htmlFor="email" className=" text-[0] hidden ">
+            <label htmlFor="email" className=" text-[0]  ">
               Email Address
             </label>
             <input
