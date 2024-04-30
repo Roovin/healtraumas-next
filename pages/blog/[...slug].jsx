@@ -84,6 +84,13 @@ export default function BlogDetail() {
                         </div>
                       )
                     } */}
+                    {
+                      item?.heading && (
+                        <div className="bottomTitle text-center">
+                          <h3 className='text-blue'>Help us support Ukraine by <Link href={'/donate'} className='underline'>donating today.</Link></h3>
+                        </div>
+                      )
+                    }
                   </div>
                   : ''}
                 </div> 

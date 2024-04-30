@@ -202,7 +202,7 @@ export const blogData = {
                     detail: "Our founding team includes three Harvard Business School alumni, a Kyiv-based psychologist, and an international nonprofit executive, who are united in the mission to <b>help Ukrainian adults and children heal from conflict-related trauma</b> so they can live fulfilling and productive lives. We are working towards a world where everyone experiencing conflict-related trauma has access to treatment and can begin healing."
                 },
                 {
-                    detail: "We ensure that proven solutions receive focus and continued development as part of the international response to the crisis. <b><q>“Since the war, I would say around 95% of people I know have experienced depression. Many people have improved over time, but others are still struggling. The real deluge is going to come after the war.”</q></b> says co-founder Oleh Orlov."
+                    detail: "We ensure that proven solutions receive focus and continued development as part of the international response to the crisis. <b><q>Since the war, I would say around 95% of people I know have experienced depression. Many people have improved over time, but others are still struggling. The real deluge is going to come after the war.</q></b> says co-founder Oleh Orlov."
                 },
                 {
                     detail: "Mental health risks being neglected if we do not provide the resources to develop and distribute appropriate care. By acting as a catalyst for scalable, evidence-based programs, we can provide <b>essential support to the many Ukrainians</b> who need it now to <b>prevent long-term effects.</b>"
