@@ -8,7 +8,8 @@ export default function BlogCards({data}) {
     <section className="blogs">
     <div className="container">
         <div className="intro text-center mb-[20px]">
-            <h2 className='text-blue'>{data.title}</h2>
+                  <h2 className='text-blue'>{data.title}</h2>
+                  
         </div> 
         <div className="cardWrapper flex md:flex-wrap">
             {
