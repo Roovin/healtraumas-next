@@ -1,33 +1,29 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import IntroWithCta from './IntroWithCta'
-import { operatingTeamDataIntro } from '../public/data/ourTeamPageData'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Style from '../styles/teamWithSlider.module.css'
 
 export default function TeamWithSlider({ data }) {
-    const [overlay, setOverlay] = useState(false);
-    const [slider, setSlider] = useState();
-    const scrollContainerRef = useRef(null);
+	const [overlay, setOverlay] = useState(false);
+	const [slider, setSlider] = useState();
 	const slickSliderRef = useRef(null);
-    const [activeTab, setActiveTab] = useState(0);
-    const prevRef = useRef(null);
+	const [activeTab, setActiveTab] = useState(0);
+	const prevRef = useRef(null);
 	const nextRef = useRef(null);
 
-    const clickOverlay = (index) => {
-        console.log(index);
+	const clickOverlay = (index) => {
+		console.log(index);
 		setOverlay((prevOverlay) => !prevOverlay);
 		setSlider(index);
-        setActiveTab(index);
+		setActiveTab(index);
 	};
 
-    const removeOverlay = () => {
+	const removeOverlay = () => {
 		setOverlay((prevOverlay) => !prevOverlay);
 	};
-    const settings = {
+	const settings = {
 		dots: false,
 		centerMode: true,
 		centerPadding: '367px',
@@ -62,17 +58,17 @@ export default function TeamWithSlider({ data }) {
 			},
 		],
 	};
-    const handleNext = () => {
+	const handleNext = () => {
 		if (nextRef.current) {
 			nextRef.current.click();
 		}
 	};
-    const handlePrev = () => {
+	const handlePrev = () => {
 		if (prevRef.current) {
 			prevRef.current.click();
 		}
 	};
-    useEffect(() => {
+	useEffect(() => {
 		prevRef.current = document.querySelector(
 			'.team .slick-initialized .slick-prev',
 		);
@@ -80,40 +76,40 @@ export default function TeamWithSlider({ data }) {
 			'.team .slick-initialized .slick-next',
 		);
 	}, [slider]);
-    return (
-        <>
-            <section className={`teamWithSlider ${data.sectionClass}`}>
-                <div className="container">
-                    <div className="intro text-center mb-[40px] max-w-[1050px] mx-auto">
-                        <h2 className={` ${data.sectionClass === 'bg-blue' ? 'text-white' : 'text-blue'} mb-[20px]`}>{data.title}</h2>
-                        {
-                            data.title && (
-                                <p>{data.description}</p>
-                            )
-                        }
-                    </div>
-                    <div className="cardWrapper flex flex-wrap w-full">
-                        {data?.team?.map((item, index) => {
-                            return (
-                                <div key={index} className={`card relative group w-[calc(25%-30px)] mx-[15px] sm:w-full sm:mx-0 phablet:w-[calc(50%-20px)] phablet:mx-[10px] tablet:w-[calc(33%-20px)] tablet:mx-[10px] bg-white mb-[30px] border-black border-[2px] rounded-[10px] hover:shadow-xl`} onClick={() => clickOverlay(index)}>
-                                    <span className='emptyLink'>.</span>
-                                    <div className="imgWrap max-w-full overflow-hidden max-h-[300px] h-full">
-                                        <Image src={item.imageUrl} alt={item.alt} width={300} height={300} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] object-cover h-full' />
-                                    </div>
-                                    <div className="contentWrap px-[15px] py-[20px] relative h-[200px] sm:h-[150px]">
-                                        <span className='font-bold '>{item.authorDesignation}</span>
-                                        <h4 className='mt-[10px]'>{item.authorName}</h4>
-                                        <div className="btnWrap absolute bottom-[20px] ">
-                                            <span>Read More</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </div>
-            </section>	
-            {overlay === true ? (
+	return (
+		<>
+			<section className={`teamWithSlider ${data.sectionClass}`}>
+				<div className="container">
+					<div className="intro text-center mb-[40px] max-w-[1050px] mx-auto">
+						<h2 className={` ${data.sectionClass === 'bg-blue' ? 'text-white' : 'text-blue'} mb-[20px]`}>{data.title}</h2>
+						{
+							data.title && (
+								<p>{data.description}</p>
+							)
+						}
+					</div>
+					<div className="cardWrapper flex flex-wrap w-full">
+						{data?.team?.map((item, index) => {
+							return (
+								<div key={index} className={`card relative group w-[calc(25%-30px)] mx-[15px] sm:w-full sm:mx-0 phablet:w-[calc(50%-20px)] phablet:mx-[10px] tablet:w-[calc(33%-20px)] tablet:mx-[10px] bg-white mb-[30px] border-black border-[2px] rounded-[10px] hover:shadow-xl`} onClick={() => clickOverlay(index)}>
+									<span className='emptyLink'>.</span>
+									<div className="imgWrap max-w-full overflow-hidden max-h-[300px] h-full">
+										<Image src={item.imageUrl} alt={item.alt} width={300} height={300} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] object-cover h-full' />
+									</div>
+									<div className="contentWrap px-[15px] py-[20px] relative h-[200px] sm:h-[150px]">
+										<span className='font-bold '>{item.authorDesignation}</span>
+										<h4 className='mt-[10px]'>{item.authorName}</h4>
+										<div className="btnWrap absolute bottom-[20px] ">
+											<span>Read More</span>
+										</div>
+									</div>
+								</div>
+							)
+						})}
+					</div>
+				</div>
+			</section>
+			{overlay === true ? (
 				<div
 					className={`overlay team transition-all duration-300 xl-up:w-full desktop:w-[calc(100%-244px)] wide-nav-screen:max-w-[2500px] wide-nav-screen:mx-auto  fixed w-screen h-screen z-[9999] ${Style.overlay}`}
 				>
@@ -162,14 +158,14 @@ export default function TeamWithSlider({ data }) {
 														<span className=" text-[16px] mb-[8px] font-[700] uppercase tracking-[1.65px]">
 															{card.authorDesignation}
 														</span>
-														<p className=" mt-[30px] xxl:text-[14px] md:mt-[10px]"  dangerouslySetInnerHTML={{ __html: card.description }} />
+														<p className=" mt-[30px] xxl:text-[14px] md:mt-[10px]" dangerouslySetInnerHTML={{ __html: card.description }} />
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								);
-							})} 
+							})}
 						</Slider>
 						<div className="flex items-center justify-center mt-[0] ml-[8px] xxl:pb-[35px] z-[10]">
 							<button
@@ -217,6 +213,6 @@ export default function TeamWithSlider({ data }) {
 			) : (
 				''
 			)}
-        </>
-    )
+		</>
+	)
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TextContent({ data }) {
   return (
-    <section className=" textContent relative w-full bg-white ">
+    <section className="TextContent relative w-full bg-white ">
       <div className="container">
         {data.datacontent.map((text, index) => (
           <div
