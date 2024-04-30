@@ -58,8 +58,19 @@ export default function ParallaxBlade({ data }) {
     <section
       className={`${Style.ParallaxBlade} parallaxBlade parallax-image  min-h-[352px] flex items-center bgBlueOverlay laptop:min-h-[310px] lg:min-h-[280px] `}
     >
-      {
-        data.parallax === 'parllaxOne' ? 
+      {data.parallax === "parllaxOne" ? (
+        <div
+          className={`${
+            data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
+          } weParallaxImage relative !z-[-3] `}
+          ref={transformValue2Ref}
+          style={{
+            backgroundImage: `url('${imgUrl}')`,
+            transform: `translateY(-${scrollY * 0.4}px)`,
+            top: `80px`,
+          }}
+        ></div>
+      ) : (
         <div
           className={`${
             data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
@@ -68,20 +79,10 @@ export default function ParallaxBlade({ data }) {
           style={{
             backgroundImage: `url('${imgUrl}')`,
             transform: `translateY(-${scrollY * 0.2}px)`,
-            top: `100px`,
+            top: `350px`,
           }}
-        ></div> :  <div
-        className={`${
-          data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
-        } weParallaxImage relative !z-[-3] `}
-        ref={transformValue2Ref}
-        style={{
-          backgroundImage: `url('${imgUrl}')`,
-          transform: `translateY(-${scrollY * 0.2}px)`,
-          top: `350px`,
-        }}
-      ></div>
-      }
+        ></div>
+      )}
       <div className="container">
         <div className="parallaxContent relative w-full text-center z-[5]">
           {data?.title ? (
