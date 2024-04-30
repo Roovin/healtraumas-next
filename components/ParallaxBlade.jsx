@@ -59,11 +59,13 @@ export default function ParallaxBlade({ data }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const rect1 = transformValue1Ref.current.getBoundingClientRect();
-      const rect2 = transformValue2Ref.current.getBoundingClientRect();
+      if (transformValue1Ref.current && transformValue2Ref.current) {
+        const rect1 = transformValue1Ref.current.getBoundingClientRect();
+        const rect2 = transformValue2Ref.current.getBoundingClientRect();
 
-      setIsVisible1(rect1.top <= window.innerHeight && rect1.bottom >= 0);
-      setIsVisible2(rect2.top <= window.innerHeight && rect2.bottom >= 0);
+        setIsVisible1(rect1.top <= window.innerHeight && rect1.bottom >= 0);
+        setIsVisible2(rect2.top <= window.innerHeight && rect2.bottom >= 0);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -91,13 +93,13 @@ export default function ParallaxBlade({ data }) {
         style={{
           backgroundImage: `url('${imgUrl}')`,
           transform: `translateY(-${scrollY * 0.4}px)`,
-          top: `80px`,
+          top: `0`,
         }}
       ></div>
       <div
         className={`${
           data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
-        } ${isVisible2 ? "" : "hidden"} weParallaxImage relative !z-[-3] `}
+        } ${isVisible2 ? "" : "hidden"}  weParallaxImage relative !z-[-3] `}
         // style={transformValue2}
         ref={transformValue2Ref}
         style={{
