@@ -29,17 +29,17 @@ export default function BlogDetail() {
                           const qDt = val.quote
                           return (
                              qDt ? 
-                              <p key={i} className='mb-[40px]'><q>{val.quote}</q></p>
+                              <p key={i} className='mb-[40px] md:mb-[20px]'><q>{val.quote}</q></p>
                               :
                               val?.imgUrl ? 
                                 <div className="imgWrapWithText flex mb-[20px] md:flex-wrap">
-                                  <div className="imgWrap w-1/2 mr-[20px] md:w-full">
+                                  <div className="imgWrap w-1/2 mr-[20px] md:w-full md:mb-[20px]">
                                     <Image src={val?.imgUrl} alt='' width={200} height={200} className='w-full rounded-[8px]' />
                                   </div>
-                                  <p key={i} className='mb-[40px] w-1/2 md:w-full' dangerouslySetInnerHTML={{ __html: val.detail }} />
+                                  <p key={i} className='mb-[40px] w-1/2 md:w-full md:mb-0' dangerouslySetInnerHTML={{ __html: val.detail }} />
                                 </div> 
                                 :
-                                <p key={i} className='mb-[40px]' dangerouslySetInnerHTML={{ __html: val.detail }} />
+                                <p key={i} className='mb-[40px] md:mb-[20px]' dangerouslySetInnerHTML={{ __html: val.detail }} />
                               
                           )
                         })

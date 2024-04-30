@@ -26,7 +26,7 @@ export default function NewsDetail() {
                   <div className="details mt-[20px]">
                     {item?.content.map((val, i) => {
                       return (
-                        <p key={i} dangerouslySetInnerHTML={{ __html: val.description }} className='mb-[40px]' />
+                        <p key={i} dangerouslySetInnerHTML={{ __html: val.description }} className='mb-[40px] md:mb-[20px]' />
                       )
                     })}
                   </div>
