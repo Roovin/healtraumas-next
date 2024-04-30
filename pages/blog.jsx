@@ -9,7 +9,6 @@ export default function index() {
   return (
     <>
         <BlogCards data={blogData} />
-        
     </>
   )
 }
