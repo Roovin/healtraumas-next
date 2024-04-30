@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from "next/router"
 import { blogData } from '../../public/data/blogData'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function BlogDetail() {
     
@@ -29,7 +31,16 @@ export default function BlogDetail() {
                              qDt ? 
                               <p key={i} className='mb-[40px]'><q>{val.quote}</q></p>
                               :
-                              <p key={i} className='mb-[40px]' dangerouslySetInnerHTML={{ __html: val.detail }} />
+                              val?.imgUrl ? 
+                                <div className="imgWrapWithText flex mb-[20px] md:flex-wrap">
+                                  <div className="imgWrap w-1/2 mr-[20px] md:w-full">
+                                    <Image src={val?.imgUrl} alt='' width={200} height={200} className='w-full rounded-[8px]' />
+                                  </div>
+                                  <p key={i} className='mb-[40px] w-1/2 md:w-full' dangerouslySetInnerHTML={{ __html: val.detail }} />
+                                </div> 
+                                :
+                                <p key={i} className='mb-[40px]' dangerouslySetInnerHTML={{ __html: val.detail }} />
+                              
                           )
                         })
                       }
@@ -54,6 +65,25 @@ export default function BlogDetail() {
                       </div>
                     </div>
                     )}
+                    {/* {
+                      item?.filterList && (
+                        <div className="filterList">
+                          <ul className='flex'>
+                            {
+                              item?.filterList.map((val, i) => {
+                                return(
+                                  <li key={i} className='pr-[20px] last:pr-0'>
+                                      <p>
+                                        <Link href="" className='no-underline font-[600]'>{val.list}</Link>
+                                      </p>
+                                  </li>
+                                )
+                              })
+                            }
+                          </ul>
+                        </div>
+                      )
+                    } */}
                   </div>
                   : ''}
                 </div> 
