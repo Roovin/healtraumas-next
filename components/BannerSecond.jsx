@@ -37,13 +37,45 @@ export default function BannerSecond({ data }) {
         />
       </div>
       <div className="container">
-        <div className="bannerContent relative text-center z-10 ">
+        <div
+          className={`bannerContent relative ${
+            data.paragraph ? "flex flex-wrap" : ""
+          }   z-10 `}
+        >
           {data.mainTitle && (
-            <h1 className=" text-white ">
-              <span className=" text-[72px] desktop:text-[66px] laptop:text-[60px] tablet:text-[54px] phablet:text-[46px] sm:text-[40px] ">
-                {data.mainTitle}
-              </span>
-            </h1>
+            <div
+              className={`titleWrapper  ${
+                data.paragraph
+                  ? "w-[50%] text-left pr-5 lg:w-full lg:text-center lg:pr-0 "
+                  : "w-full text-center pr-0 "
+              }`}
+            >
+              <h1 className={` text-white `}>
+                <span
+                  className={`${
+                    data.paragraph
+                      ? "h1"
+                      : "text-[72px] desktop:text-[66px] laptop:text-[60px] tablet:text-[54px] phablet:text-[46px] sm:text-[40px]"
+                  }  `}
+                >
+                  {data.mainTitle}
+                </span>
+              </h1>
+            </div>
+          )}
+          {data.paragraph && (
+            <div
+              className={`content  ${
+                data.mainTitle
+                  ? "w-[50%] text-left  lg:w-full lg:text-center lg:pr-0"
+                  : "w-full text-center"
+              } `}
+            >
+              <p
+                className="text-white"
+                dangerouslySetInnerHTML={{ __html: data.paragraph }}
+              />
+            </div>
           )}
         </div>
       </div>
