@@ -6,7 +6,7 @@ export default function ColTwoContent({ data }) {
     <section className={`colTwoContent ${data[0]?.sectionBg}`}>
       <div className="container">
         <div className="row flex md:flex-wrap">
-          {data.map((item, i) => {
+          {data?.map((item, i) => {
             return (
               <div key={i} className="item w-1/2 md:w-full">
                 {item?.mainTitle ? (
@@ -30,17 +30,17 @@ export default function ColTwoContent({ data }) {
                       })
                     ) : (
                       <>
-                        <p className="mb-4">{item.description}</p>
+                        <p className="mb-4">{item?.description}</p>
                         {item.descriptionTwo && (
-                          <p className="mb-4">{item.descriptionTwo}</p>
+                          <p className="mb-4">{item?.descriptionTwo}</p>
                         )}
                       </>
                     )}
-                    {item.btn && (
+                    {item?.btn && (
                       <Button
-                        buttonText={item.btn.text}
-                        buttonClass={item.btn.btnClass}
-                        url={item.btn.btnUrl}
+                        buttonText={item?.btn?.text}
+                        buttonClass={item?.btn?.btnClass}
+                        url={item?.btn?.btnUrl}
                       />
                     )}
                   </div>

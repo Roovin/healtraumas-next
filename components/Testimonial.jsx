@@ -26,16 +26,16 @@ export default function Testimonial() {
                 <p
                   className=" mb-4"
                   dangerouslySetInnerHTML={{
-                    __html: testimonialSlider.quote,
+                    __html: testimonialSlider?.quote,
                   }}
                 />
               </blockquote>
               <p>
                 -{" "}
                 <Link href="/our-team" className=" underline ">
-                  {testimonialSlider.authorName}
+                  {testimonialSlider?.authorName}
                 </Link>
-                {testimonialSlider.author}
+                {testimonialSlider?.author}
               </p>
             </div>
           ))}

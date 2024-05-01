@@ -78,13 +78,13 @@ export default function TeamWithSlider({ data }) {
 	}, [slider]);
 	return (
 		<>
-			<section className={`teamWithSlider ${data.sectionClass}`}>
+			<section className={`teamWithSlider ${data?.sectionClass}`}>
 				<div className="container">
 					<div className="intro text-center mb-[40px] max-w-[1050px] mx-auto">
-						<h2 className={` ${data.sectionClass === 'bg-blue' ? 'text-white' : 'text-blue'} mb-[20px]`}>{data.title}</h2>
+						<h2 className={` ${data?.sectionClass === 'bg-blue' ? 'text-white' : 'text-blue'} mb-[20px]`}>{data?.title}</h2>
 						{
-							data.title && (
-								<p>{data.description}</p>
+							data?.title && (
+								<p>{data?.description}</p>
 							)
 						}
 					</div>
@@ -94,11 +94,11 @@ export default function TeamWithSlider({ data }) {
 								<div key={index} className={`card relative group w-[calc(25%-30px)] mx-[15px] sm:w-full sm:mx-0 phablet:w-[calc(50%-20px)] phablet:mx-[10px] tablet:w-[calc(33%-20px)] tablet:mx-[10px] bg-white mb-[30px] border-black border-[2px] rounded-[10px] hover:shadow-xl`} onClick={() => clickOverlay(index)}>
 									<span className='emptyLink'>.</span>
 									<div className="imgWrap max-w-full overflow-hidden max-h-[300px] h-full">
-										<Image src={item.imageUrl} alt={item.alt} width={300} height={300} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] object-cover h-full' />
+										<Image src={item?.imageUrl} alt={item?.alt} width={300} height={300} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] object-cover h-full' />
 									</div>
 									<div className="contentWrap px-[15px] py-[20px] relative h-[200px] sm:h-[150px]">
-										<span className='font-bold '>{item.authorDesignation}</span>
-										<h4 className='mt-[10px]'>{item.authorName}</h4>
+										<span className='font-bold '>{item?.authorDesignation}</span>
+										<h4 className='mt-[10px]'>{item?.authorName}</h4>
 										<div className="btnWrap absolute bottom-[20px] ">
 											<span>Read More</span>
 										</div>
@@ -146,7 +146,7 @@ export default function TeamWithSlider({ data }) {
 														className="w-full h-full object-cover"
 														width={297}
 														height={312}
-														src={card.imageUrl}
+														src={card?.imageUrl}
 														alt="card image"
 													/>
 												</div>
@@ -154,11 +154,11 @@ export default function TeamWithSlider({ data }) {
 											<div className="colTwo w-[62%] xxl-up:w-fit pl-[10px] xxl-up:pl-[30px] md:w-full md:mt-[10px] md:pl-0">
 												<div className="content md:pb-0 h-full">
 													<div className="text-black mb-[30px] md:mb-0 max-w-[95%] md:text-center">
-														<h3 className=" mb-[4px]">{card.authorName}</h3>
+														<h3 className=" mb-[4px]">{card?.authorName}</h3>
 														<span className=" text-[16px] mb-[8px] font-[700] uppercase tracking-[1.65px]">
-															{card.authorDesignation}
+															{card?.authorDesignation}
 														</span>
-														<p className=" mt-[30px] xxl:text-[14px] md:mt-[10px]" dangerouslySetInnerHTML={{ __html: card.description }} />
+														<p className=" mt-[30px] xxl:text-[14px] md:mt-[10px]" dangerouslySetInnerHTML={{ __html: card?.description }} />
 													</div>
 												</div>
 											</div>

@@ -29,33 +29,33 @@ export default function ContentWithVideo({ data }) {
       <div className="container">
         <div
           className={`contentWrap ${
-            data.imgurl
-              ? data.flexRowReverse
+            data?.imgurl
+              ? data?.flexRowReverse
                 ? "flex-row-reverse lg:flex-row"
                 : ""
               : ""
           } relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap lg:w-full lg:ml-0`}
         >
           <div className="content w-[calc(50%-40px)] mx-[20px] lg:w-full lg:mx-auto  ">
-            {data.title && <h4 className="text-blue mb-8 ">{data.title}</h4>}
-            {data.paragraph && (
+            {data?.title && <h4 className="text-blue mb-8 ">{data?.title}</h4>}
+            {data?.paragraph && (
               <p
                 className=" mb-4"
-                dangerouslySetInnerHTML={{ __html: data.paragraph }}
+                dangerouslySetInnerHTML={{ __html: data?.paragraph }}
               />
             )}
-            {data.paragraph2 && (
+            {data?.paragraph2 && (
               <p
                 className=" mb-4"
-                dangerouslySetInnerHTML={{ __html: data.paragraph2 }}
+                dangerouslySetInnerHTML={{ __html: data?.paragraph2 }}
               />
             )}
-            {data.list && (
+            {data?.list && (
               <ul className=" relative w-full list-disc pl-10 ">
                 {data?.list.map((item, i) => {
                   return (
                     <li key={i} className=" mb-2 ">
-                      <p>{item.description}</p>
+                      <p>{item?.description}</p>
                     </li>
                   );
                 })}
@@ -63,17 +63,17 @@ export default function ContentWithVideo({ data }) {
             )}
           </div>
           <div className="videoWrapper w-[calc(50%-40px)] mx-[20px] lg:w-full lg:max-w-[600px] lg:mx-0 lg:mt-5 ">
-            {data && data.imgurl ? (
+            {data && data?.imgurl ? (
               <div className="imageWrap w-full h-[500px] laptop:h-[400px] lg:h-full lg:max-h-[400px] ">
                 <Image
-                  src={data.imgurl}
+                  src={data?.imgurl}
                   width={600}
                   height={600}
                   alt="img"
                   className=" w-full h-full object-cover object-center "
                 />
               </div>
-            ) : data && data.videoUrl ? (
+            ) : data && data?.videoUrl ? (
               <div
                 className="video relative w-full"
                 style={{
@@ -84,7 +84,7 @@ export default function ContentWithVideo({ data }) {
                 <iframe
                   // width="560"
                   // height="315"
-                  src={data.videoUrl}
+                  src={data?.videoUrl}
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -93,21 +93,21 @@ export default function ContentWithVideo({ data }) {
                   className=" w-full h-full "
                 ></iframe>
               </div>
-            ) : data && data.logoImage ? (
+            ) : data && data?.logoImage ? (
               <div className="logoWrapper relative w-full flex justify-end ">
                 <div className="logo relative w-full max-w-[225px] h-full max-h-[96px] ">
                   <Image
-                    src={data.logoImage}
+                    src={data?.logoImage}
                     width={400}
                     height={400}
                     alt="logo"
                     className=" w-full h-full object-cover "
                   />
                 </div>
-                {data.logoImage2 && (
+                {data?.logoImage2 && (
                   <div className="logo relative w-full max-w-[225px] h-full max-h-[222px] ml-10 ">
                     <Image
-                      src={data.logoImage2}
+                      src={data?.logoImage2}
                       width={400}
                       height={400}
                       alt="logo"

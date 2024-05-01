@@ -17,7 +17,7 @@ export default function BannerSecond({ data }) {
   }, []);
   return (
     <section
-      className={`introWithCta relative w-full min-h-[50vh] flex flex-wrap items-center overflow-hidden after:opacity-[0.75] ${data.bgImage ? "bgBlueOverlay" : ""
+      className={`introWithCta relative w-full min-h-[50vh] flex flex-wrap items-center overflow-hidden after:opacity-[0.75] ${data?.bgImage ? "bgBlueOverlay" : ""
         }`}
     >
       <div
@@ -28,7 +28,7 @@ export default function BannerSecond({ data }) {
         }}
       >
         <Image
-          src={data.bgImage}
+          src={data?.bgImage}
           width={1960}
           height={500}
           className=" w-full h-full object-cover object-center "
@@ -42,14 +42,14 @@ export default function BannerSecond({ data }) {
             <div className={`titleWrapper w-1/2 text-left pr-5 md:w-full md:text-center md:pr-0 md:mb-[20px]`}>
               <h1 className={` text-white `}>
                 <span className={`h1`}>
-                  {data.mainTitle}
+                  {data?.mainTitle}
                 </span>
               </h1>
             </div>
             <div className={`content w-1/2 text-left  md:w-full md:text-center md:pr-0 `}>
               <p
                 className="text-white"
-                dangerouslySetInnerHTML={{ __html: data.paragraph }}
+                dangerouslySetInnerHTML={{ __html: data?.paragraph }}
               />
             </div>
         </div> : 
@@ -58,7 +58,7 @@ export default function BannerSecond({ data }) {
             <span
               className={`text-[72px] desktop:text-[66px] laptop:text-[60px] tablet:text-[54px] phablet:text-[46px] sm:text-[40px]"`}
             >
-              {data.mainTitle}
+              {data?.mainTitle}
             </span>
           </h1>
         </div>

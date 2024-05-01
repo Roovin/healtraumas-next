@@ -42,10 +42,10 @@ export default function ParallaxBlade({ data }) {
     <section
       className={`${Style.ParallaxBlade} parallaxBlade parallax-image  min-h-[352px] flex items-center bgBlueOverlay laptop:min-h-[310px] lg:min-h-[280px] `}
     >
-      {data.parallax === "parllaxOne" ? (
+      {data?.parallax === "parllaxOne" ? (
         <div
           className={`${
-            data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
+            data?.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
           } weParallaxImage relative !z-[-3] `}
           ref={transformValue2Ref}
           style={{
@@ -57,7 +57,7 @@ export default function ParallaxBlade({ data }) {
       ) : (
         <div
           className={`${
-            data.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
+            data?.colTwoTitle ? Style.colTwoTitle : Style.weParallaxImage
           } weParallaxImage relative !z-[-3] `}
           ref={transformValue2Ref}
           style={{
@@ -70,19 +70,19 @@ export default function ParallaxBlade({ data }) {
       <div className="container">
         <div className="parallaxContent relative w-full text-center z-[5]">
           {data?.title ? (
-            <h2 className=" text-skyBlue ">{data.title}</h2>
-          ) : data.colTwoTitle ? (
+            <h2 className=" text-skyBlue ">{data?.title}</h2>
+          ) : data?.colTwoTitle ? (
             <div className="row flex md:flex-wrap">
               <div className="item w-1/2 md:w-full md:mb-[20px]">
                 <div className="titleWrap">
-                  <h2 className="h1 text-white">{data.colTwoTitle}</h2>
+                  <h2 className="h1 text-white">{data?.colTwoTitle}</h2>
                 </div>
               </div>
               <div className="item w-1/2 md:w-full">
                 <div className="titleWrap text-left">
                   <p
                     className="text-white"
-                    dangerouslySetInnerHTML={{ __html: data.description }}
+                    dangerouslySetInnerHTML={{ __html: data?.description }}
                   />
                 </div>
               </div>

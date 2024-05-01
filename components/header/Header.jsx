@@ -71,13 +71,13 @@ export default function Header() {
               <div className="nav mr-[20px]">
                 <ul className='flex pt-[42px] ipad:flex-wrap ipad:pt-[20px] ml-[20px] ipad:ml-0'>
                   {
-                    headerData.map((item, i) => {
+                    headerData?.map((item, i) => {
                       return (
                         <li key={i} className='mr-[30px] pb-[42px] ipad:w-full ipad:pb-[20px] laptop-portrait:mr-[10px] last:mr-0' onMouseEnter={(e) => showSubManu(e, i)} onMouseLeave={(e) => hideMenu(e, i)}>
                           { item?.subMenu ? 
-                              <span className={`text-white ${item?.subMenu ? Style.arrow : ''} cursor-pointer pr-[20px] ipad:pr-[30px] ${ item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={(e) => showMenuRes(e, i)}>{item.nav}</span>
+                              <span className={`text-white ${item?.subMenu ? Style.arrow : ''} cursor-pointer pr-[20px] ipad:pr-[30px] ${ item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={(e) => showMenuRes(e, i)}>{item?.nav}</span>
                             : 
-                            <Link href={item.url} className={`text-white ${item?.subMenu ? Style.arrow : ''} pr-[20px] ipad:pr-[30px] ${ item?.subMenu && openSubMenu === i ? Style.show : ''} `}>{item.nav}</Link>
+                            <Link href={item?.url} className={`text-white ${item?.subMenu ? Style.arrow : ''} pr-[20px] ipad:pr-[30px] ${ item?.subMenu && openSubMenu === i ? Style.show : ''} `}>{item?.nav}</Link>
                           }
                           <div className={`subMenu ${Style.subMenu} ${openSubMenu == i && item?.subMenu ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === i ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full ipad:!top-[0] p-[20px] z-[99]`} style={subMenuProrperty}>
                             <div className={`${Style.backBtn} backBtn relative cursor-pointer text-[20px] mb-[20px] ipad:mb-[25px] pl-[30px] hidden ipad:inline-block`} onClick={() => backBtn('x')}></div>
@@ -86,7 +86,7 @@ export default function Header() {
                                 item?.subMenu?.map((val, i) => {
                                   return (
                                     <li key={i} className='mb-[10px] last:mb-0'>
-                                      <Link href={val.url} className='text-blue'>{val.subNav}</Link>
+                                      <Link href={val?.url} className='text-blue'>{val?.subNav}</Link>
                                     </li>
                                   )
                                 })
