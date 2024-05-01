@@ -35,7 +35,7 @@ export default function FooterCta() {
         <div className="formWrap relative w-full  max-w-[1200px] mx-auto mt-8 z-[2]  ">
           <form
             onSubmit={handleSubmit}
-            className="w-[calc(100%+16px)] ml-[-8px] flex lg:flex-wrap sm:w-full sm:flex-col sm:ml-0 "
+            className="w-[calc(100%+16px)] ml-[-8px] flex lg:flex-wrap md:mx-auto md:inline-grid md:w-full" 
           >
             <label htmlFor="firstName" className=" text-[0] ">
               First Name
@@ -45,7 +45,7 @@ export default function FooterCta() {
               type="text"
               name="firstName"
               placeholder="First Name"
-              className="relative w-full py-[22px] wrap max-w-[315px] mx-2 mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px] sm:mx-auto "
+              className="relative w-full py-[22px] wrap max-w-[315px] sm:max-w-full mx-2 md:mx-auto mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px]"
             />
             <ValidationError
               prefix="FirstName"
@@ -60,7 +60,7 @@ export default function FooterCta() {
               type="text"
               name="LastName"
               placeholder="Last Name"
-              className="relative w-full py-[22px] wrap max-w-[315px] mx-2 mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px]  sm:mx-auto "
+              className="relative w-full py-[22px] wrap max-w-[315px] sm:max-w-full mx-2 md:mx-auto mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px]"
             />
             <ValidationError
               prefix="LastName"
@@ -75,7 +75,7 @@ export default function FooterCta() {
               type="email"
               name="email"
               placeholder="Email Address"
-              className="relative w-full py-[22px] wrap max-w-[315px] mx-2 mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px]  sm:mx-auto "
+              className="relative w-full py-[22px] wrap max-w-[315px] sm:max-w-full mx-2 md:mx-auto mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px]"
             />
             <ValidationError
               prefix="Email"
@@ -84,7 +84,7 @@ export default function FooterCta() {
             />
             <button
               type="submit"
-              className="default h-full md:max-w-[150px] min-w-[150px]  sm:mx-auto "
+              className="default h-full md:max-w-[150px] min-w-[150px] md:mx-auto"
               disabled={state.submitting}
             >
               Sign Up
@@ -95,3 +95,4 @@ export default function FooterCta() {
     </section>
   );
 }
+
