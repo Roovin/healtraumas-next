@@ -3,17 +3,17 @@ const intro = {
   bgImage: "",
   title: "",
   titleSpan: "What We Do",
-  paragraph: "We work with international trauma experts and Ukrainian partners to scale existing evidence- based programs and pilot innovative solutions for: ",
+  paragraph: "We work with trauma experts and Ukrainian partners to scale existing evidence-based programs and pilot innovative solutions for: ",
   points: [
     {
       id: 1,
       listTitle: "Veterans",
-      listItem: " - Supporting the introduction of novel therapies to improve outcomes for those with severe mental health conditions.",
+      listItem: " - Supporting the introduction of novel therapies to improve outcomes for those with severe mental health conditions. ",
     },
     {
       id: 2,
       listTitle: "Children",
-      listItem: " – Implementing effective programs to address traumatic stress and reduce the risk of long-term mental health conditions.",
+      listItem: " - Implementing effective programs to address traumatic stress and reduce the risk of long-term mental health conditions. ",
     }
   ],
   btnText: "How We Help",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "./button/Button";
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function FooterCta() {
   const [state, handleSubmit] = useForm("xeqyvnlk");
@@ -9,16 +9,16 @@ export default function FooterCta() {
   useEffect(() => {
     const clearForm = () => {
       const inputs = document.querySelectorAll(".contactForm form input");
-      inputs.forEach(input => {
+      inputs.forEach((input) => {
         input.value = "";
       });
     };
     return clearForm;
   }, []);
-  
+
   if (state.succeeded && !formsuccess) {
-      alert('Thank You')
-      setformsuccess(true);
+    alert("Thank You");
+    setformsuccess(true);
   }
   return (
     <section className="FooterCta relative w-full bg-blue">
@@ -33,19 +33,22 @@ export default function FooterCta() {
           </p>
         </div>
         <div className="formWrap relative w-full  max-w-[1200px] mx-auto mt-8 z-[2]  ">
-          <form onSubmit={handleSubmit} className="w-[calc(100%+16px)] ml-[-8px] flex lg:flex-wrap">
+          <form
+            onSubmit={handleSubmit}
+            className="w-[calc(100%+16px)] ml-[-8px] flex lg:flex-wrap"
+          >
             <label htmlFor="firstName" className=" text-[0] ">
               First Name
             </label>
             <input
               id="firstName"
-              type="text" 
+              type="text"
               name="firstName"
               placeholder="First Name"
               className="relative w-full py-[22px] wrap max-w-[315px] mx-2 mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px]"
             />
-            <ValidationError 
-              prefix="FirstName" 
+            <ValidationError
+              prefix="FirstName"
               field="firstName"
               errors={state.errors}
             />
@@ -54,13 +57,13 @@ export default function FooterCta() {
             </label>
             <input
               id="LastName"
-              type="text" 
+              type="text"
               name="LastName"
               placeholder="Last Name"
               className="relative w-full py-[22px] wrap max-w-[315px] mx-2 mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px]"
             />
-            <ValidationError 
-              prefix="LastName" 
+            <ValidationError
+              prefix="LastName"
               field="LastName"
               errors={state.errors}
             />
@@ -69,18 +72,22 @@ export default function FooterCta() {
             </label>
             <input
               id="email"
-              type="email" 
+              type="email"
               name="email"
               placeholder="Email Address"
               className="relative w-full py-[22px] wrap max-w-[315px] mx-2 mb-4 px-8 laptop:p-5 lg:p-4 rounded-none bg-white border-none outline-none transition duration-300 ease-in-out focus:outline-solid focus:outline-white focus:outline-[2px]"
             />
-            <ValidationError 
-              prefix="Email" 
+            <ValidationError
+              prefix="Email"
               field="email"
               errors={state.errors}
             />
-            <button type="submit" className="default h-full md:max-w-[150px]" disabled={state.submitting}>
-              Submit
+            <button
+              type="submit"
+              className="default h-full md:max-w-[150px]"
+              disabled={state.submitting}
+            >
+              Sign Up
             </button>
           </form>
         </div>
