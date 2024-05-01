@@ -7,7 +7,7 @@ export const blogData = {
             alt: "Child Toys",
             date: "8/16/23",
             title: "What Children in Ukraine Need Right Now",
-            description: "The impact of conflict on children is significant. Research from Turku University shows that in war zones",
+            description: "The impact of conflict on children is significant. Research from Turku University shows that in war zones, 60% of adolescents",
             btn: "Read More",
             btnUrl: "/blog/",
             date: 'Aug 16',
@@ -16,7 +16,7 @@ export const blogData = {
                     detail: "The impact of conflict on children is significant. Research from Turku University shows that in war zones, 60% of adolescents witnessed armed attacks, 14% were victims of violence, and 30% were displaced from their homes. 1 Children also endure isolation caused by disruptions in family, friendships, and education, and vulnerability to sexual violence, malnutrition, and illness.2 This exposure to different forms of violence, the duration of conflict, and the nature of trauma, whether witnessed or experienced, elevate the likelihood of mental disorders later in life. The global deficit in child mental health services worsens the already challenging situation.3",
                 },
                 {
-                    detail: "The invasion of Ukraine particularly endangers young children, stripping away their sense of security.They struggle to comprehend the complexities of war, lack dependable parental support due to pervasive confusion and insecurity, and face challenges in finding new refuge and rebuilding friendships.4 Additionally, the destruction of over 2, 400 educational facilities diminishes safe spaces for social interaction.5 Many children have also been separated from their families, necessitating specific care and concerns about future social mobility.Separated children also face serious risks of human trafficking and abuse.",
+                    detail: "The invasion of Ukraine particularly endangers young children, stripping away their sense of security. They struggle to comprehend the complexities of war, lack dependable parental support due to pervasive confusion and insecurity, and face challenges in finding new refuge and rebuilding friendships.4 Additionally, the destruction of over 2,400 educational facilities diminishes safe spaces for social interaction.5 Many children have also been separated from their families, necessitating specific care and concerns about future social mobility. Separated children also face serious risks of human trafficking and abuse.",
                 },
                 {
                     detail: "Children with disabilities already face pre-existing challenges, including stigma, isolation, and difficulties in accessing community assistance.6 Conflict worsens these effects, especially for those with intellectual disabilities. The situation is severe for many living in residential institutions, where tens of thousands of people are segregated and children with disabilities are often living in inhumane conditions.7 8  ",
@@ -25,7 +25,7 @@ export const blogData = {
                     detail: "Because of these factors, Heal Ukraine Trauma and other organizations are working to provide support to children’s programs as an urgent priority. Right now, children in Ukraine require safe physical and psychological spaces, support to process their complex trauma and experiences, and strengthening social networks, which they have all lost since the start of the war.",
                 },
                 {
-                    detail: "As Dennis Ougrin, Professor of Child and Adolescent Psychiatry and Heal Ukraine Trauma Advisory Board Member stated:  ",
+                    detail: "As Dennis Ougrin, Professor of Child and Adolescent Psychiatry and Heal Ukraine Trauma Advisory Board Member stated:",
                 },
                 {
                     detail: "Learn more about the needs in Ukraine <b><a href='/'>here</a></b>",
@@ -98,7 +98,7 @@ export const blogData = {
                     detail: "Kyiv doesn’t seem like a city at war, but it is.  Scratch the surface and you see it everywhere. Everyone’s changed.  One old friend said, poignantly, when I asked him what made him saddest, <q>I’ve lost my past.  We’ve lost our past.</q>  His words reminded me of accounts of the summers of 1914 and 1939 being described as a golden time cast in amber, gone forever.  This war has changed everything."
                 },
                 {
-                    detail: "It was also a hugely productive trip that confirmed for me that Heal Ukraine Trauma (HUT)’s mission, vision, and our operating model are exactly correct.  I went to Kyiv to work with our Ukrainian partner organizations who we are working with to implement programs that serve both children and families as well as veterans and first responders."
+                    detail: "It was also a hugely productive trip that confirmed for me that Heal Ukraine Trauma (HUT)’s mission, vision, and our operating model are exactly correct. I went to Kyiv to work with our Ukrainian partner organizations who we are working with to implement programs that serve both children and families as well as veterans and first responders."
                 },
                 {
                     detail: "This included supporting our partner Ukrainian Psychedelic Research Association (UPRA) in preparing for Ukraine’s first conference on the potential of psychedelic-assisted therapy (PAT) for the treatment of severe PTSD in veterans and first responders and working with our partner NGO, <q>Volunteers</q>, implementing a program to teach children mind-body therapies."
@@ -114,7 +114,7 @@ export const blogData = {
                     detail: "Veterans spoke of their personal experiences and global health experts shared compelling clinical data demonstrating the benefit of PAT for severe PTSD. "
                 },
                 {
-                    detail: "I saw compelling success from HUT’s initiatives.  The UPRA conference, sponsored by HUT, was a groundbreaking medical conference supported by the Ukrainian Ministry of Health and held at a leading military rehabilitation hospital.  Veterans spoke of their personal experiences and global health experts shared compelling clinical data demonstrating the benefit of PAT for severe PTSD.  The data presented will support the first PAT submission to the FDA later this year, with potential approval in the U.S. next year.  And in central Ukraine, in an evidence-based HUT-supported program, 500 children will learn how to process traumatic memories, an important guardrail against the onset of mental disorders. "
+                    detail: "I saw compelling success from HUT’s initiatives.  The UPRA conference, sponsored by HUT, was a groundbreaking medical conference supported by the Ukrainian Ministry of Health and held at a leading military rehabilitation hospital.  Veterans spoke of their personal experiences and global health experts shared compelling clinical data demonstrating the benefit of PAT for severe PTSD.  The data presented will support the first PAT submission to the FDA later this year, with potential approval in the U.S. next year.  And in central Ukraine, in an evidence-based HUT-supported program, 500 children will learn how to process traumatic memories, an important guardrail against the onset of mental disorders."
                 },
                 {
                     detail: "I can’t tell you how proud we are to have successfully launched programs with this level of impact in such a challenging operating environment."
