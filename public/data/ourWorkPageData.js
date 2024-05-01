@@ -33,7 +33,7 @@ const colTwoContentData = [
     mainTitle: "",
     description: "Heal Ukraine Trauma brings unique value – we focus on areas of great need, build collaborative partnerships, and lead project teams. Our global network of experts helps us achieve maximum impact.",
     descriptionTwo: "Please reach out if you would like to collaborate with us!",
-    btn: { text: "Get Involved", btnUrl: "/", btnClass: "default" },
+    btn: { text: "Get Involved", btnUrl: "/contact-us", btnClass: "default" },
   }
 ]
 
