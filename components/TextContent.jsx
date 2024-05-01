@@ -32,8 +32,8 @@ export default function TextContent({ data }) {
                 dangerouslySetInnerHTML={{ __html: text.paragraph2 }}
               />
             )}
-            {text.listItems && Array.isArray(text.listItems) && (
-              <ul className=" list-disc pl-[40px] ">
+            {text.listItems && (
+              <ul className=" list-disc pl-[40px]">
                 {text.listItems.map((listItem) => (
                   <li key={listItem.id} className=" mb-4 ">
                     <p dangerouslySetInnerHTML={{ __html: listItem.item }} />
@@ -47,7 +47,7 @@ export default function TextContent({ data }) {
                 dangerouslySetInnerHTML={{ __html: text.paragraph3 }}
               />
             )}
-            {text.listItems2 && Array.isArray(text.listItems2) && (
+            {text.listItems2 && (
               <ul className=" list-disc pl-[40px] ">
                 {text.listItems2.map((listItem) => (
                   <li key={listItem.id} className=" mb-4 ">
@@ -62,7 +62,7 @@ export default function TextContent({ data }) {
                 dangerouslySetInnerHTML={{ __html: text.paragraph4 }}
               />
             )}
-            {text.listItems3 && Array.isArray(text.listItems3) && (
+            {text.listItems3 && (
               <ul className=" list-disc pl-[40px] ">
                 {text.listItems3.map((listItem) => (
                   <li key={listItem.id} className=" mb-4 ">
