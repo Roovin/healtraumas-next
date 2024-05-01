@@ -431,3 +431,6 @@ p a {
 b {
   font-weight: 700;
 }
+.slick-arrow {
+  display: none !important;
+}
