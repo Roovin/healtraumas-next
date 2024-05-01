@@ -12,6 +12,10 @@ export const headerData = [
                 subNav: "Our Team",
                 url: "/our-team"
             },
+            {
+                subNav: "Psychedelic-Assisted Therapy",
+                url: "/pat"
+            },
         ]
     },
     {

@@ -84,7 +84,7 @@ export default function FooterCta() {
             />
             <button
               type="submit"
-              className="default h-full md:max-w-[150px]"
+              className="default h-full md:max-w-[150px] min-w-[150px]"
               disabled={state.submitting}
             >
               Sign Up
