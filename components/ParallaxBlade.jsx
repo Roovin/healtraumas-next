@@ -51,7 +51,7 @@ export default function ParallaxBlade({ data }) {
           style={{
             backgroundImage: `url('${imgUrl}')`,
             transform: `translateY(-${scrollY * 0.4}px)`,
-            top: `80px`,
+            top: `50px`,
           }}
         ></div>
       ) : (
