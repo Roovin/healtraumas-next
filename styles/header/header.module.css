@@ -36,6 +36,15 @@ header .header span.arrow.show::before,
 header .header a.arrow.show::before {
     transform: translateY(-50%) rotate(180deg);
 }
+@media (max-width: 1024px) {
+    header .header span.arrow::before,  
+    header .header a.arrow::before {
+        width: 18px;
+        height: 12px;
+        transform: translateY(-50%) rotate(0) !important;
+        background: url('../../public/icons/right-arrow-white.svg') no-repeat;
+    }
+}
 
 header .header .subMenu .backBtn {
     content: '';
