@@ -44,6 +44,12 @@ export default function ContentWithVideo({ data }) {
                 dangerouslySetInnerHTML={{ __html: data.paragraph }}
               />
             )}
+            {data.paragraph2 && (
+              <p
+                className=" mb-4"
+                dangerouslySetInnerHTML={{ __html: data.paragraph2 }}
+              />
+            )}
             {data.list && (
               <ul className=" relative w-full list-disc pl-10 ">
                 {data?.list.map((item, i) => {
@@ -51,14 +57,14 @@ export default function ContentWithVideo({ data }) {
                     <li key={i} className=" mb-2 ">
                       <p>{item.description}</p>
                     </li>
-                  )
-                }) }
+                  );
+                })}
               </ul>
             )}
           </div>
           <div className="videoWrapper w-[calc(50%-40px)] mx-[20px] lg:w-full lg:max-w-[600px] lg:mx-0 lg:mt-5 ">
             {data && data.imgurl ? (
-              <div className="imageWrap w-full h-[500px] laptop:h-[400px] sm:h-[300px] ">
+              <div className="imageWrap w-full h-[500px] laptop:h-[400px] lg:h-full lg:max-h-[400px] ">
                 <Image
                   src={data.imgurl}
                   width={600}
