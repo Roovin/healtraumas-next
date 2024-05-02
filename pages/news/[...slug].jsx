@@ -18,15 +18,15 @@ export default function NewsDetail() {
 
           return (
             <div key={i} className="container">
-              {item.title === getValue ?
+              {item?.title === getValue ?
                 <div className='max-w-[1020px] mx-auto'>
                   <div className="intro text-center">
-                    <h2 className='text-blue'>{item.title}</h2>
+                    <h2 className='text-blue'>{item?.title}</h2>
                   </div>
                   <div className="details mt-[20px]">
                     {item?.content.map((val, i) => {
                       return (
-                        <p key={i} dangerouslySetInnerHTML={{ __html: val.description }} className='mb-[40px] md:mb-[20px]' />
+                        <p key={i} dangerouslySetInnerHTML={{ __html: val?.description }} className='mb-[40px] md:mb-[20px]' />
                       )
                     })}
                   </div>

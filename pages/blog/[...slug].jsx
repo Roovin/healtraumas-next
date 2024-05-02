@@ -17,11 +17,11 @@ export default function BlogDetail() {
       {blogData?.cards.map((item, i) => {
             return (
               <div className="container" key={i}>
-                {item.title === isValue ?
+                {item?.title === isValue ?
                   <div className='max-w-[1020px] mx-auto'>
                     <div className="intro text-center mb-[20px] ">
-                      <p className='text-blue'>{item.date }</p>
-                      <h2 className='text-blue h1'><span>{item.title}</span></h2>
+                      <p className='text-blue'>{item?.date }</p>
+                      <h2 className='text-blue h1'><span>{item?.title}</span></h2>
                     </div>
                     <div className=''>
                       {
@@ -29,17 +29,17 @@ export default function BlogDetail() {
                           const qDt = val.quote
                           return (
                              qDt ? 
-                              <p key={i} className='mb-[40px] md:mb-[20px]'><q>{val.quote}</q></p>
+                              <p key={i} className='mb-[40px] md:mb-[20px]'><q>{val?.quote}</q></p>
                               :
                               val?.imgUrl ? 
                                 <div className="imgWrapWithText flex mb-[20px] md:flex-wrap">
                                   <div className="imgWrap w-1/2 mr-[20px] md:w-full md:mb-[20px]">
                                     <Image src={val?.imgUrl} alt='' width={200} height={200} className='w-full rounded-[8px]' />
                                   </div>
-                                  <p key={i} className='mb-[40px] w-1/2 md:w-full md:mb-0' dangerouslySetInnerHTML={{ __html: val.detail }} />
+                                  <p key={i} className='mb-[40px] w-1/2 md:w-full md:mb-0' dangerouslySetInnerHTML={{ __html: val?.detail }} />
                                 </div> 
                                 :
-                                <p key={i} className='mb-[40px] md:mb-[20px]' dangerouslySetInnerHTML={{ __html: val.detail }} />
+                                <p key={i} className='mb-[40px] md:mb-[20px]' dangerouslySetInnerHTML={{ __html: val?.detail }} />
                               
                           )
                         })
@@ -56,7 +56,7 @@ export default function BlogDetail() {
                             item?.sources.map((list, index) => {
                               return (
                                 <li key={index} className='mb-[40px]'>
-                                  <p dangerouslySetInnerHTML={{ __html: list.source }} />
+                                  <p dangerouslySetInnerHTML={{ __html: list?.source }} />
                               </li>
                               )
                             })
