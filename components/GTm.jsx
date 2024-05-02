@@ -4,7 +4,7 @@ export default function GTm() {
     return (
         <>
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L526122LP"></script>
-            <script dangerouslySetInnerHTML={{
+            <script strategy="lazyOnload" dangerouslySetInnerHTML={{
                 __html: `window.dataLayer = window.dataLayer || [];
 					function gtag(){
 						dataLayer.push(arguments);
