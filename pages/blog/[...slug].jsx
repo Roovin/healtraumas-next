@@ -32,7 +32,7 @@ export default function BlogDetail() {
                               <p key={i} className='mb-[40px] md:mb-[20px]'><q>{val?.quote}</q></p>
                               :
                               val?.imgUrl ? 
-                                <div className="imgWrapWithText flex mb-[20px] md:flex-wrap">
+                                <div key={i} className="imgWrapWithText flex mb-[20px] md:flex-wrap">
                                   <div className="imgWrap w-1/2 mr-[20px] md:w-full md:mb-[20px]">
                                     <Image src={val?.imgUrl} alt='' width={200} height={200} className='w-full rounded-[8px]' />
                                   </div>

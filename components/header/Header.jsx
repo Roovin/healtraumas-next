@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { HeaderData, headerData } from '../../public/data/headerData'
 import Button from '../button/Button'
 import Style from '../../styles/header/header.module.css'
+import { useRouter } from "next/router";
 
 export default function Header() {
 
