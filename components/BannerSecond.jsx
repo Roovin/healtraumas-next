@@ -28,6 +28,7 @@ export default function BannerSecond({ data }) {
         }}
       >
         <Image
+        loading="eager"
           src={data?.bgImage}
           width={1960}
           height={500}

@@ -66,6 +66,7 @@ export default function ContentWithVideo({ data }) {
             {data && data?.imgurl ? (
               <div className="imageWrap w-full h-[500px] laptop:h-[400px] lg:h-full lg:max-h-[400px] ">
                 <Image
+                loading="eager"
                   src={data?.imgurl}
                   width={600}
                   height={600}
@@ -97,6 +98,7 @@ export default function ContentWithVideo({ data }) {
               <div className="logoWrapper relative w-full flex justify-end ">
                 <div className="logo relative w-full max-w-[225px] h-full max-h-[96px] ">
                   <Image
+                  loading="eager"
                     src={data?.logoImage}
                     width={400}
                     height={400}
@@ -107,6 +109,7 @@ export default function ContentWithVideo({ data }) {
                 {data?.logoImage2 && (
                   <div className="logo relative w-full max-w-[225px] h-full max-h-[222px] ml-10 ">
                     <Image
+                    loading="eager"
                       src={data?.logoImage2}
                       width={400}
                       height={400}

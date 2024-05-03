@@ -12,6 +12,7 @@ export default function IntroWithCta({ data, className }) {
       {data?.bgImage && (
         <div className="bg_img absolute top-0 left-0 w-full h-full ">
           <Image
+          loading="eager"
             src={data?.bgImage}
             width={1960}
             height={500}

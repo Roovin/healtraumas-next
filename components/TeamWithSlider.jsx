@@ -94,7 +94,7 @@ export default function TeamWithSlider({ data }) {
 								<div key={index} className={`card relative group w-[calc(25%-30px)] mx-[15px] sm:w-full sm:mx-0 phablet:w-[calc(50%-20px)] phablet:mx-[10px] tablet:w-[calc(33%-20px)] tablet:mx-[10px] bg-white mb-[30px] border-black border-[2px] rounded-[10px] hover:shadow-xl`} onClick={() => clickOverlay(index)}>
 									<span className='emptyLink'>.</span>
 									<div className="imgWrap max-w-full overflow-hidden max-h-[300px] h-full">
-										<Image src={item?.imageUrl} alt={item?.alt} width={300} height={300} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] object-cover h-full' />
+										<Image loading="eager" src={item?.imageUrl} alt={item?.alt} width={300} height={300} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] object-cover h-full' />
 									</div>
 									<div className="contentWrap px-[15px] py-[20px] relative h-[200px] sm:h-[150px]">
 										<span className='font-bold '>{item?.authorDesignation}</span>
@@ -143,6 +143,7 @@ export default function TeamWithSlider({ data }) {
 											<div className="colTwo md:h-full w-[38%] xxl-up:w-fit pr-[14px] xxl-up:pb-[45px] md:w-full md:pr-0">
 												<div className="imgwrap max-h-[312px] md:max-h-full xxl-up:h-[400px] xxl-up:w-[400px] h-full w-full max-w-[297px] overflow-hidden rounded-[16px] mb-[20px] mx-auto">
 													<Image
+														loading="eager"
 														className="w-full h-full object-cover"
 														width={297}
 														height={312}

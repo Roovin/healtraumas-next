@@ -27,6 +27,7 @@ export default function BlogCards({ data }) {
                 </Link>
                 <div className="imgWrap h-[275px] overflow-hidden ipad:h-[200px]">
                   <Image
+                  loading="eager"
                     src={item?.imgUrl}
                     alt={item?.alt}
                     width={300}

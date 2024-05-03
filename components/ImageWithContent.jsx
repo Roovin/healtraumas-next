@@ -13,7 +13,7 @@ export default function ImageWithContent({ data }) {
                             <div key={i} className="colTwo w-1/2 mr-[20px] last:mr-0 md:w-full md:mb-[20px] md:last:mb-0 md:mr-0">
                                 {item?.imageUrl ? 
                                 <div className="imgWrap">
-                                    <Image src={item?.imageUrl} alt={item?.alt} width={514} height={342} className='md:w-full' />
+                                    <Image loading="eager" src={item?.imageUrl} alt={item?.alt} width={514} height={342} className='md:w-full' />
                                 </div>
                                     :
                                 <div className="content">

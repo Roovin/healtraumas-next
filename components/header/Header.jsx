@@ -109,7 +109,7 @@ export default function Header() {
           <div className={`mainHeader ${Style.mainHeader} flex items-center justify-between`}>
             <div className="logoWrap max-w-[200px] ipad:max-w-[150px] sm:max-w-[100px] relative">
               <Link href={'/'} className='emptyLink' onClick={() => closeMenu()}>.</Link>
-              <Image src={'/logo/logo.png'} alt='Logo' width={334} height={140} />
+              <Image loading="eager" src={'/logo/logo.png'} alt='Logo' width={334} height={140} />
             </div>
             <div className={`main-nav flex items-center ipad:flex-wrap ipad:justify-start justify-end ipad:absolute ipad:top-[62px] sm:top-[42px] ipad:w-full ipad:bg-blue ipad:z-[99] ipad:p-[20px] ipad:pt-0 transition-all duration-700 ease-in-out ${isMenuOpen ? 'ipad:left-0 ipad:opacity-1 ipad:visible' : 'ipad:left-[-100%] ipad:opacity-0 ipad:invisible'}`}>
               <div className="nav mr-[20px]">
@@ -144,7 +144,7 @@ export default function Header() {
                   <li onMouseEnter={(e) => showLan(1)} onMouseLeave={(e) => hideLan(0)} className='pr-[30px] pb-[42px] laptop-portrait:mr-[10px] ipad:hidden'>
                     <div className="iconWrap ">
                       <span className='cursor-pointer'>
-                        <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} />
+                        <Image loading="eager" src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} />
                       </span>
                     </div>
                     <div className={`subMenu ${Style.subMenu} ${openLanMenu == 1 ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === 1 ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full p-[20px] z-[99]`} style={subMenuProrperty}>
@@ -175,7 +175,7 @@ export default function Header() {
                 <div className='mr-[20px] laptop-portrait:mr-[10px]'>
                   <div className="iconWrap" onClick={(e) => showLangRes(1)}>
                     <span className='cursor-pointer relative sm:top-[-2px]'>
-                      <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} className='sm:w-[18px] sm:h-[18px]' />
+                      <Image loading="eager" src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} className='sm:w-[18px] sm:h-[18px]' />
                     </span>
                   </div>
                   <div className={`subMenu ${Style.subMenu} absolute bottom-0 ${openLanMenuRes === 1 ? 'block' : 'hidden'} transition-all duration-700 ease-in-out bg-white h-fit right-[20px] sm:!top-[43px] ipad:!top-[69px] p-[20px] z-[99]`} style={subMenuProrperty}>

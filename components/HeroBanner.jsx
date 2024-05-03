@@ -7,6 +7,7 @@ export default function HeroBanner({data}) {
     <section className=" hero_banner bgBlueOverlay relative w-full bg-blue  after:opacity-[0.55] ">
       <div className="banner_bg_img absolute top-0 right-0 w-full h-full ">
         <Image
+          loading="eager"
           width={2500}
           height={1200}
           src="/heroBanner/hero_banner_img.jpeg"
