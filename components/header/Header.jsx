@@ -36,7 +36,7 @@ export default function Header() {
 
   const subMenuProrperty =
   {
-    top: `${headerHeight - 6}px`,
+    top: `${headerHeight }px`,
   }
 
   const showSubManu = (e, i) => {
@@ -75,7 +75,7 @@ const showLangRes = (val) => {
   const { locales } = useRouter();
   const intl = useIntl(); 
   const headerData = intl?.messages?.headerData;
-  
+
   return (
     <header>
       <div className={`${Style.header} header bg-blue ipad:py-[20px] sm:py-[10px] `}> {/* ${isFixed === 1 ? 'fixed z-[99] w-full ' : ''} */}
@@ -115,13 +115,13 @@ const showLangRes = (val) => {
                       )
                     })
                   }
-                  <li onMouseEnter={(e) => showLan(1)} onMouseLeave={(e) => hideLan(0)} className='mr-[30px] pb-[42px] laptop-portrait:mr-[10px] ipad:hidden'>
+                  <li onMouseEnter={(e) => showLan(1)} onMouseLeave={(e) => hideLan(0)} className='pr-[30px] pb-[42px] laptop-portrait:mr-[10px] ipad:hidden'>
                     <div className="iconWrap ">
                       <span className='cursor-pointer'>
                         <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} />
                       </span>
                     </div>
-                    <div className={`subMenu ${Style.subMenu} ${openLanMenu == 1 ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === 1 ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full ipad:!top-[0] p-[20px] z-[99]`} style={subMenuProrperty}>
+                    <div className={`subMenu ${Style.subMenu} ${openLanMenu == 1 ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === 1 ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full p-[20px] z-[99]`} style={subMenuProrperty}>
                       <ul>
                         {[...locales].sort().map((locale) => (
                           <li key={locale} className='mb-[10px] last:mb-0'>
