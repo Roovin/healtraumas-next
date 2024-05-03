@@ -32,11 +32,20 @@ export default function Header() {
       setSubMenu("a")
       setFixed(0)
     })
+    const mainSections = document.querySelector('main');
+
+    mainSections.addEventListener('click', function () {
+      setIsMenuOpen(false);
+      setActiveMobileSubMenu();
+      setLanMenuRes(0)
+    })
+
+
   })
 
   const subMenuProrperty =
   {
-    top: `${headerHeight }px`,
+    top: `${headerHeight}px`,
   }
 
   const showSubManu = (e, i) => {
@@ -59,21 +68,38 @@ export default function Header() {
       setBack()
     }
   }
-const showLangRes = (val) => {
-  openLanMenuRes === 0 ? setLanMenuRes(1) : setLanMenuRes(0)
-}
+  const showLangRes = (val) => {
+    if(openLanMenuRes === 0) {
+      setLanMenuRes(1)
+      setIsMenuOpen(false);
+      setActiveMobileSubMenu();
+    } else {
+      setLanMenuRes(0)
+    }
+
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setActiveMobileSubMenu();
     (isFixed === 0) ? setFixed(1) : setFixed(0);
+    setLanMenuRes(0)
   }
   const backBtn = (val) => {
     setBack(val)
   }
 
+  const closeMenu = () => {
+    // if(openLanMenuRes === 1) {
+      setIsMenuOpen(!isMenuOpen);
+      setActiveMobileSubMenu();
+    // } else {
+    //   setLanMenuRes(0)
+    // }
+  }
+ 
   const { locales } = useRouter();
-  const intl = useIntl(); 
+  const intl = useIntl();
   const headerData = intl?.messages?.headerData;
 
   return (
@@ -95,7 +121,7 @@ const showLangRes = (val) => {
                           {item?.subMenu ?
                             <span className={`text-white ${item?.subMenu ? Style.arrow : ''} cursor-pointer pr-[20px] ipad:pr-[30px] ${item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={(e) => showMenuRes(e, i)}>{item?.nav}</span>
                             :
-                            <Link href={item?.url} className={`text-white ${item?.subMenu ? Style.arrow : ''} pr-[20px] ipad:pr-[30px] ${item?.subMenu && openSubMenu === i ? Style.show : ''} `}>{item?.nav}</Link>
+                            <Link href={item?.url} className={`text-white ${item?.subMenu ? Style.arrow : ''} pr-[20px] ipad:pr-[30px] ${item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={() => closeMenu()}>{item?.nav}</Link>
                           }
                           <div className={`subMenu ${Style.subMenu} ${openSubMenu == i && item?.subMenu ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === i ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full ipad:!top-[0] p-[20px] z-[99]`} style={subMenuProrperty}>
                             <div className={`${Style.backBtn} backBtn relative cursor-pointer text-[20px] mb-[20px] ipad:mb-[25px] pl-[30px] hidden ipad:inline-block`} onClick={() => backBtn('x')}></div>
@@ -104,7 +130,7 @@ const showLangRes = (val) => {
                                 item?.subMenu?.map((val, i) => {
                                   return (
                                     <li key={i} className='mb-[10px] last:mb-0'>
-                                      <Link href={val?.url} className='text-blue'>{val?.subNav}</Link>
+                                      <Link href={val?.url} className='text-blue' onClick={() => closeMenu()}>{val?.subNav}</Link>
                                     </li>
                                   )
                                 })
@@ -125,7 +151,7 @@ const showLangRes = (val) => {
                       <ul>
                         {[...locales].sort().map((locale) => (
                           <li key={locale} className='mb-[10px] last:mb-0'>
-                            <Link href="/" locale={locale}>{locale === 'en' ? 'English' : 'Ukrain'}</Link>
+                            <Link href="/" locale={locale} className='text-blue'>{locale === 'en' ? 'English' : 'Ukrain'}</Link>
                           </li>
                         ))}
                       </ul>
@@ -149,14 +175,14 @@ const showLangRes = (val) => {
                 <div className='mr-[20px] laptop-portrait:mr-[10px]'>
                   <div className="iconWrap" onClick={(e) => showLangRes(1)}>
                     <span className='cursor-pointer relative sm:top-[-2px]'>
-                      <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} className='sm:w-[18px] sm:h-[18px]'/>
+                      <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} className='sm:w-[18px] sm:h-[18px]' />
                     </span>
                   </div>
-                <div className={`subMenu ${Style.subMenu} absolute bottom-0 ${openLanMenuRes === 1 ? 'block' : 'hidden'} transition-all duration-700 ease-in-out bg-white h-fit right-[20px] sm:!top-[43px] ipad:!top-[69px] p-[20px] z-[99]`} style={subMenuProrperty}>
+                  <div className={`subMenu ${Style.subMenu} absolute bottom-0 ${openLanMenuRes === 1 ? 'block' : 'hidden'} transition-all duration-700 ease-in-out bg-white h-fit right-[20px] sm:!top-[43px] ipad:!top-[69px] p-[20px] z-[99]`} style={subMenuProrperty}>
                     <ul>
                       {[...locales].sort().map((locale) => (
                         <li key={locale} className='mb-[10px] last:mb-0'>
-                          <Link href="/" locale={locale}>{locale === 'en' ? 'English' : 'Ukrain'}</Link>
+                          <Link href="/" locale={locale} className='text-blue'>{locale === 'en' ? 'English' : 'Ukrain'}</Link>
                         </li>
                       ))}
                     </ul>
