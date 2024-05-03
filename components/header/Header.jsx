@@ -100,7 +100,7 @@ export default function Header() {
                   }
                 </ul>
               </div>
-              <div className="socialLinkWithBtn">
+              <div className="socialLinkWithBtn ipad:w-full">
                 <div className="socialIcon relative">
                   <Link href={'/'} className='emptyLink'>.</Link>
                 </div>

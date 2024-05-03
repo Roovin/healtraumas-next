@@ -5,7 +5,7 @@
 	background-color: #f2dd30;
 	display: inline-block;
 	border-radius: 300px;
-	padding: 22px 32px 22px;
+	padding: 22px 32px;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 500;
@@ -15,6 +15,18 @@
 	position: relative;
     opacity: 1;
 }
+@media (min-width: 596px) and (max-width: 1024px) {
+	.default {
+		padding: 20px 28px;
+		font-size: 16px;
+	}
+}
+@media (max-width: 595px) {
+	.default {
+	  font-size: 14px;
+	  padding: 18px 24px;
+	}
+  }
 .btn-blue {
     color: #fff;
     background-color: #0045bf;
