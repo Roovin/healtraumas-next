@@ -91,7 +91,7 @@ export default function Header() {
 
   const closeMenu = () => {
     // if(openLanMenuRes === 1) {
-      setIsMenuOpen(!isMenuOpen);
+      setIsMenuOpen(false);
       setActiveMobileSubMenu();
     // } else {
     //   setLanMenuRes(0)
@@ -108,7 +108,7 @@ export default function Header() {
         <div className={`container`}>
           <div className={`mainHeader ${Style.mainHeader} flex items-center justify-between`}>
             <div className="logoWrap max-w-[200px] ipad:max-w-[150px] sm:max-w-[100px] relative">
-              <Link href={'/'} className='emptyLink'>.</Link>
+              <Link href={'/'} className='emptyLink' onClick={() => closeMenu()}>.</Link>
               <Image src={'/logo/logo.png'} alt='Logo' width={334} height={140} />
             </div>
             <div className={`main-nav flex items-center ipad:flex-wrap ipad:justify-start justify-end ipad:absolute ipad:top-[62px] sm:top-[42px] ipad:w-full ipad:bg-blue ipad:z-[99] ipad:p-[20px] ipad:pt-0 transition-all duration-700 ease-in-out ${isMenuOpen ? 'ipad:left-0 ipad:opacity-1 ipad:visible' : 'ipad:left-[-100%] ipad:opacity-0 ipad:invisible'}`}>
