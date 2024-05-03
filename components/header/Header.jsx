@@ -59,6 +59,8 @@ export default function Header() {
     setBack(val)
   }
 
+  const { locales } = useRouter();
+
   return (
     <header>
       <div className={`${Style.header} header bg-blue ipad:py-[20px] sm:py-[10px] `}> {/* ${isFixed === 1 ? 'fixed z-[99] w-full ' : ''} */} 
@@ -98,6 +100,22 @@ export default function Header() {
                       )
                     })
                   }
+                  <li>
+                    <div className="iconWrap ">
+                      <span className='cursor-pointer'>
+                        <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} />
+                      </span>
+                      <div className="subMenu">
+                        <ul>
+                          {[...locales].sort().map((locale) => (
+                            <li key={locale}>
+                              <Link href="/" locale={locale}>{locale}</Link>
+                            </li>
+                            ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
               <div className="socialLinkWithBtn ipad:w-full">

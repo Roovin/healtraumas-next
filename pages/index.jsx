@@ -3,22 +3,27 @@ import IntroWithCta from "../components/IntroWithCta";
 import Testimonial from "../components/Testimonial";
 import FooterCta from "../components/FooterCta";
 import { intro, intro2, intro3 } from "../public/data/homePageData";
-import { NextSeo } from 'next-seo';
+import { LogoJsonLd, NextSeo } from 'next-seo';
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { FormattedMessage, useIntl } from "react-intl";
 
 
 export default function Home() {
+    const intl = useIntl();
+
+    const title = intl.formatMessage({ id: "title" });
+    const description = intl.formatMessage({ id: "description" })
   return (
     <>
     <NextSeo
-				title="Heal Ukraine Trauma"
-				description="Heal Ukraine Trauma provides mental health services for Ukrainians healing from conflict-associated trauma and PTSD."
+				title={title}
+				description={description}
 				canonical='https://healtraumas.org'
 				openGraph={{
 					url: 'https://healtraumas.org',
 					title: 'Heal Ukraine Trauma',
-					description: 'Heal Ukraine Trauma provides mental health services for Ukrainians healing from conflict-associated trauma and PTSD.',
+					description: {description},
 					images: [
 						{
 							url: 'https://healtraumas.vercel.app/healtraumas_OG_image.jpeg',
@@ -36,7 +41,7 @@ export default function Home() {
 					cardType: 'summary_large_image',
 				}}
 			/>
-      <HeroBanner />
+      <HeroBanner data={intl?.messages?.heroBanner}/>
       <IntroWithCta data={intro} />
       <IntroWithCta data={intro2} />
       <IntroWithCta data={intro3} />
