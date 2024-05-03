@@ -5,11 +5,13 @@ import { HeaderData, headerData } from '../../public/data/headerData'
 import Button from '../button/Button'
 import Style from '../../styles/header/header.module.css'
 import { useRouter } from "next/router";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function Header() {
 
   const [openSubMenu, setSubMenu] = useState("a")
   const [openLanMenu, setLanMenu] = useState(0)
+  const [openLanMenuRes, setLanMenuRes] = useState(0)
   const [headerHeight, setHeaderHeight] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [winWidth, isWinWidth] = useState(0);
@@ -57,6 +59,10 @@ export default function Header() {
       setBack()
     }
   }
+const showLangRes = (val) => {
+  openLanMenuRes === 0 ? setLanMenuRes(1) : setLanMenuRes(0)
+}
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setActiveMobileSubMenu();
@@ -67,7 +73,9 @@ export default function Header() {
   }
 
   const { locales } = useRouter();
-
+  const intl = useIntl(); 
+  const headerData = intl?.messages?.headerData;
+  
   return (
     <header>
       <div className={`${Style.header} header bg-blue ipad:py-[20px] sm:py-[10px] `}> {/* ${isFixed === 1 ? 'fixed z-[99] w-full ' : ''} */}
@@ -107,7 +115,7 @@ export default function Header() {
                       )
                     })
                   }
-                  <li onMouseEnter={(e) => showLan(1)} onMouseLeave={(e) => hideLan(0)} className='mr-[30px] laptop-portrait:mr-[10px]'>
+                  <li onMouseEnter={(e) => showLan(1)} onMouseLeave={(e) => hideLan(0)} className='mr-[30px] pb-[42px] laptop-portrait:mr-[10px] ipad:hidden'>
                     <div className="iconWrap ">
                       <span className='cursor-pointer'>
                         <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} />
@@ -136,13 +144,34 @@ export default function Header() {
               </div>
 
             </div>
-            <button aria-label="first link" className={`menu-toggle w-9 h-[25px] relative transition-transform duration-500 cursor-pointer sm:w-[22px] sm:h-[12px] laptop-portrait:hidden xl-up:hidden ${isMenuOpen ? 'menu-open' : ''}`} onClick={toggleMenu}>
-              <ul>
-                <li className={`h-0.5 absolute w-full transition-all duration-300 ease-in-out bg-white ${isMenuOpen ? 'menu-open transform rotate-[135deg] top-3 sm:top-[6px]' : 'top-0'}`}></li>
-                <li className={`h-0.5 absolute w-full transition-all duration-300 ease-in-out bg-white ${isMenuOpen ? 'menu-open opacity-0 left-[-60px] ' : 'top-[11px] left-0 sm:top-[6px]'}`}></li>
-                <li className={`h-0.5 absolute w-full transition-all duration-300 ease-in-out bg-white ${isMenuOpen ? 'menu-open transform rotate-[-135deg] top-3 sm:top-[6px]' : 'top-[22px] sm:top-[12px]'}`}></li>
-              </ul>
-            </button>
+            <div className="humburgerWithLanguage flex">
+              <div className="languageWrap ipad-up:hidden">
+                <div className='mr-[20px] laptop-portrait:mr-[10px]'>
+                  <div className="iconWrap" onClick={(e) => showLangRes(1)}>
+                    <span className='cursor-pointer relative sm:top-[-2px]'>
+                      <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} className='sm:w-[18px] sm:h-[18px]'/>
+                    </span>
+                  </div>
+                <div className={`subMenu ${Style.subMenu} absolute bottom-0 ${openLanMenuRes === 1 ? 'block' : 'hidden'} transition-all duration-700 ease-in-out bg-white h-fit right-[20px] sm:!top-[43px] ipad:!top-[69px] p-[20px] z-[99]`} style={subMenuProrperty}>
+                    <ul>
+                      {[...locales].sort().map((locale) => (
+                        <li key={locale} className='mb-[10px] last:mb-0'>
+                          <Link href="/" locale={locale}>{locale === 'en' ? 'English' : 'Ukrain'}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <button aria-label="first link" className={`menu-toggle w-9 h-[25px] relative transition-transform duration-500 cursor-pointer sm:w-[22px] sm:h-[12px] laptop-portrait:hidden xl-up:hidden ${isMenuOpen ? 'menu-open' : ''}`} onClick={toggleMenu}>
+                <ul>
+                  <li className={`h-0.5 absolute w-full transition-all duration-300 ease-in-out bg-white ${isMenuOpen ? 'menu-open transform rotate-[135deg] top-3 sm:top-[6px]' : 'top-0'}`}></li>
+                  <li className={`h-0.5 absolute w-full transition-all duration-300 ease-in-out bg-white ${isMenuOpen ? 'menu-open opacity-0 left-[-60px] ' : 'top-[11px] left-0 sm:top-[6px]'}`}></li>
+                  <li className={`h-0.5 absolute w-full transition-all duration-300 ease-in-out bg-white ${isMenuOpen ? 'menu-open transform rotate-[-135deg] top-3 sm:top-[6px]' : 'top-[22px] sm:top-[12px]'}`}></li>
+                </ul>
+              </button>
+            </div>
+
           </div>
         </div>
       </div>
