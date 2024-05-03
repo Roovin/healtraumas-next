@@ -164,7 +164,7 @@ export default function Header() {
                 <div className="socialIcon relative">
                   <Link href={'/'} className='emptyLink'>.</Link>
                 </div>
-                <div className="btnWrap ipad:mt-[50px]">
+                <div className="btnWrap ipad:mt-[50px]" onClick={() => closeMenu()}>
                   <Button buttonText="Donate" buttonClass="default" url={'/donate'} />
                 </div>
               </div>
