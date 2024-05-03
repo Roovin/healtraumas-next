@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 export default function Header() {
 
   const [openSubMenu, setSubMenu] = useState("a")
+  const [openLanMenu, setLanMenu] = useState(0)
   const [headerHeight, setHeaderHeight] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [winWidth, isWinWidth] = useState(0);
@@ -42,13 +43,19 @@ export default function Header() {
   const hideMenu = (e, val) => {
     setSubMenu("h")
   }
-  const showMenuRes = (e, i) => {
-  if(winWidth <= 1024) {
-    e.preventDefault();
-    e.stopPropagation()
-    setActiveMobileSubMenu(i);
-    setBack()
+  const showLan = (val) => {
+    setLanMenu(val);
   }
+  const hideLan = (val) => {
+    setLanMenu(val)
+  }
+  const showMenuRes = (e, i) => {
+    if (winWidth <= 1024) {
+      e.preventDefault();
+      e.stopPropagation()
+      setActiveMobileSubMenu(i);
+      setBack()
+    }
   }
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -63,7 +70,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className={`${Style.header} header bg-blue ipad:py-[20px] sm:py-[10px] `}> {/* ${isFixed === 1 ? 'fixed z-[99] w-full ' : ''} */} 
+      <div className={`${Style.header} header bg-blue ipad:py-[20px] sm:py-[10px] `}> {/* ${isFixed === 1 ? 'fixed z-[99] w-full ' : ''} */}
         <div className={`container`}>
           <div className={`mainHeader ${Style.mainHeader} flex items-center justify-between`}>
             <div className="logoWrap max-w-[200px] ipad:max-w-[150px] sm:max-w-[100px] relative">
@@ -77,10 +84,10 @@ export default function Header() {
                     headerData?.map((item, i) => {
                       return (
                         <li key={i} className='mr-[30px] pb-[42px] ipad:w-full ipad:pb-[20px] laptop-portrait:mr-[10px] last:mr-0' onMouseEnter={(e) => showSubManu(e, i)} onMouseLeave={(e) => hideMenu(e, i)}>
-                          { item?.subMenu ? 
-                              <span className={`text-white ${item?.subMenu ? Style.arrow : ''} cursor-pointer pr-[20px] ipad:pr-[30px] ${ item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={(e) => showMenuRes(e, i)}>{item?.nav}</span>
-                            : 
-                            <Link href={item?.url} className={`text-white ${item?.subMenu ? Style.arrow : ''} pr-[20px] ipad:pr-[30px] ${ item?.subMenu && openSubMenu === i ? Style.show : ''} `}>{item?.nav}</Link>
+                          {item?.subMenu ?
+                            <span className={`text-white ${item?.subMenu ? Style.arrow : ''} cursor-pointer pr-[20px] ipad:pr-[30px] ${item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={(e) => showMenuRes(e, i)}>{item?.nav}</span>
+                            :
+                            <Link href={item?.url} className={`text-white ${item?.subMenu ? Style.arrow : ''} pr-[20px] ipad:pr-[30px] ${item?.subMenu && openSubMenu === i ? Style.show : ''} `}>{item?.nav}</Link>
                           }
                           <div className={`subMenu ${Style.subMenu} ${openSubMenu == i && item?.subMenu ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === i ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full ipad:!top-[0] p-[20px] z-[99]`} style={subMenuProrperty}>
                             <div className={`${Style.backBtn} backBtn relative cursor-pointer text-[20px] mb-[20px] ipad:mb-[25px] pl-[30px] hidden ipad:inline-block`} onClick={() => backBtn('x')}></div>
@@ -100,21 +107,22 @@ export default function Header() {
                       )
                     })
                   }
-                  <li>
+                  <li onMouseEnter={(e) => showLan(1)} onMouseLeave={(e) => hideLan(0)} className='mr-[30px] laptop-portrait:mr-[10px]'>
                     <div className="iconWrap ">
                       <span className='cursor-pointer'>
                         <Image src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} />
                       </span>
-                      <div className="subMenu">
-                        <ul>
-                          {[...locales].sort().map((locale) => (
-                            <li key={locale}>
-                              <Link href="/" locale={locale}>{locale}</Link>
-                            </li>
-                            ))}
-                        </ul>
-                      </div>
                     </div>
+                    <div className={`subMenu ${Style.subMenu} ${openLanMenu == 1 ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === 1 ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full ipad:!top-[0] p-[20px] z-[99]`} style={subMenuProrperty}>
+                      <ul>
+                        {[...locales].sort().map((locale) => (
+                          <li key={locale} className='mb-[10px] last:mb-0'>
+                            <Link href="/" locale={locale}>{locale === 'en' ? 'English' : 'Ukrain'}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
                   </li>
                 </ul>
               </div>
