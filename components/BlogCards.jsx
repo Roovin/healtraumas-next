@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./button/Button";
 
 export default function BlogCards({ data }) {
   return (
@@ -11,9 +10,9 @@ export default function BlogCards({ data }) {
           <h2 className="text-blue">{data?.title}</h2>
         </div>
         <div className="cardWrapper flex lg:flex-wrap">
-          {data?.cards.map((item, i) => {
-            var title = item?.title;
-            var titleWithUrl = title.split(" ").join("-");
+          {data?.cards?.map((item, i) => {
+            const title = item?.title;
+            const titleWithUrl = title.split(" ").join("-");
             return (
               <div
                 key={i}

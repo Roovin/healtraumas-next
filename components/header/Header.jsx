@@ -112,7 +112,7 @@ export default function Header() {
                   {
                     headerData?.map((item, i) => {
                       return (
-                        <li key={i} className='mr-[30px] pb-[42px] ipad:w-full ipad:pb-[20px] laptop-portrait:mr-[10px] last:mr-0' onMouseEnter={(e) => showSubManu(e, i)} onMouseLeave={(e) => hideMenu(e, i)}>
+                        <li key={item?.id + i} className='mr-[30px] pb-[42px] ipad:w-full ipad:pb-[20px] laptop-portrait:mr-[10px] last:mr-0' onMouseEnter={(e) => showSubManu(e, i)} onMouseLeave={(e) => hideMenu(e, i)}>
                           {item?.subMenu ?
                             <span className={`text-white ${item?.subMenu ? Style.arrow : ''} cursor-pointer pr-[20px] ipad:pr-[30px] ${item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={(e) => showMenuRes(e, i)}>{item?.nav}</span>
                             :
@@ -124,7 +124,7 @@ export default function Header() {
                               {
                                 item?.subMenu?.map((val, i) => {
                                   return (
-                                    <li key={i} className='mb-[10px] last:mb-0'>
+                                    <li key={val?.id + i} className='mb-[10px] last:mb-0'>
                                       <Link href={val?.url} className='text-blue' onClick={() => closeMenu()}>{val?.subNav}</Link>
                                     </li>
                                   )

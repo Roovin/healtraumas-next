@@ -1,30 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
-import Image from "next/image";
 import Style from "../styles/parallaxBlade.module.css";
 
-const spacing = {
-  parallax1Top: "-300px",
-  parallax2Top: "200px",
-};
 
 export default function ParallaxBlade({ data }) {
-  const [isVisible1, setIsVisible1] = useState(true);
-  const [isVisible2, setIsVisible2] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const imgUrl = data.imgUrl;
-  const transformValue1Ref = useRef(null);
+  const imgUrl = data?.imgUrl;
   const transformValue2Ref = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      if (transformValue1Ref.current && transformValue2Ref.current) {
-        const rect1 = transformValue1Ref.current.getBoundingClientRect();
-        const rect2 = transformValue2Ref.current.getBoundingClientRect();
-
-        setIsVisible1(rect1.top <= window.innerHeight && rect1.bottom >= 0);
-        setIsVisible2(rect2.top <= window.innerHeight && rect2.bottom >= 0);
-      }
     };
 
     window.addEventListener("scroll", handleScroll);

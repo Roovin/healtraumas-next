@@ -4,10 +4,10 @@ export default function TextContent({ data }) {
   return (
     <section className="TextContent relative w-full bg-white ">
       <div className="container">
-        {data?.datacontent.map((text, index) => (
+        {data?.datacontent?.map((text, index) => (
           <div
             className="content relative w-full max-w-[1050px] mx-auto mb-14 "
-            key={index}
+            key={text?.id+index}
           >
             {text?.title && (
               <h6 className=" font-bold text-blue mb-4 ">{text?.title}</h6>

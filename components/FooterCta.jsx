@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Button from "./button/Button";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function FooterCta() {
   const [state, handleSubmit] = useForm("xeqyvnlk");
-  const [formsuccess, setformsuccess] = useState(false);
+  const [formSuccess, setFormSuccess] = useState(false);
 
   useEffect(() => {
     const clearForm = () => {
@@ -16,9 +15,9 @@ export default function FooterCta() {
     return clearForm;
   }, []);
 
-  if (state.succeeded && !formsuccess) {
+  if (state.succeeded && !formSuccess) {
     alert("Thank You");
-    setformsuccess(true);
+    setFormSuccess(true);
   }
   return (
     <section className="FooterCta relative w-full bg-blue">

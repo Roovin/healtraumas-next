@@ -9,15 +9,12 @@ export default function TeamWithSlider({ data }) {
 	const [overlay, setOverlay] = useState(false);
 	const [slider, setSlider] = useState();
 	const slickSliderRef = useRef(null);
-	const [activeTab, setActiveTab] = useState(0);
 	const prevRef = useRef(null);
 	const nextRef = useRef(null);
 
 	const clickOverlay = (index) => {
-		console.log(index);
 		setOverlay((prevOverlay) => !prevOverlay);
 		setSlider(index);
-		setActiveTab(index);
 	};
 
 	const removeOverlay = () => {
@@ -91,7 +88,7 @@ export default function TeamWithSlider({ data }) {
 					<div className="cardWrapper flex flex-wrap w-full">
 						{data?.team?.map((item, index) => {
 							return (
-								<div key={index} className={`card relative group w-[calc(25%-30px)] mx-[15px] sm:w-full sm:mx-0 phablet:w-[calc(50%-20px)] phablet:mx-[10px] tablet:w-[calc(33%-20px)] tablet:mx-[10px] bg-white mb-[30px] border-black border-[2px] rounded-[10px] hover:shadow-xl`} onClick={() => clickOverlay(index)}>
+								<div key={item?.id+index} className={`card overflow-hidden relative group w-[calc(25%-30px)] mx-[15px] sm:w-full sm:mx-0 phablet:w-[calc(50%-20px)] phablet:mx-[10px] tablet:w-[calc(33%-20px)] tablet:mx-[10px] bg-white mb-[30px] border-black border-[2px] rounded-[10px] hover:shadow-xl`} onClick={() => clickOverlay(index)}>
 									<span className='emptyLink'>.</span>
 									<div className="imgWrap max-w-full overflow-hidden max-h-[300px] h-full">
 										<Image loading="eager" src={item?.imageUrl} alt={item?.alt} width={300} height={300} className='w-full scale-1 group-hover:scale-[1.1] transition-all ease-in-out duration-300 sm:h-[300px] object-cover h-full' />
@@ -136,7 +133,7 @@ export default function TeamWithSlider({ data }) {
 						<Slider ref={slickSliderRef} {...settings}>
 							{data?.team?.map((card, index) => {
 								return (
-									<div key={index} className="py-[10px] md:pb-0">
+									<div key={card?.id+index} className="py-[10px] md:pb-0">
 										<div
 											className={`${Style.cardWrap} group xl:py-[20px] px-[70px] bg-white py-[40px] md:px-[20px] tablet-landscape:pb-[60px] xxl-up:min-h-[460px] bg-skyblue mx-[16px] flex md:flex-wrap relative card w-[calc(100%-28px)] h-full transition-all duration-[0.3s] my-[20px] border-[2px] border-white rounded-[16px] overflow-hidden`}
 										>

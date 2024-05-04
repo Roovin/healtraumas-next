@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function ImageWithContent({ data }) {
   return (
@@ -10,7 +9,7 @@ export default function ImageWithContent({ data }) {
                 {
                     data?.map((item, i) => {
                         return(
-                            <div key={i} className="colTwo w-1/2 mr-[20px] last:mr-0 md:w-full md:mb-[20px] md:last:mb-0 md:mr-0">
+                            <div key={item?.id+i} className="colTwo w-1/2 mr-[20px] last:mr-0 md:w-full md:mb-[20px] md:last:mb-0 md:mr-0">
                                 {item?.imageUrl ? 
                                 <div className="imgWrap">
                                     <Image loading="eager" src={item?.imageUrl} alt={item?.alt} width={514} height={342} className='md:w-full' />

@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 
 export default function Layout({ children, dir }) {
   const { locales } = useRouter();
-    // const intl = useIntl();
   return (
     <>
         <Header locales={locales} />

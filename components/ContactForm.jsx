@@ -3,7 +3,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 export default function ContactForm() {
     const [state, handleSubmit] = useForm("xeqyvnlk");
-    const [formsuccess, setformsuccess] = useState(false);
+    const [formSuccess, setFormSuccess] = useState(false);
   
     useEffect(() => {
       const clearForm = () => {
@@ -15,9 +15,9 @@ export default function ContactForm() {
       return clearForm;
     }, []);
     
-    if (state.succeeded && !formsuccess) {
+    if (state.succeeded && !formSuccess) {
         alert('Thank You')
-        setformsuccess(true);
+        setFormSuccess(true);
     }
     return (
         <section className="ContactUsForm">

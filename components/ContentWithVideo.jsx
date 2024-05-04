@@ -28,13 +28,7 @@ export default function ContentWithVideo({ data }) {
     <section className="contentWithVideo bg-skyBlue ">
       <div className="container">
         <div
-          className={`contentWrap ${
-            data?.imgurl
-              ? data?.flexRowReverse
-                ? "flex-row-reverse lg:flex-row"
-                : ""
-              : ""
-          } relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap lg:w-full lg:ml-0`}
+          className={`contentWrap ${ data?.imgurl ? data?.flexRowReverse ? "flex-row-reverse lg:flex-row" : "" : "" } relative w-[calc(100%+40px)] ml-[-20px] flex flex-wrap lg:w-full lg:ml-0`}
         >
           <div className="content w-[calc(50%-40px)] mx-[20px] lg:w-full lg:mx-auto  ">
             {data?.title && <h4 className="text-blue mb-8 ">{data?.title}</h4>}
@@ -54,7 +48,7 @@ export default function ContentWithVideo({ data }) {
               <ul className=" relative w-full list-disc pl-10 ">
                 {data?.list.map((item, i) => {
                   return (
-                    <li key={i} className=" mb-2 ">
+                    <li key={item?.id+i} className=" mb-2 ">
                       <p>{item?.description}</p>
                     </li>
                   );
@@ -75,16 +69,13 @@ export default function ContentWithVideo({ data }) {
                 />
               </div>
             ) : data && data?.videoUrl ? (
-              <div
-                className="video relative w-full"
+              <div className="video relative w-full"
                 style={{
                   width: videoDimensions.width,
                   height: videoDimensions.height,
                 }}
               >
                 <iframe
-                  // width="560"
-                  // height="315"
                   src={data?.videoUrl}
                   title="YouTube video player"
                   frameBorder="0"

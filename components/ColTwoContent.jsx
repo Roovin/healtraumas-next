@@ -8,7 +8,7 @@ export default function ColTwoContent({ data }) {
         <div className="row flex md:flex-wrap">
           {data?.map((item, i) => {
             return (
-              <div key={i} className="item w-1/2 md:w-full">
+              <div key={item?.id + i} className="item w-1/2 md:w-full">
                 {item?.mainTitle ? (
                   <div className="title">
                     <h2 className="h1 text-blue md:mb-4 ">
@@ -20,7 +20,7 @@ export default function ColTwoContent({ data }) {
                     {item?.content ? (
                       item?.content.map((val, i) => {
                         return (
-                          <div key={i} className="item mb-[20px] last:mb-0">
+                          <div key={val?.id+i} className="item mb-[20px] last:mb-0">
                             <h6 className="my-[20px] text-blue">
                               {val?.title}
                             </h6>

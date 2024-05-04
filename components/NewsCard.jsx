@@ -14,7 +14,7 @@ export default function NewsCard({ data }) {
             const title = item?.title;
             const titleWithUrl = title.split(" ").join('-');
             return (
-              <div key={i} className="card group w-[calc(33.33%-30px)] mx-[15px] mb-[30px] relative overflow-hidden border-[2px] border-black rounded-[8px] phablet:w-[calc(50%-20px)] phablet:mx-[10px] sm:w-full sm:mx-0 phablet:mb-[20px]">
+              <div key={item?.id+i} className="card group w-[calc(33.33%-30px)] mx-[15px] mb-[30px] relative overflow-hidden border-[2px] border-black rounded-[8px] phablet:w-[calc(50%-20px)] phablet:mx-[10px] sm:w-full sm:mx-0 phablet:mb-[20px]">
                 <Link href={item?.url + titleWithUrl} target='_blank' className='emptyLink'>.</Link>
                 <div className="imgWrap h-[200px] overflow-hidden ipad:h-[200px] tablet:h-[150px]">
                   <Image loading="eager" src={item?.imageUrl} alt={item?.alt} width={300} height={300} className='w-full h-full scale-1 transition-all ease-in-out delay-300 group-hover:scale-[1.1] object-cover' />
