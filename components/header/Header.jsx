@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { HeaderData, headerData } from '../../public/data/headerData'
 import Button from '../button/Button'
 import Style from '../../styles/header/header.module.css'
 import { useRouter } from "next/router";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 
 export default function Header() {
 
-  const [openSubMenu, setSubMenu] = useState("a")
-  const [openLanMenu, setLanMenu] = useState(0)
-  const [openLanMenuRes, setLanMenuRes] = useState(0)
+  const [openSubMenu, setOpenSubMenu] = useState("a")
+  const [openLanMenu, setOpenLanMenu] = useState(0)
+  const [openLanMenuRes, setOpenLanMenuRes] = useState(0)
   const [headerHeight, setHeaderHeight] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [winWidth, isWinWidth] = useState(0);
-  const [ActiveMobileSubMenu, setActiveMobileSubMenu] = useState();
+  const [winWidth, setWinWidth] = useState(0);
+  const [activeMobileSubMenu, setActiveMobileSubMenu] = useState();
   const [back, setBack] = useState();
-  const [isFixed, setFixed] = useState(0);
+  const [isFixed, setIsFixed] = useState(0);
 
   useEffect(() => {
     const headerElement = document.querySelector('header .mainHeader');
@@ -27,21 +26,21 @@ export default function Header() {
       setHeaderHeight(height);
     }
     window.addEventListener('resize', function () {
-      isWinWidth(window.innerWidth);
+      setWinWidth(window.innerWidth);
       setIsMenuOpen(false)
-      setSubMenu("a")
-      setFixed(0)
+      setOpenSubMenu("a")
+      setIsFixed(0)
     })
     const mainSections = document.querySelector('main');
 
     mainSections.addEventListener('click', function () {
       setIsMenuOpen(false);
       setActiveMobileSubMenu();
-      setLanMenuRes(0)
+      setOpenLanMenuRes(0)
     })
 
 
-  })
+  }, [headerHeight, winWidth, isMenuOpen, openSubMenu, isFixed, activeMobileSubMenu, openLanMenuRes])
 
   const subMenuProrperty =
   {
@@ -49,16 +48,16 @@ export default function Header() {
   }
 
   const showSubManu = (e, i) => {
-    setSubMenu(i)
+    setOpenSubMenu(i)
   }
   const hideMenu = (e, val) => {
-    setSubMenu("h")
+    setOpenSubMenu("h")
   }
   const showLan = (val) => {
-    setLanMenu(val);
+    setOpenLanMenu(val);
   }
   const hideLan = (val) => {
-    setLanMenu(val)
+    setOpenLanMenu(val)
   }
   const showMenuRes = (e, i) => {
     if (winWidth <= 1024) {
@@ -70,11 +69,11 @@ export default function Header() {
   }
   const showLangRes = (val) => {
     if(openLanMenuRes === 0) {
-      setLanMenuRes(1)
+      setOpenLanMenuRes(1)
       setIsMenuOpen(false);
       setActiveMobileSubMenu();
     } else {
-      setLanMenuRes(0)
+      setOpenLanMenuRes(0)
     }
 
   }
@@ -82,20 +81,16 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setActiveMobileSubMenu();
-    (isFixed === 0) ? setFixed(1) : setFixed(0);
-    setLanMenuRes(0)
+    (isFixed === 0) ? setIsFixed(1) : setIsFixed(0);
+    setOpenLanMenuRes(0)
   }
   const backBtn = (val) => {
     setBack(val)
   }
 
   const closeMenu = () => {
-    // if(openLanMenuRes === 1) {
       setIsMenuOpen(false);
       setActiveMobileSubMenu();
-    // } else {
-    //   setLanMenuRes(0)
-    // }
   }
  
   const { locales } = useRouter();
@@ -123,7 +118,7 @@ export default function Header() {
                             :
                             <Link href={item?.url} className={`text-white ${item?.subMenu ? Style.arrow : ''} pr-[20px] ipad:pr-[30px] ${item?.subMenu && openSubMenu === i ? Style.show : ''} `} onClick={() => closeMenu()}>{item?.nav}</Link>
                           }
-                          <div className={`subMenu ${Style.subMenu} ${openSubMenu == i && item?.subMenu ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === i ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full ipad:!top-[0] p-[20px] z-[99]`} style={subMenuProrperty}>
+                          <div className={`subMenu ${Style.subMenu} ${openSubMenu == i && item?.subMenu ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && activeMobileSubMenu === i ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full ipad:!top-[0] p-[20px] z-[99]`} style={subMenuProrperty}>
                             <div className={`${Style.backBtn} backBtn relative cursor-pointer text-[20px] mb-[20px] ipad:mb-[25px] pl-[30px] hidden ipad:inline-block`} onClick={() => backBtn('x')}></div>
                             <ul className='ipad:mt-[40px]'>
                               {
@@ -147,7 +142,7 @@ export default function Header() {
                         <Image loading="eager" src={'/icons/language_icon.svg'} alt="Language Icons" width={20} height={20} />
                       </span>
                     </div>
-                    <div className={`subMenu ${Style.subMenu} ${openLanMenu == 1 ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && ActiveMobileSubMenu === 1 ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full p-[20px] z-[99]`} style={subMenuProrperty}>
+                    <div className={`subMenu ${Style.subMenu} ${openLanMenu == 1 ? 'ipad-up:block' : 'ipad-up:hidden'} absolute bottom-0 ${back != 'x' && activeMobileSubMenu === 1 ? 'ipad:left-0' : 'ipad:left-[-100%]'} transition-all duration-700 ease-in-out bg-white h-fit ipad:h-full ipad:w-full p-[20px] z-[99]`} style={subMenuProrperty}>
                       <ul>
                         {[...locales].sort().map((locale) => (
                           <li key={locale} className='mb-[10px] last:mb-0'>

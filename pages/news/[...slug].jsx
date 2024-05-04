@@ -1,21 +1,16 @@
 import React from 'react'
 import { useRouter } from "next/router"
 import { newsData } from '../../public/data/newData'
-import Link from 'next/link';
-import Image from 'next/image';
 
 export default function NewsDetail() {
   const router = useRouter();
   const query = router.query
   const queryVal = query?.slug?.[0];
   var getValue = queryVal?.replace(/-/g, " ")
-  // const [isValue, setGetValue] = useState(getValue);
   return (
     <section className="newsDetail">
-
       {
         newsData?.newsCard?.map((item, i) => {
-
           return (
             <div key={i} className="container">
               {item?.title === getValue ?
@@ -35,10 +30,8 @@ export default function NewsDetail() {
               }
             </div>
           )
-
         })
       }
-
     </section>
   )
 }
