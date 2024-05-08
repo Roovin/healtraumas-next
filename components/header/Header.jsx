@@ -124,7 +124,7 @@ export default function Header() {
                               {
                                 item?.subMenu?.map((val, i) => {
                                   return (
-                                    <li key={val?.id + i} className='mb-[10px] last:mb-0'>
+                                    <li key={i} className='mb-[10px] last:mb-0'>
                                       <Link href={val?.url} className='text-blue' onClick={() => closeMenu()}>{val?.subNav}</Link>
                                     </li>
                                   )
