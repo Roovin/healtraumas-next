@@ -20,7 +20,7 @@ export default function FooterCta() {
     setFormSuccess(true);
   }
   return (
-    <section className="FooterCta relative w-full bg-blue">
+    <section className="footerCta relative w-full bg-blue">
       <div className="container">
         <div className="intro text-center w-full  max-w-[1050px] mx-auto z-[2] ">
           <h2 className=" text-yellow mb-4">
@@ -34,7 +34,7 @@ export default function FooterCta() {
         <div className="formWrap relative w-full  max-w-[1200px] mx-auto mt-8 z-[2]  ">
           <form
             onSubmit={handleSubmit}
-            className="w-[calc(100%+16px)] ml-[-8px] flex lg:flex-wrap md:mx-auto md:inline-grid md:w-full" 
+            className="w-[calc(100%+16px)] ml-[-8px] flex lg:flex-wrap md:mx-auto md:inline-grid md:w-full"
           >
             <label htmlFor="firstName" className=" text-[0] ">
               First Name
@@ -94,4 +94,3 @@ export default function FooterCta() {
     </section>
   );
 }
-
