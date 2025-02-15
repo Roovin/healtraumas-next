@@ -453,3 +453,29 @@ b {
   display: none !important;
   pointer-events: none;
 }
+
+
+/* global.css or your styles file */
+.keen-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.5s linear; /* Linear transition for smooth effect */
+}
+
+.keen-slider__slide {
+  min-width: 200px; /* Adjust the width of each logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Hide the overflow to keep it neat */
+.keen-slider-wrapper {
+  overflow: hidden; 
+}
+
+.keen-slider__slide {
+  width: 20%; /* 100% / 5 slides = 20% */
+  flex: 0 0 auto; /* Prevents the slides from shrinking */
+}

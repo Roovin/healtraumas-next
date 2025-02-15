@@ -7,6 +7,7 @@ import { LogoJsonLd, NextSeo } from 'next-seo';
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { FormattedMessage, useIntl } from "react-intl";
+import LogoSlider from '../components/LogoWithSlider'
 
 
 export default function Home() {
@@ -14,6 +15,16 @@ export default function Home() {
 
     const title = intl.formatMessage({ id: "title" });
     const description = intl.formatMessage({ id: "description" })
+
+	const logos = [
+		{ mediaItemUrl: '/logoWithSlider/built-in.png', altText: 'Logo 1' },
+		{ mediaItemUrl: '/logoWithSlider/doordash.svg', altText: 'Logo 2' },
+		{ mediaItemUrl: '/logoWithSlider/hellofresh.svg', altText: 'Logo 3' },
+		{ mediaItemUrl: '/logoWithSlider/nikon.svg', altText: 'Logo 4' },
+		{ mediaItemUrl: '/logoWithSlider/swan.png', altText: 'Logo 5' },
+		{ mediaItemUrl: '/logoWithSlider/syber-security.png', altText: 'Logo 6' },
+		{ mediaItemUrl: '/logoWithSlider/yelp.svg', altText: 'Logo 7' }
+	  ];
   return (
     <>
     <NextSeo
@@ -42,6 +53,7 @@ export default function Home() {
 				}}
 			/>
       <HeroBanner data={intl?.messages?.heroBanner}/>
+	  <LogoSlider logos={logos} />
       <IntroWithCta data={intro} />
       <IntroWithCta data={intro2} />
       <IntroWithCta data={intro3} />

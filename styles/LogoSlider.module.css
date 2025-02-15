@@ -1,0 +1,51 @@
+.sliderContainer {
+    width: 100%;
+    overflow: hidden; /* Hide overflow for the slider */
+    position: relative;
+  }
+  
+  .sliderContent {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite; /* Adjust speed by changing duration */
+  }
+  
+  .logoWrapper {
+    display: inline-block;
+    padding: 0 10px; /* Spacing between logos */
+    box-sizing: border-box;
+    margin: 0 30px;
+  }
+  
+  .logoImage {
+    max-width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+  }
+  
+  /* Keyframes for infinite scroll */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .logoImage {
+      max-width: 120px;
+      max-height: 60px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logoImage {
+      max-width: 100px;
+      max-height: 50px;
+    }
+  }
+  
